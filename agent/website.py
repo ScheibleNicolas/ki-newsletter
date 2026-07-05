@@ -60,6 +60,18 @@ def _tags_html(schlagwoerter: list[str]) -> str:
     return f'<div class="tags">{pills}</div>'
 
 
+def _quelle_html(story: dict) -> str:
+    quelle_url = story.get("quelle_url")
+    if not quelle_url:
+        return ""
+    label = story.get("quelle_name") or quelle_url
+    return (
+        f'<p class="quelle">Quelle: '
+        f'<a href="{html.escape(quelle_url)}" target="_blank" rel="noopener noreferrer">'
+        f'{html.escape(label)}</a></p>'
+    )
+
+
 def _story_html(story: dict) -> str:
     ist_hauptartikel = story.get("typ") == "deep-dive"
     klasse = "story story--haupt" if ist_hauptartikel else "story"
@@ -70,6 +82,7 @@ def _story_html(story: dict) -> str:
       <h2>{titel}</h2>
       <p>{zusammenfassung}</p>
       {_tags_html(story.get("schlagwoerter", []))}
+      {_quelle_html(story)}
     </article>"""
 
 
@@ -92,6 +105,7 @@ def _ausgabe_html(newsletter: dict, audio_relativ: str) -> str:
     .story h2 {{ font-size: 1.15rem; margin: 0 0 0.5rem; }}
     .story p {{ line-height: 1.55; color: #d4d4d8; margin: 0; }}
     .story--haupt h2 {{ font-size: 1.35rem; color: #fbbf24; }}
+    .quelle {{ margin: 0.7rem 0 0; font-size: 0.82rem; color: #9aa0a6; }}
     audio {{ width: 100%; margin: 1.4rem 0; }}
     .zurueck {{ display: inline-block; margin-top: 2rem; font-size: 0.9rem; }}
   </style>
@@ -202,18 +216,24 @@ def _test_newsletter() -> dict:
                 "zusammenfassung": "Dies ist ein längerer Testtext, der im echten Betrieb 400-500 Wörter umfassen würde und das wichtigste Thema der Woche ausführlich erklärt.",
                 "schlagwoerter": ["Reasoning", "Unternehmen", "KI-Agenten"],
                 "typ": "deep-dive",
+                "quelle_url": "https://example.com/reasoning-modelle",
+                "quelle_name": "OpenAI Blog",
             },
             {
                 "titel": "EU einigt sich auf neue KI-Regularien",
                 "zusammenfassung": "Kurzmeldung zu neuen Transparenzpflichten für KI-Anbieter in der EU.",
                 "schlagwoerter": ["EU", "Regulierung"],
                 "typ": "kurzmeldung",
+                "quelle_url": "https://example.com/eu-ki-regeln",
+                "quelle_name": "Tagesschau.de",
             },
             {
                 "titel": "Google DeepMind zeigt Fortschritte bei Protein-Faltung",
                 "zusammenfassung": "Kurzmeldung zu einem verbesserten Modell für Proteinstruktur-Vorhersagen.",
                 "schlagwoerter": ["DeepMind", "Biotech"],
                 "typ": "kurzmeldung",
+                "quelle_url": "https://example.com/deepmind-protein",
+                "quelle_name": "Google DeepMind Blog",
             },
         ],
         "schlagwoerter": ["Reasoning", "KI-Agenten", "Regulierung"],
