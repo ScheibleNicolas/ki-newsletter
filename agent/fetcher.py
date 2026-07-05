@@ -2,7 +2,10 @@
 
 from __future__ import annotations
 
+import socket
 import sys
+import urllib.error
+import urllib.request
 from dataclasses import dataclass, asdict
 from pathlib import Path
 
@@ -10,6 +13,8 @@ import feedparser
 import yaml
 
 QUELLEN_PFAD = Path(__file__).parent / "quellen.yaml"
+
+TIMEOUT_SEKUNDEN = 10
 
 
 @dataclass
@@ -29,8 +34,26 @@ def lade_quellen(pfad: Path = QUELLEN_PFAD) -> list[dict]:
     return [q for q in quellen if q.get("url")]
 
 
+def _lade_rohdaten(url: str) -> bytes:
+    """Lädt die Feed-Rohdaten selbst (statt feedparser die URL abrufen zu
+    lassen), damit ein fester Timeout durchgesetzt werden kann - ohne
+    Timeout kann ein einzelner nicht antwortender Feed die ganze Pipeline
+    blockieren."""
+    anfrage = urllib.request.Request(url, headers={"User-Agent": feedparser.USER_AGENT})
+    try:
+        with urllib.request.urlopen(anfrage, timeout=TIMEOUT_SEKUNDEN) as antwort:
+            return antwort.read()
+    except (socket.timeout, TimeoutError):
+        raise TimeoutError(f"keine Antwort innerhalb von {TIMEOUT_SEKUNDEN}s")
+    except urllib.error.URLError as e:
+        if isinstance(e.reason, (socket.timeout, TimeoutError)):
+            raise TimeoutError(f"keine Antwort innerhalb von {TIMEOUT_SEKUNDEN}s")
+        raise
+
+
 def hole_artikel_fuer_quelle(quelle: dict) -> list[Artikel]:
-    feed = feedparser.parse(quelle["url"])
+    rohdaten = _lade_rohdaten(quelle["url"])
+    feed = feedparser.parse(rohdaten)
 
     if feed.bozo and not feed.entries:
         raise ValueError(f"Feed konnte nicht gelesen werden: {feed.bozo_exception}")

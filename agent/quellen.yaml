@@ -3,10 +3,18 @@
 # Jede Quelle hat folgende Felder:
 #   name        - Anzeigename der Quelle
 #   url         - RSS/Atom-Feed-URL (null, falls kein offizieller Feed existiert)
-#   kategorie   - ki-international / ki-deutsch / wirtschaft-politik
+#   kategorie   - international / deutschland / finanzen / ki-tech
 #   sprache     - de / en
 #   prioritaet  - hoch / mittel (Vorschlag, bei Bedarf anpassen)
 #   hinweis     - optionale Anmerkung, z.B. wenn kein offizieller Feed existiert
+#
+# Hinweis zur Kategorie-Umstellung (2026-07-05): Das ursprüngliche Schema
+# (ki-international / ki-deutsch / wirtschaft-politik) wurde durch das neue
+# 4-Kategorien-Schema ersetzt, das generator.py/website.py/tts.py für die
+# Gliederung der Ausgaben verwenden. Bestehende Quellen wurden wie folgt
+# überführt: die KI/Tech-Quellen (unabhängig von der Sprache) -> ki-tech,
+# allgemeine Nachrichtenquellen -> international bzw. deutschland,
+# Finanzquellen -> finanzen.
 #
 # Stand der Recherche: 2026-07-05. RSS-URLs von Firmen/Medien ändern sich
 # gelegentlich (Redesigns, Substack-Migrationen etc.) - bei Fehlern in der
@@ -14,11 +22,94 @@
 
 quellen:
   # ─────────────────────────────────────────────
-  # KI & Tech International
+  # International
+  # ─────────────────────────────────────────────
+  - name: "Reuters"
+    url: null
+    kategorie: international
+    sprache: en
+    prioritaet: mittel
+    hinweis: >
+      Reuters hat im Juni 2020 alle öffentlichen RSS-Feeds eingestellt; es
+      existiert kein offizieller Feed mehr. Alternative: Google-News-RSS-Suche
+      (news.google.com/rss/search?q=allinurl:reuters.com) als Behelfslösung.
+
+  - name: "AP News"
+    url: null
+    kategorie: international
+    sprache: en
+    prioritaet: mittel
+    hinweis: >
+      Für AP News existiert kein zuverlässiger offizieller RSS-Feed mehr
+      (frühere Feeds sind bekanntermaßen defekt). Alternative: Drittanbieter-
+      Scraper oder generierter Feed via RSS.app.
+
+  - name: "BBC World News"
+    url: "https://feeds.bbci.co.uk/news/world/rss.xml"
+    kategorie: international
+    sprache: en
+    prioritaet: hoch
+
+  - name: "Al Jazeera English"
+    url: "https://www.aljazeera.com/xml/rss/all.xml"
+    kategorie: international
+    sprache: en
+    prioritaet: hoch
+
+  - name: "The Economist"
+    url: null
+    kategorie: international
+    sprache: en
+    prioritaet: mittel
+    hinweis: >
+      The Economist bietet keinen einheitlichen Gesamt-Feed, sondern nur
+      Feeds pro Rubrik (z.B. Business, Finance & Economics). Passende
+      Rubrik-Feed(s) je nach Newsletter-Fokus auf economist.com auswählen.
+
+  # ─────────────────────────────────────────────
+  # Deutschland
+  # ─────────────────────────────────────────────
+  - name: "Tagesschau.de"
+    url: "https://www.tagesschau.de/xml/rss2"
+    kategorie: deutschland
+    sprache: de
+    prioritaet: hoch
+
+  - name: "Tagesschau Wirtschaft"
+    url: "https://www.tagesschau.de/wirtschaft/index~rss2.xml"
+    kategorie: deutschland
+    sprache: de
+    prioritaet: hoch
+    hinweis: >
+      Die ursprünglich vorgeschlagene URL (.../xml/rss2_wirtschaft) liefert
+      HTTP 404 (geprüft am 2026-07-05); die oben stehende URL wurde stattdessen
+      verifiziert (200, 23 Einträge).
+
+  # ─────────────────────────────────────────────
+  # Finanzen
+  # ─────────────────────────────────────────────
+  - name: "Yahoo Finance RSS"
+    url: "https://finance.yahoo.com/news/rssindex"
+    kategorie: finanzen
+    sprache: en
+    prioritaet: hoch
+
+  - name: "Finanzen.net RSS"
+    url: null
+    kategorie: finanzen
+    sprache: de
+    prioritaet: hoch
+    hinweis: >
+      Liefert HTTP 403 (geprüft am 2026-07-05, auch mit Browser-User-Agent) -
+      vermutlich Bot-Schutz. Kein funktionierender Feed gefunden; Alternative:
+      finanznachrichten.de/service/rss.htm prüfen oder RSS.app-Generator nutzen.
+
+  # ─────────────────────────────────────────────
+  # KI & Tech
   # ─────────────────────────────────────────────
   - name: "The Batch"
     url: null
-    kategorie: ki-international
+    kategorie: ki-tech
     sprache: en
     prioritaet: hoch
     hinweis: >
@@ -28,13 +119,13 @@ quellen:
 
   - name: "Import AI"
     url: "https://importai.substack.com/feed"
-    kategorie: ki-international
+    kategorie: ki-tech
     sprache: en
     prioritaet: hoch
 
   - name: "Anthropic Blog"
     url: null
-    kategorie: ki-international
+    kategorie: ki-tech
     sprache: en
     prioritaet: hoch
     hinweis: >
@@ -45,111 +136,69 @@ quellen:
 
   - name: "OpenAI Blog"
     url: "https://openai.com/news/rss.xml"
-    kategorie: ki-international
+    kategorie: ki-tech
     sprache: en
     prioritaet: hoch
 
   - name: "Google DeepMind Blog"
     url: "https://deepmind.google/blog/rss.xml"
-    kategorie: ki-international
+    kategorie: ki-tech
     sprache: en
     prioritaet: hoch
 
   - name: "MIT Technology Review"
     url: "https://www.technologyreview.com/feed/"
-    kategorie: ki-international
+    kategorie: ki-tech
     sprache: en
     prioritaet: mittel
 
   - name: "Ars Technica"
     url: "https://feeds.arstechnica.com/arstechnica/index"
-    kategorie: ki-international
+    kategorie: ki-tech
     sprache: en
     prioritaet: mittel
 
   - name: "Hacker News"
     url: "https://news.ycombinator.com/rss"
-    kategorie: ki-international
+    kategorie: ki-tech
     sprache: en
     prioritaet: mittel
 
   - name: "TLDR Newsletter"
     url: null
-    kategorie: ki-international
+    kategorie: ki-tech
     sprache: en
     prioritaet: mittel
     hinweis: >
       tldr.tech veröffentlicht keinen offiziellen RSS-Feed. Alternative:
       inoffizielle Drittanbieter-Mirrors oder E-Mail-zu-RSS-Bridge.
 
-  # ─────────────────────────────────────────────
-  # KI & Tech Deutsch
-  # ─────────────────────────────────────────────
   - name: "Heise.de"
     url: "https://www.heise.de/rss/heise-atom.xml"
-    kategorie: ki-deutsch
+    kategorie: ki-tech
     sprache: de
     prioritaet: hoch
 
   - name: "t3n.de"
     url: "https://t3n.de/rss.xml"
-    kategorie: ki-deutsch
+    kategorie: ki-tech
     sprache: de
     prioritaet: mittel
 
   - name: "Golem.de"
     url: "https://rss.golem.de/rss.php?feed=RSS2.0"
-    kategorie: ki-deutsch
+    kategorie: ki-tech
     sprache: de
     prioritaet: mittel
-
-  # ─────────────────────────────────────────────
-  # Wirtschaft & Politik
-  # ─────────────────────────────────────────────
-  - name: "Reuters"
-    url: null
-    kategorie: wirtschaft-politik
-    sprache: en
-    prioritaet: mittel
-    hinweis: >
-      Reuters hat im Juni 2020 alle öffentlichen RSS-Feeds eingestellt; es
-      existiert kein offizieller Feed mehr. Alternative: Google-News-RSS-Suche
-      (news.google.com/rss/search?q=allinurl:reuters.com) als Behelfslösung.
-
-  - name: "AP News"
-    url: null
-    kategorie: wirtschaft-politik
-    sprache: en
-    prioritaet: mittel
-    hinweis: >
-      Für AP News existiert kein zuverlässiger offizieller RSS-Feed mehr
-      (frühere Feeds sind bekanntermaßen defekt). Alternative: Drittanbieter-
-      Scraper oder generierter Feed via RSS.app.
-
-  - name: "Tagesschau.de"
-    url: "https://www.tagesschau.de/xml/rss2"
-    kategorie: wirtschaft-politik
-    sprache: de
-    prioritaet: hoch
-
-  - name: "The Economist"
-    url: null
-    kategorie: wirtschaft-politik
-    sprache: en
-    prioritaet: mittel
-    hinweis: >
-      The Economist bietet keinen einheitlichen Gesamt-Feed, sondern nur
-      Feeds pro Rubrik (z.B. Business, Finance & Economics). Passende
-      Rubrik-Feed(s) je nach Newsletter-Fokus auf economist.com auswählen.
 
   - name: "BBC Technology"
     url: "https://feeds.bbci.co.uk/news/technology/rss.xml"
-    kategorie: wirtschaft-politik
+    kategorie: ki-tech
     sprache: en
     prioritaet: mittel
 
   - name: "NYT Technology"
     url: "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml"
-    kategorie: wirtschaft-politik
+    kategorie: ki-tech
     sprache: en
     prioritaet: mittel

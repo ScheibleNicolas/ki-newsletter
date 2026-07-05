@@ -1,5 +1,10 @@
 """Erstellt aus einem Newsletter-Dict (siehe generator.py) eine statische
 HTML-Ausgabenseite und pflegt den Gesamt-Index (docs/index.html, docs/index.json).
+
+Storys werden nach Kategorie gruppiert angezeigt, in der Reihenfolge aus
+generator.KATEGORIE_REIHENFOLGE (International -> Deutschland -> Finanzen ->
+KI & Tech), damit Website und Audio (tts.py) konsistent derselben Gliederung
+folgen.
 """
 
 from __future__ import annotations
@@ -9,6 +14,8 @@ import json
 import os
 from datetime import date
 from pathlib import Path
+
+from generator import KATEGORIE_LABEL, KATEGORIE_REIHENFOLGE
 
 DOCS_VERZEICHNIS = Path(__file__).parent.parent / "docs"
 AUSGABEN_VERZEICHNIS = DOCS_VERZEICHNIS / "ausgaben"
@@ -73,24 +80,49 @@ def _quelle_html(story: dict) -> str:
 
 
 def _story_html(story: dict) -> str:
-    ist_hauptartikel = story.get("typ") == "deep-dive"
-    klasse = "story story--haupt" if ist_hauptartikel else "story"
+    ist_einordnung = story.get("typ") == "einordnung"
+    klasse = "story story--einordnung" if ist_einordnung else "story"
     titel = html.escape(story.get("titel", ""))
     zusammenfassung = html.escape(story.get("zusammenfassung", "")).replace("\n", "<br>")
+    einordnung_label = '<p class="einordnung-label">Einordnung</p>' if ist_einordnung else ""
     return f"""
     <article class="{klasse}">
-      <h2>{titel}</h2>
+      {einordnung_label}
+      <h3>{titel}</h3>
       <p>{zusammenfassung}</p>
       {_tags_html(story.get("schlagwoerter", []))}
       {_quelle_html(story)}
     </article>"""
 
 
+def _gruppiere_nach_kategorie(storys: list[dict]) -> dict[str, list[dict]]:
+    gruppen: dict[str, list[dict]] = {k: [] for k in KATEGORIE_REIHENFOLGE}
+    for story in storys:
+        kategorie = story.get("kategorie")
+        gruppen.setdefault(kategorie, []).append(story)
+    return gruppen
+
+
+def _kategorie_abschnitt_html(kategorie: str, storys: list[dict]) -> str:
+    label = KATEGORIE_LABEL.get(kategorie, kategorie.replace("-", " ").title())
+    storys_html = "".join(_story_html(s) for s in storys)
+    return f"""
+    <section class="kategorie">
+      <h2 class="kategorie-titel">{html.escape(label)}</h2>
+      {storys_html}
+    </section>"""
+
+
 def _ausgabe_html(newsletter: dict, audio_relativ: str) -> str:
     titel = html.escape(newsletter.get("titel", ""))
     modus = newsletter.get("modus", "")
     datum = newsletter.get("datum", "")
-    storys_html = "".join(_story_html(s) for s in newsletter.get("storys", []))
+
+    gruppen = _gruppiere_nach_kategorie(newsletter.get("storys", []))
+    reihenfolge = KATEGORIE_REIHENFOLGE + [k for k in gruppen if k not in KATEGORIE_REIHENFOLGE]
+    abschnitte_html = "".join(
+        _kategorie_abschnitt_html(k, gruppen[k]) for k in reihenfolge if gruppen.get(k)
+    )
 
     return f"""<!doctype html>
 <html lang="de">
@@ -100,11 +132,15 @@ def _ausgabe_html(newsletter: dict, audio_relativ: str) -> str:
   <title>{titel}</title>
   <style>
 {GRUNDSTIL}
-    .story {{ border-top: 1px solid #23262e; padding: 1.4rem 0; }}
-    .story:first-of-type {{ border-top: none; }}
-    .story h2 {{ font-size: 1.15rem; margin: 0 0 0.5rem; }}
+    .kategorie {{ border-top: 2px solid #262a33; padding-top: 1.6rem; margin-top: 1.8rem; }}
+    .kategorie:first-of-type {{ border-top: none; padding-top: 0; margin-top: 1.6rem; }}
+    .kategorie-titel {{ font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: #7dd3fc; margin: 0 0 0.8rem; }}
+    .story {{ border-top: 1px solid #23262e; padding: 1.2rem 0; }}
+    .story:first-of-type {{ border-top: none; padding-top: 0; }}
+    .story h3 {{ font-size: 1.1rem; margin: 0 0 0.5rem; }}
     .story p {{ line-height: 1.55; color: #d4d4d8; margin: 0; }}
-    .story--haupt h2 {{ font-size: 1.35rem; color: #fbbf24; }}
+    .story--einordnung h3 {{ font-size: 1.3rem; color: #fbbf24; }}
+    .einordnung-label {{ font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: #fbbf24; margin: 0 0 0.3rem; }}
     .quelle {{ margin: 0.7rem 0 0; font-size: 0.82rem; color: #9aa0a6; }}
     audio {{ width: 100%; margin: 1.4rem 0; }}
     .zurueck {{ display: inline-block; margin-top: 2rem; font-size: 0.9rem; }}
@@ -116,7 +152,7 @@ def _ausgabe_html(newsletter: dict, audio_relativ: str) -> str:
     <h1>{titel}</h1>
     {_badge_html(modus)}
     <audio controls preload="none" src="{html.escape(audio_relativ)}"></audio>
-    {storys_html}
+    {abschnitte_html}
     <a class="zurueck" href="../index.html">&larr; Alle Ausgaben</a>
   </div>
 </body>
@@ -212,28 +248,49 @@ def _test_newsletter() -> dict:
         "titel": "KI-Newsletter Deep-Dive, Testausgabe",
         "storys": [
             {
-                "titel": "Hauptthema der Woche: Reasoning-Modelle im Unternehmenseinsatz",
-                "zusammenfassung": "Dies ist ein längerer Testtext, der im echten Betrieb 400-500 Wörter umfassen würde und das wichtigste Thema der Woche ausführlich erklärt.",
-                "schlagwoerter": ["Reasoning", "Unternehmen", "KI-Agenten"],
-                "typ": "deep-dive",
-                "quelle_url": "https://example.com/reasoning-modelle",
-                "quelle_name": "OpenAI Blog",
+                "titel": "G7-Gipfel einigt sich auf gemeinsame Erklärung",
+                "zusammenfassung": "Testtext zu einer internationalen Meldung mit 120-180 Wörtern, wie sie in der echten Samstagsausgabe vorkommen würde.",
+                "schlagwoerter": ["G7", "Diplomatie"],
+                "typ": "kurzmeldung",
+                "quelle_url": "https://example.com/g7-gipfel",
+                "quelle_name": "AP News",
+                "kategorie": "international",
             },
             {
-                "titel": "EU einigt sich auf neue KI-Regularien",
-                "zusammenfassung": "Kurzmeldung zu neuen Transparenzpflichten für KI-Anbieter in der EU.",
-                "schlagwoerter": ["EU", "Regulierung"],
+                "titel": "Bundestag beschließt neues Digitalisierungsgesetz",
+                "zusammenfassung": "Testtext zu einer Deutschland-Meldung.",
+                "schlagwoerter": ["Bundestag", "Digitalisierung"],
                 "typ": "kurzmeldung",
-                "quelle_url": "https://example.com/eu-ki-regeln",
+                "quelle_url": "https://example.com/bundestag-digitalisierung",
                 "quelle_name": "Tagesschau.de",
+                "kategorie": "deutschland",
+            },
+            {
+                "titel": "DAX erreicht neues Rekordhoch",
+                "zusammenfassung": "Testtext zu einer Finanzen-Meldung.",
+                "schlagwoerter": ["DAX", "Aktienmarkt"],
+                "typ": "kurzmeldung",
+                "quelle_url": "https://example.com/dax-rekordhoch",
+                "quelle_name": "Finanzen.net RSS",
+                "kategorie": "finanzen",
+            },
+            {
+                "titel": "Reasoning-Modelle im Unternehmenseinsatz",
+                "zusammenfassung": "Dies ist ein längerer Testtext, der im echten Betrieb 150-200 Wörter umfassen würde und das dominierende KI/Tech-Thema der Woche einordnet.",
+                "schlagwoerter": ["Reasoning", "Unternehmen", "KI-Agenten"],
+                "typ": "einordnung",
+                "quelle_url": "https://example.com/reasoning-modelle",
+                "quelle_name": "OpenAI Blog",
+                "kategorie": "ki-tech",
             },
             {
                 "titel": "Google DeepMind zeigt Fortschritte bei Protein-Faltung",
-                "zusammenfassung": "Kurzmeldung zu einem verbesserten Modell für Proteinstruktur-Vorhersagen.",
+                "zusammenfassung": "Testtext zu einer KI/Tech-Kurzmeldung.",
                 "schlagwoerter": ["DeepMind", "Biotech"],
                 "typ": "kurzmeldung",
                 "quelle_url": "https://example.com/deepmind-protein",
                 "quelle_name": "Google DeepMind Blog",
+                "kategorie": "ki-tech",
             },
         ],
         "schlagwoerter": ["Reasoning", "KI-Agenten", "Regulierung"],

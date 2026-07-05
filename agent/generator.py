@@ -1,5 +1,8 @@
-"""Newsletter-Generator: erstellt per Gemini die Mittwochs-Kurzform oder den
-Samstags-Deep-Dive aus einer Liste von Artikeln (siehe fetcher.py).
+"""Newsletter-Generator: erstellt per Gemini die Mittwochs- und Samstags-Ausgabe
+aus einer Liste von Artikeln (siehe fetcher.py). Beide Ausgaben sind gleich
+strukturiert (4 Kategorien: international, deutschland, finanzen, ki-tech),
+unterscheiden sich nur in der Menge der Meldungen pro Kategorie und darin,
+dass die Samstagsausgabe optional einen Einordnungs-Absatz enthält.
 
 Hinweis: Die ursprünglich vorgesehene Bibliothek "google-generativeai" und das
 Modell "gemini-1.5-flash" sind inzwischen abgeschaltet (gemini-1.5-flash liefert
@@ -10,7 +13,13 @@ Schutz gegen Halluzinationen: Der Prompt verbietet erfundene Informationen
 explizit, jede Story muss auf einen echten Artikel (quelle_url/quelle_name)
 verweisen, Storys mit unbekannter quelle_url werden nach der Antwort verworfen,
 und bei weniger als MINDEST_ARTIKEL echten Artikeln wird abgebrochen statt mit
-erfundenem Inhalt aufzufüllen.
+erfundenem Inhalt aufzufüllen. Das Feld "kategorie" wird NICHT von Gemini
+erfragt, sondern nach der Antwort deterministisch aus dem echten Quellartikel
+übernommen (_kategorien_zuweisen) - so kann Gemini auch hier nichts erfinden.
+
+Anmerkung zur Zieldauer (12-15 Min / ca. 1800-2200 Wörter): dieses Ziel ergibt
+für die kurze Mittwochsausgabe (1-2 Meldungen x 4 Kategorien) keinen Sinn und
+wird daher nur der Samstagsausgabe als Vorgabe mitgegeben.
 """
 
 from __future__ import annotations
@@ -34,6 +43,19 @@ SAMSTAG = 5
 
 MINDEST_ARTIKEL = 3
 
+KATEGORIE_REIHENFOLGE = ["international", "deutschland", "finanzen", "ki-tech"]
+KATEGORIE_LABEL = {
+    "international": "Internationales",
+    "deutschland": "Deutschland",
+    "finanzen": "Finanzen",
+    "ki-tech": "KI & Tech",
+}
+
+# (Meldungen pro Kategorie als Text für den Prompt, Zielwortzahl nur Samstag)
+_MENGE_PRO_KATEGORIE = {"kurzform": "1-2", "deep-dive": "2-3"}
+_MENGE_MAX = {"kurzform": 2, "deep-dive": 3}
+_ZIEL_WOERTER_DEEP_DIVE = "1800-2200"
+
 VERBOT_ERFINDEN = (
     "Fasse NUR die folgenden Artikel zusammen. Erfinde keine Informationen. "
     "Wenn ein Thema nicht in den Artikeln vorkommt, erwähne es nicht."
@@ -56,15 +78,33 @@ def _client() -> genai.Client:
 
 
 def _artikel_fuer_prompt(artikel_liste: list[dict]) -> str:
+    """Gruppiert die Artikel nach Kategorie und nummeriert sie durchgehend,
+    damit Gemini die Mengen-Quote pro Kategorie einhalten kann."""
     bloecke = []
-    for i, a in enumerate(artikel_liste, start=1):
-        bloecke.append(
-            f"{i}. Titel: {a.get('titel', '')}\n"
-            f"   URL: {a.get('url', '')}\n"
-            f"   Quelle: {a.get('quelle_name', '')}\n"
-            f"   Kategorie: {a.get('kategorie', '')}\n"
-            f"   Beschreibung: {a.get('zusammenfassung', '')}"
-        )
+    zaehler = 1
+
+    kategorien_mit_sonstigen = KATEGORIE_REIHENFOLGE + ["sonstige"]
+    for kategorie in kategorien_mit_sonstigen:
+        if kategorie == "sonstige":
+            artikel_in_kategorie = [
+                a for a in artikel_liste if a.get("kategorie") not in KATEGORIE_REIHENFOLGE
+            ]
+        else:
+            artikel_in_kategorie = [a for a in artikel_liste if a.get("kategorie") == kategorie]
+
+        if not artikel_in_kategorie:
+            continue
+
+        bloecke.append(f"### Kategorie: {kategorie}")
+        for a in artikel_in_kategorie:
+            bloecke.append(
+                f"{zaehler}. Titel: {a.get('titel', '')}\n"
+                f"   URL: {a.get('url', '')}\n"
+                f"   Quelle: {a.get('quelle_name', '')}\n"
+                f"   Beschreibung: {a.get('zusammenfassung', '')}"
+            )
+            zaehler += 1
+
     return "\n".join(bloecke)
 
 
@@ -104,80 +144,107 @@ def _validiere_quellen(storys: list[dict], artikel_liste: list[dict]) -> list[di
     return gueltige_storys
 
 
-def _erstelle_kurzform(artikel_liste: list[dict], heute: date) -> dict:
+def _kategorien_zuweisen(storys: list[dict], artikel_liste: list[dict]) -> list[dict]:
+    """Setzt "kategorie" je Story auf die echte Kategorie ihres Quellartikels
+    (nie von Gemini erfragt, damit hier nichts erfunden werden kann)."""
+    kategorie_je_url = {a.get("url"): a.get("kategorie") for a in artikel_liste}
+    for story in storys:
+        story["kategorie"] = kategorie_je_url.get(story.get("quelle_url"), "sonstige")
+    return storys
+
+
+def _begrenze_pro_kategorie(storys: list[dict], max_anzahl: int) -> list[dict]:
+    """Erzwingt die Mengen-Quote hart im Code, falls Gemini die Vorgabe im
+    Prompt nicht einhält (z.B. 5 Meldungen in einer Kategorie statt 2-3).
+    Die Einordnungs-Story zählt nicht zur Quote und bleibt immer erhalten."""
+    gezaehlt: dict[str, int] = {}
+    begrenzt = []
+    for story in storys:
+        if story.get("typ") == "einordnung":
+            begrenzt.append(story)
+            continue
+        kategorie = story.get("kategorie")
+        anzahl = gezaehlt.get(kategorie, 0)
+        if anzahl >= max_anzahl:
+            print(
+                f"[HINWEIS] Story '{story.get('titel', '')}' überschreitet die "
+                f"Quote von {max_anzahl} für Kategorie '{kategorie}' und wird "
+                "nicht übernommen."
+            )
+            continue
+        gezaehlt[kategorie] = anzahl + 1
+        begrenzt.append(story)
+    return begrenzt
+
+
+def _kategorie_verfuegbarkeit_text(artikel_liste: list[dict]) -> str:
+    zeilen = []
+    for kategorie in KATEGORIE_REIHENFOLGE:
+        anzahl = sum(1 for a in artikel_liste if a.get("kategorie") == kategorie)
+        zeilen.append(f"- {kategorie}: {anzahl} Artikel verfügbar")
+    return "\n".join(zeilen)
+
+
+def _erstelle_ausgabe(artikel_liste: list[dict], heute: date, modus: str) -> dict:
     _pruefe_mindestanzahl(artikel_liste)
+
+    menge = _MENGE_PRO_KATEGORIE[modus]
+
+    einordnung_hinweis = ""
+    typ_hinweis = '"typ" ist immer "kurzmeldung".'
+    laenge_hinweis = "2-3 Sätze Zusammenfassung je Meldung"
+    if modus == "deep-dive":
+        typ_hinweis = (
+            '"typ" ist "kurzmeldung" für normale Meldungen, oder "einordnung" '
+            "für den optionalen Einordnungs-Absatz."
+        )
+        laenge_hinweis = (
+            "ca. 120-180 Wörter Zusammenfassung je Meldung (deutlich ausführlicher "
+            "als eine reine Kurzmeldung)"
+        )
+        einordnung_hinweis = f"""
+Zusätzlich NUR für diese Ausgabe: Falls ein einzelnes KI/Tech-Thema aus der
+Kategorie "ki-tech" die Woche klar dominiert hat, füge GENAU EINE zusätzliche
+Story mit "typ": "einordnung" hinzu, die dieses Thema in 150-200 Wörtern
+einordnet und erklärt (Feld "kategorie" dieser Story ist "ki-tech"). Falls kein
+Thema klar dominiert hat, füge KEINE Einordnung hinzu.
+
+Zielumfang der gesamten Ausgabe: ca. {_ZIEL_WOERTER_DEEP_DIVE} Wörter
+(entspricht ca. 12-15 Minuten Vorlesezeit) - wähle die Meldungslänge so, dass
+diese Zielspanne über alle Storys hinweg erreicht wird."""
 
     prompt = f"""Du bist Redakteur eines KI/Tech/Wirtschaft-Newsletters auf Deutsch.
 
 {VERBOT_ERFINDEN}
-Du darfst ausschließlich Inhalte aus der unten stehenden nummerierten
-Artikelliste verwenden. Wähle daraus die 5 relevantesten Artikel aus.
+Du darfst ausschließlich Inhalte aus der unten stehenden, nach Kategorie
+gruppierten Artikelliste verwenden.
+
+Verfügbare Artikel pro Kategorie:
+{_kategorie_verfuegbarkeit_text(artikel_liste)}
+
+Wähle pro Kategorie ({", ".join(KATEGORIE_REIHENFOLGE)}) GENAU {menge} der
+relevantesten Meldungen aus ({laenge_hinweis}). Das ist eine harte Vorgabe:
+wähle für JEDE Kategorie mit mindestens einem verfügbaren Artikel (siehe
+Liste oben) auch mindestens eine Meldung aus, und wähle NIE mehr als das
+Maximum der Spanne pro Kategorie aus, selbst wenn eine andere Kategorie
+mehr interessante Artikel bietet. Überspringe eine Kategorie nur, wenn für
+sie laut obiger Liste 0 Artikel vorhanden sind - erfinde niemals zusätzliche
+Meldungen, um eine leere Kategorie zu füllen.
+{einordnung_hinweis}
+
 Jede Story MUSS "quelle_url" und "quelle_name" enthalten - übernimm dafür
-exakt die URL und den Quellennamen aus der Artikelliste, erfinde niemals
-eine URL.
+exakt die URL und den Quellennamen aus der Artikelliste, erfinde niemals eine
+URL. {typ_hinweis}
 
 Antworte NUR mit JSON in exakt diesem Format (keine weiteren Felder):
 
 {{
-  "titel": "Newsletter-Titel für diese Kurzform-Ausgabe",
+  "titel": "Newsletter-Titel für diese Ausgabe",
   "storys": [
     {{
       "titel": "Artikeltitel",
-      "zusammenfassung": "2-3 Sätze Zusammenfassung auf Deutsch",
+      "zusammenfassung": "Zusammenfassung auf Deutsch",
       "schlagwoerter": ["Schlagwort1", "Schlagwort2"],
-      "quelle_url": "exakte URL aus der Artikelliste",
-      "quelle_name": "exakter Quellenname aus der Artikelliste"
-    }}
-  ],
-  "schlagwoerter": ["übergreifende Schlagwörter der gesamten Ausgabe"]
-}}
-
-Artikelliste:
-{_artikel_fuer_prompt(artikel_liste)}
-"""
-    daten = _rufe_gemini_json(prompt)
-    return {
-        "modus": "kurzform",
-        "datum": heute.isoformat(),
-        "titel": daten.get("titel", ""),
-        "storys": _validiere_quellen(daten.get("storys", []), artikel_liste),
-        "schlagwoerter": daten.get("schlagwoerter", []),
-    }
-
-
-def _erstelle_deep_dive(artikel_liste: list[dict], heute: date) -> dict:
-    _pruefe_mindestanzahl(artikel_liste)
-
-    prompt = f"""Du bist Redakteur eines KI/Tech/Wirtschaft-Newsletters auf Deutsch.
-
-{VERBOT_ERFINDEN}
-Du darfst ausschließlich Inhalte aus der unten stehenden nummerierten
-Artikelliste verwenden. Identifiziere daraus das wichtigste Thema der Woche
-und erkläre es ausführlich in 400-500 Wörtern (Feld "zusammenfassung" der
-ersten Story, "typ": "deep-dive"). Ergänze danach 3-4 weitere kurze Meldungen
-(je 2-3 Sätze, "typ": "kurzmeldung").
-Jede Story MUSS "quelle_url" und "quelle_name" enthalten - übernimm dafür
-exakt die URL und den Quellennamen aus der Artikelliste, erfinde niemals
-eine URL. Falls das Hauptthema auf mehreren Artikeln basiert, nutze die URL
-des Artikels, der das Thema am zentralsten behandelt.
-
-Antworte NUR mit JSON in exakt diesem Format (keine weiteren Felder):
-
-{{
-  "titel": "Newsletter-Titel für diese Deep-Dive-Ausgabe",
-  "storys": [
-    {{
-      "titel": "Titel des Hauptthemas",
-      "zusammenfassung": "400-500 Wörter Fließtext auf Deutsch",
-      "schlagwoerter": ["Schlagwort1", "Schlagwort2"],
-      "typ": "deep-dive",
-      "quelle_url": "exakte URL aus der Artikelliste",
-      "quelle_name": "exakter Quellenname aus der Artikelliste"
-    }},
-    {{
-      "titel": "Titel der Kurzmeldung",
-      "zusammenfassung": "2-3 Sätze",
-      "schlagwoerter": ["Schlagwort1"],
       "typ": "kurzmeldung",
       "quelle_url": "exakte URL aus der Artikelliste",
       "quelle_name": "exakter Quellenname aus der Artikelliste"
@@ -190,11 +257,15 @@ Artikelliste:
 {_artikel_fuer_prompt(artikel_liste)}
 """
     daten = _rufe_gemini_json(prompt)
+    storys = _validiere_quellen(daten.get("storys", []), artikel_liste)
+    storys = _kategorien_zuweisen(storys, artikel_liste)
+    storys = _begrenze_pro_kategorie(storys, _MENGE_MAX[modus])
+
     return {
-        "modus": "deep-dive",
+        "modus": modus,
         "datum": heute.isoformat(),
         "titel": daten.get("titel", ""),
-        "storys": _validiere_quellen(daten.get("storys", []), artikel_liste),
+        "storys": storys,
         "schlagwoerter": daten.get("schlagwoerter", []),
     }
 
@@ -202,7 +273,10 @@ Artikelliste:
 def generate_newsletter(artikel_liste: list[dict], heute: date | None = None) -> dict:
     """Erstellt den Newsletter-Inhalt für den aktuellen (oder übergebenen) Tag.
 
-    Mittwoch -> Kurzform, Samstag -> Deep-Dive, sonst kein Newsletter.
+    Mittwoch -> Kurzform, Samstag -> Deep-Dive, sonst kein Newsletter. Beide
+    Ausgaben sind gleich strukturiert (Storys mit "kategorie" in
+    KATEGORIE_REIHENFOLGE), Samstag hat höhere Mengen-Quoten pro Kategorie
+    und ggf. eine zusätzliche Einordnungs-Story.
 
     Wirft ZuWenigArtikelFehler, wenn an einem Newsletter-Tag weniger als
     MINDEST_ARTIKEL echte Artikel übergeben werden.
@@ -211,9 +285,9 @@ def generate_newsletter(artikel_liste: list[dict], heute: date | None = None) ->
     wochentag = heute.weekday()
 
     if wochentag == MITTWOCH:
-        return _erstelle_kurzform(artikel_liste, heute)
+        return _erstelle_ausgabe(artikel_liste, heute, "kurzform")
     elif wochentag == SAMSTAG:
-        return _erstelle_deep_dive(artikel_liste, heute)
+        return _erstelle_ausgabe(artikel_liste, heute, "deep-dive")
     else:
         return {
             "modus": "kein-newsletter-tag",
@@ -226,53 +300,22 @@ def generate_newsletter(artikel_liste: list[dict], heute: date | None = None) ->
 
 def _test_artikel() -> list[dict]:
     return [
+        # international
         {
-            "titel": "OpenAI veröffentlicht neues Flaggschiff-Modell",
-            "url": "https://example.com/openai-neues-modell",
+            "titel": "BBC: UN-Sicherheitsrat berät über neue Nahost-Initiative",
+            "url": "https://example.com/un-sicherheitsrat-nahost",
             "datum": "2026-07-01",
-            "zusammenfassung": "OpenAI hat ein neues Sprachmodell mit deutlich verbesserten Fähigkeiten bei Code und Reasoning vorgestellt.",
-            "quelle_name": "OpenAI Blog",
-            "kategorie": "ki-international",
+            "zusammenfassung": "Der UN-Sicherheitsrat hat eine Dringlichkeitssitzung zu einer neuen diplomatischen Initiative im Nahen Osten abgehalten.",
+            "quelle_name": "BBC World News",
+            "kategorie": "international",
         },
         {
-            "titel": "Anthropic erweitert Claude um neue Agenten-Fähigkeiten",
-            "url": "https://example.com/anthropic-agenten",
-            "datum": "2026-07-01",
-            "zusammenfassung": "Anthropic hat Claude um Funktionen erweitert, die autonomes mehrstufiges Arbeiten in Entwicklerumgebungen verbessern.",
-            "quelle_name": "Anthropic Blog",
-            "kategorie": "ki-international",
-        },
-        {
-            "titel": "EU einigt sich auf neue KI-Regularien",
-            "url": "https://example.com/eu-ki-regeln",
+            "titel": "AP News: G7-Gipfel einigt sich auf gemeinsame Erklärung",
+            "url": "https://example.com/g7-gipfel-erklaerung",
             "datum": "2026-06-30",
-            "zusammenfassung": "Die EU-Staaten haben sich auf verschärfte Transparenzpflichten für KI-Anbieter geeinigt.",
-            "quelle_name": "Tagesschau.de",
-            "kategorie": "wirtschaft-politik",
-        },
-        {
-            "titel": "Deutsche Industrie investiert massiv in KI-Infrastruktur",
-            "url": "https://example.com/industrie-ki-investition",
-            "datum": "2026-06-29",
-            "zusammenfassung": "Mehrere deutsche Großkonzerne kündigen Milliarden-Investitionen in eigene KI-Rechenzentren an.",
-            "quelle_name": "Heise.de",
-            "kategorie": "ki-deutsch",
-        },
-        {
-            "titel": "Google DeepMind zeigt Fortschritte bei Protein-Faltung",
-            "url": "https://example.com/deepmind-protein",
-            "datum": "2026-06-28",
-            "zusammenfassung": "Ein neues Modell von DeepMind verbessert die Vorhersage von Proteinstrukturen erneut deutlich.",
-            "quelle_name": "Google DeepMind Blog",
-            "kategorie": "ki-international",
-        },
-        {
-            "titel": "Hacker News diskutiert neuen Open-Source-Inferenz-Server",
-            "url": "https://example.com/hn-inferenz-server",
-            "datum": "2026-06-27",
-            "zusammenfassung": "Ein neues Open-Source-Projekt zur schnellen lokalen Modell-Inferenz sorgt für rege Diskussion.",
-            "quelle_name": "Hacker News",
-            "kategorie": "ki-international",
+            "zusammenfassung": "Die G7-Staaten haben sich auf eine gemeinsame Erklärung zu Handelsfragen und Klimapolitik geeinigt.",
+            "quelle_name": "AP News",
+            "kategorie": "international",
         },
         {
             "titel": "Reuters: Chipmangel entspannt sich laut Branchenverband",
@@ -280,7 +323,82 @@ def _test_artikel() -> list[dict]:
             "datum": "2026-06-26",
             "zusammenfassung": "Der weltweite Halbleitermangel geht laut aktuellen Zahlen spürbar zurück.",
             "quelle_name": "Reuters",
-            "kategorie": "wirtschaft-politik",
+            "kategorie": "international",
+        },
+        # deutschland
+        {
+            "titel": "Tagesschau: Bundestag beschließt neues Digitalisierungsgesetz",
+            "url": "https://example.com/bundestag-digitalisierung",
+            "datum": "2026-07-01",
+            "zusammenfassung": "Der Bundestag hat ein Gesetz zur Beschleunigung der Verwaltungsdigitalisierung verabschiedet.",
+            "quelle_name": "Tagesschau.de",
+            "kategorie": "deutschland",
+        },
+        {
+            "titel": "Tagesschau Wirtschaft: Deutsche Wirtschaft wächst leicht im zweiten Quartal",
+            "url": "https://example.com/deutsche-wirtschaft-q2",
+            "datum": "2026-06-29",
+            "zusammenfassung": "Das deutsche Bruttoinlandsprodukt ist im zweiten Quartal leicht gewachsen, getragen von Exporten.",
+            "quelle_name": "Tagesschau Wirtschaft",
+            "kategorie": "deutschland",
+        },
+        {
+            "titel": "Deutsche Industrie investiert massiv in KI-Infrastruktur",
+            "url": "https://example.com/industrie-ki-investition",
+            "datum": "2026-06-29",
+            "zusammenfassung": "Mehrere deutsche Großkonzerne kündigen Milliarden-Investitionen in eigene KI-Rechenzentren an.",
+            "quelle_name": "Heise.de",
+            "kategorie": "deutschland",
+        },
+        # finanzen
+        {
+            "titel": "Yahoo Finance: Aktienmärkte schließen im Plus nach Zinssignal der Fed",
+            "url": "https://example.com/aktienmaerkte-fed-signal",
+            "datum": "2026-07-02",
+            "zusammenfassung": "Die US-Notenbank hat Signale für stabile Zinsen gesendet, woraufhin die Aktienmärkte deutlich zulegten.",
+            "quelle_name": "Yahoo Finance RSS",
+            "kategorie": "finanzen",
+        },
+        {
+            "titel": "DAX erreicht neues Rekordhoch",
+            "url": "https://example.com/dax-rekordhoch",
+            "datum": "2026-07-01",
+            "zusammenfassung": "Der deutsche Leitindex DAX hat ein neues Rekordhoch erreicht, getrieben von starken Quartalszahlen.",
+            "quelle_name": "Finanzen.net RSS",
+            "kategorie": "finanzen",
+        },
+        # ki-tech
+        {
+            "titel": "OpenAI veröffentlicht neues Flaggschiff-Modell",
+            "url": "https://example.com/openai-neues-modell",
+            "datum": "2026-07-01",
+            "zusammenfassung": "OpenAI hat ein neues Sprachmodell mit deutlich verbesserten Fähigkeiten bei Code und Reasoning vorgestellt.",
+            "quelle_name": "OpenAI Blog",
+            "kategorie": "ki-tech",
+        },
+        {
+            "titel": "Anthropic erweitert Claude um neue Agenten-Fähigkeiten",
+            "url": "https://example.com/anthropic-agenten",
+            "datum": "2026-07-01",
+            "zusammenfassung": "Anthropic hat Claude um Funktionen erweitert, die autonomes mehrstufiges Arbeiten in Entwicklerumgebungen verbessern.",
+            "quelle_name": "Anthropic Blog",
+            "kategorie": "ki-tech",
+        },
+        {
+            "titel": "Google DeepMind zeigt Fortschritte bei Protein-Faltung",
+            "url": "https://example.com/deepmind-protein",
+            "datum": "2026-06-28",
+            "zusammenfassung": "Ein neues Modell von DeepMind verbessert die Vorhersage von Proteinstrukturen erneut deutlich.",
+            "quelle_name": "Google DeepMind Blog",
+            "kategorie": "ki-tech",
+        },
+        {
+            "titel": "Hacker News diskutiert neuen Open-Source-Inferenz-Server",
+            "url": "https://example.com/hn-inferenz-server",
+            "datum": "2026-06-27",
+            "zusammenfassung": "Ein neues Open-Source-Projekt zur schnellen lokalen Modell-Inferenz sorgt für rege Diskussion.",
+            "quelle_name": "Hacker News",
+            "kategorie": "ki-tech",
         },
         {
             "titel": "t3n: Deutsche Startups setzen verstärkt auf KI-Agenten",
@@ -288,7 +406,7 @@ def _test_artikel() -> list[dict]:
             "datum": "2026-06-25",
             "zusammenfassung": "Immer mehr deutsche Startups bauen ihr Produkt um autonome KI-Agenten herum.",
             "quelle_name": "t3n.de",
-            "kategorie": "ki-deutsch",
+            "kategorie": "ki-tech",
         },
     ]
 

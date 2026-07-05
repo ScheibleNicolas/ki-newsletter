@@ -6,6 +6,10 @@ erfordert Zugangsdaten (z.B. GOOGLE_APPLICATION_CREDENTIALS auf eine Service-
 Account-JSON-Datei). Ist das nicht konfiguriert oder schlägt der Aufruf aus
 einem anderen Grund fehl, wird automatisch auf gTTS zurückgefallen (kein
 API-Key nötig, klingt aber etwas roboterhafter).
+
+Storys werden wie auf der Website nach Kategorie gruppiert vorgelesen (siehe
+generator.KATEGORIE_REIHENFOLGE), mit angesagten Kategorie-Übergängen
+("Jetzt: ...", "Weiter mit: ...").
 """
 
 from __future__ import annotations
@@ -13,15 +17,30 @@ from __future__ import annotations
 from datetime import date
 from pathlib import Path
 
+from generator import KATEGORIE_LABEL, KATEGORIE_REIHENFOLGE
+
 AUDIO_VERZEICHNIS = Path(__file__).parent.parent / "docs" / "audio"
 
 GOOGLE_CLOUD_STIMME = "de-DE-Standard-A"
 GOOGLE_CLOUD_SPRACHCODE = "de-DE"
 
 
+def _gruppiere_nach_kategorie(storys: list[dict]) -> dict[str, list[dict]]:
+    gruppen: dict[str, list[dict]] = {k: [] for k in KATEGORIE_REIHENFOLGE}
+    for story in storys:
+        gruppen.setdefault(story.get("kategorie"), []).append(story)
+    return gruppen
+
+
+def _kategorie_label(kategorie: str | None) -> str:
+    if kategorie in KATEGORIE_LABEL:
+        return KATEGORIE_LABEL[kategorie]
+    return kategorie.replace("-", " ").title() if kategorie else "Weitere Themen"
+
+
 def _text_aus_newsletter(newsletter: dict) -> str:
-    """Baut aus dem Newsletter-Dict einen zusammenhängenden Vorlesetext."""
-    modus = newsletter.get("modus")
+    """Baut aus dem Newsletter-Dict einen zusammenhängenden Vorlesetext,
+    gruppiert nach Kategorie mit angesagten Übergängen."""
     titel = newsletter.get("titel") or ""
     storys = newsletter.get("storys", [])
 
@@ -29,27 +48,25 @@ def _text_aus_newsletter(newsletter: dict) -> str:
     if titel:
         teile.append(f"{titel}.")
 
-    if modus == "deep-dive":
-        hauptartikel = [s for s in storys if s.get("typ") == "deep-dive"]
-        kurzmeldungen = [s for s in storys if s.get("typ") != "deep-dive"]
-        if not hauptartikel and storys:
-            # Falls "typ" fehlt: erste Story als Hauptartikel behandeln.
-            hauptartikel, kurzmeldungen = [storys[0]], storys[1:]
+    gruppen = _gruppiere_nach_kategorie(storys)
+    reihenfolge = KATEGORIE_REIHENFOLGE + [k for k in gruppen if k not in KATEGORIE_REIHENFOLGE]
 
-        for story in hauptartikel:
-            teile.append(f"{story.get('titel', '')}.")
+    erste_kategorie = True
+    for kategorie in reihenfolge:
+        storys_in_kategorie = gruppen.get(kategorie) or []
+        if not storys_in_kategorie:
+            continue
+
+        label = _kategorie_label(kategorie)
+        teile.append(f"Jetzt: {label}." if erste_kategorie else f"Weiter mit: {label}.")
+        erste_kategorie = False
+
+        for story in storys_in_kategorie:
+            if story.get("typ") == "einordnung":
+                teile.append(f"Eine Einordnung: {story.get('titel', '')}.")
+            else:
+                teile.append(f"{story.get('titel', '')}.")
             teile.append(story.get("zusammenfassung", ""))
-
-        if kurzmeldungen:
-            teile.append("Außerdem in Kürze:")
-            for story in kurzmeldungen:
-                teile.append(
-                    f"{story.get('titel', '')}. {story.get('zusammenfassung', '')}"
-                )
-    else:
-        # Kurzform (oder unbekannter Modus): jede Story mit Titel + Zusammenfassung.
-        for story in storys:
-            teile.append(f"{story.get('titel', '')}. {story.get('zusammenfassung', '')}")
 
     return "\n\n".join(teil.strip() for teil in teile if teil and teil.strip())
 
@@ -115,14 +132,32 @@ def _test_newsletter_kurzform() -> dict:
         "titel": "KI-Newsletter Kurzform, Testausgabe",
         "storys": [
             {
+                "titel": "G7-Gipfel einigt sich auf gemeinsame Erklärung",
+                "zusammenfassung": "Die G7-Staaten haben sich auf eine gemeinsame Erklärung zu Handelsfragen geeinigt.",
+                "schlagwoerter": ["G7", "Diplomatie"],
+                "typ": "kurzmeldung",
+                "kategorie": "international",
+            },
+            {
+                "titel": "Bundestag beschließt neues Digitalisierungsgesetz",
+                "zusammenfassung": "Der Bundestag hat ein Gesetz zur Beschleunigung der Verwaltungsdigitalisierung verabschiedet.",
+                "schlagwoerter": ["Bundestag", "Digitalisierung"],
+                "typ": "kurzmeldung",
+                "kategorie": "deutschland",
+            },
+            {
+                "titel": "DAX erreicht neues Rekordhoch",
+                "zusammenfassung": "Der deutsche Leitindex DAX hat ein neues Rekordhoch erreicht.",
+                "schlagwoerter": ["DAX", "Aktienmarkt"],
+                "typ": "kurzmeldung",
+                "kategorie": "finanzen",
+            },
+            {
                 "titel": "OpenAI veröffentlicht neues Modell",
                 "zusammenfassung": "OpenAI hat ein neues Sprachmodell mit deutlich verbesserten Fähigkeiten bei Code und Reasoning vorgestellt.",
                 "schlagwoerter": ["OpenAI", "Sprachmodell"],
-            },
-            {
-                "titel": "EU einigt sich auf neue KI-Regularien",
-                "zusammenfassung": "Die EU-Staaten haben sich auf verschärfte Transparenzpflichten für KI-Anbieter geeinigt.",
-                "schlagwoerter": ["EU", "Regulierung"],
+                "typ": "kurzmeldung",
+                "kategorie": "ki-tech",
             },
         ],
         "schlagwoerter": ["KI", "Regulierung", "OpenAI"],
