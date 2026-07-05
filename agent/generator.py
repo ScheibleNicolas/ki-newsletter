@@ -5,6 +5,12 @@ Hinweis: Die ursprünglich vorgesehene Bibliothek "google-generativeai" und das
 Modell "gemini-1.5-flash" sind inzwischen abgeschaltet (gemini-1.5-flash liefert
 HTTP 404). Verwendet wird daher das aktuelle, offiziell unterstützte SDK
 "google-genai" mit dem Modell "gemini-2.5-flash".
+
+Schutz gegen Halluzinationen: Der Prompt verbietet erfundene Informationen
+explizit, jede Story muss auf einen echten Artikel (quelle_url/quelle_name)
+verweisen, Storys mit unbekannter quelle_url werden nach der Antwort verworfen,
+und bei weniger als MINDEST_ARTIKEL echten Artikeln wird abgebrochen statt mit
+erfundenem Inhalt aufzufüllen.
 """
 
 from __future__ import annotations
@@ -22,6 +28,17 @@ MODELL = "gemini-2.5-flash"
 MITTWOCH = 2
 SAMSTAG = 5
 
+MINDEST_ARTIKEL = 3
+
+VERBOT_ERFINDEN = (
+    "Fasse NUR die folgenden Artikel zusammen. Erfinde keine Informationen. "
+    "Wenn ein Thema nicht in den Artikeln vorkommt, erwähne es nicht."
+)
+
+
+class ZuWenigArtikelFehler(RuntimeError):
+    """Wird ausgelöst, wenn zu wenige echte Artikel für einen Newsletter vorliegen."""
+
 
 def _client() -> genai.Client:
     api_key = os.environ.get("GEMINI_API_KEY")
@@ -36,13 +53,13 @@ def _client() -> genai.Client:
 
 def _artikel_fuer_prompt(artikel_liste: list[dict]) -> str:
     bloecke = []
-    for a in artikel_liste:
+    for i, a in enumerate(artikel_liste, start=1):
         bloecke.append(
-            f"- Titel: {a.get('titel', '')}\n"
-            f"  Quelle: {a.get('quelle_name', '')}\n"
-            f"  Kategorie: {a.get('kategorie', '')}\n"
-            f"  Zusammenfassung: {a.get('zusammenfassung', '')}\n"
-            f"  URL: {a.get('url', '')}"
+            f"{i}. Titel: {a.get('titel', '')}\n"
+            f"   URL: {a.get('url', '')}\n"
+            f"   Quelle: {a.get('quelle_name', '')}\n"
+            f"   Kategorie: {a.get('kategorie', '')}\n"
+            f"   Beschreibung: {a.get('zusammenfassung', '')}"
         )
     return "\n".join(bloecke)
 
@@ -57,9 +74,44 @@ def _rufe_gemini_json(prompt: str) -> dict:
     return json.loads(response.text)
 
 
+def _pruefe_mindestanzahl(artikel_liste: list[dict]) -> None:
+    if len(artikel_liste) < MINDEST_ARTIKEL:
+        raise ZuWenigArtikelFehler(
+            f"Nur {len(artikel_liste)} echte Artikel vorhanden, mindestens "
+            f"{MINDEST_ARTIKEL} werden für einen Newsletter benötigt. Abbruch, "
+            "um keine Ausgabe mit erfundenem Inhalt zu erzeugen."
+        )
+
+
+def _validiere_quellen(storys: list[dict], artikel_liste: list[dict]) -> list[dict]:
+    """Verwirft Storys, deren quelle_url nicht zu einem echten Artikel gehört."""
+    echte_urls = {a.get("url") for a in artikel_liste}
+    gueltige_storys = []
+    for story in storys:
+        quelle_url = story.get("quelle_url")
+        if quelle_url not in echte_urls:
+            print(
+                f"[WARNUNG] Story '{story.get('titel', '')}' verweist auf keine "
+                f"echte Artikel-URL ({quelle_url!r}) und wird verworfen "
+                "(mögliche Halluzination)."
+            )
+            continue
+        gueltige_storys.append(story)
+    return gueltige_storys
+
+
 def _erstelle_kurzform(artikel_liste: list[dict], heute: date) -> dict:
+    _pruefe_mindestanzahl(artikel_liste)
+
     prompt = f"""Du bist Redakteur eines KI/Tech/Wirtschaft-Newsletters auf Deutsch.
-Wähle aus der folgenden Artikelliste die 5 relevantesten Artikel aus.
+
+{VERBOT_ERFINDEN}
+Du darfst ausschließlich Inhalte aus der unten stehenden nummerierten
+Artikelliste verwenden. Wähle daraus die 5 relevantesten Artikel aus.
+Jede Story MUSS "quelle_url" und "quelle_name" enthalten - übernimm dafür
+exakt die URL und den Quellennamen aus der Artikelliste, erfinde niemals
+eine URL.
+
 Antworte NUR mit JSON in exakt diesem Format (keine weiteren Felder):
 
 {{
@@ -68,7 +120,9 @@ Antworte NUR mit JSON in exakt diesem Format (keine weiteren Felder):
     {{
       "titel": "Artikeltitel",
       "zusammenfassung": "2-3 Sätze Zusammenfassung auf Deutsch",
-      "schlagwoerter": ["Schlagwort1", "Schlagwort2"]
+      "schlagwoerter": ["Schlagwort1", "Schlagwort2"],
+      "quelle_url": "exakte URL aus der Artikelliste",
+      "quelle_name": "exakter Quellenname aus der Artikelliste"
     }}
   ],
   "schlagwoerter": ["übergreifende Schlagwörter der gesamten Ausgabe"]
@@ -82,17 +136,27 @@ Artikelliste:
         "modus": "kurzform",
         "datum": heute.isoformat(),
         "titel": daten.get("titel", ""),
-        "storys": daten.get("storys", []),
+        "storys": _validiere_quellen(daten.get("storys", []), artikel_liste),
         "schlagwoerter": daten.get("schlagwoerter", []),
     }
 
 
 def _erstelle_deep_dive(artikel_liste: list[dict], heute: date) -> dict:
+    _pruefe_mindestanzahl(artikel_liste)
+
     prompt = f"""Du bist Redakteur eines KI/Tech/Wirtschaft-Newsletters auf Deutsch.
-Identifiziere aus der folgenden Artikelliste das wichtigste Thema der Woche und
-erkläre es ausführlich in 400-500 Wörtern (Feld "zusammenfassung" der ersten
-Story, "typ": "deep-dive"). Ergänze danach 3-4 weitere kurze Meldungen
+
+{VERBOT_ERFINDEN}
+Du darfst ausschließlich Inhalte aus der unten stehenden nummerierten
+Artikelliste verwenden. Identifiziere daraus das wichtigste Thema der Woche
+und erkläre es ausführlich in 400-500 Wörtern (Feld "zusammenfassung" der
+ersten Story, "typ": "deep-dive"). Ergänze danach 3-4 weitere kurze Meldungen
 (je 2-3 Sätze, "typ": "kurzmeldung").
+Jede Story MUSS "quelle_url" und "quelle_name" enthalten - übernimm dafür
+exakt die URL und den Quellennamen aus der Artikelliste, erfinde niemals
+eine URL. Falls das Hauptthema auf mehreren Artikeln basiert, nutze die URL
+des Artikels, der das Thema am zentralsten behandelt.
+
 Antworte NUR mit JSON in exakt diesem Format (keine weiteren Felder):
 
 {{
@@ -102,13 +166,17 @@ Antworte NUR mit JSON in exakt diesem Format (keine weiteren Felder):
       "titel": "Titel des Hauptthemas",
       "zusammenfassung": "400-500 Wörter Fließtext auf Deutsch",
       "schlagwoerter": ["Schlagwort1", "Schlagwort2"],
-      "typ": "deep-dive"
+      "typ": "deep-dive",
+      "quelle_url": "exakte URL aus der Artikelliste",
+      "quelle_name": "exakter Quellenname aus der Artikelliste"
     }},
     {{
       "titel": "Titel der Kurzmeldung",
       "zusammenfassung": "2-3 Sätze",
       "schlagwoerter": ["Schlagwort1"],
-      "typ": "kurzmeldung"
+      "typ": "kurzmeldung",
+      "quelle_url": "exakte URL aus der Artikelliste",
+      "quelle_name": "exakter Quellenname aus der Artikelliste"
     }}
   ],
   "schlagwoerter": ["übergreifende Schlagwörter der gesamten Ausgabe"]
@@ -122,7 +190,7 @@ Artikelliste:
         "modus": "deep-dive",
         "datum": heute.isoformat(),
         "titel": daten.get("titel", ""),
-        "storys": daten.get("storys", []),
+        "storys": _validiere_quellen(daten.get("storys", []), artikel_liste),
         "schlagwoerter": daten.get("schlagwoerter", []),
     }
 
@@ -131,6 +199,9 @@ def generate_newsletter(artikel_liste: list[dict], heute: date | None = None) ->
     """Erstellt den Newsletter-Inhalt für den aktuellen (oder übergebenen) Tag.
 
     Mittwoch -> Kurzform, Samstag -> Deep-Dive, sonst kein Newsletter.
+
+    Wirft ZuWenigArtikelFehler, wenn an einem Newsletter-Tag weniger als
+    MINDEST_ARTIKEL echte Artikel übergeben werden.
     """
     heute = heute or date.today()
     wochentag = heute.weekday()
@@ -222,15 +293,16 @@ def main() -> None:
     artikel = _test_artikel()
 
     testfaelle = [
-        (date(2026, 7, 8), "Mittwoch -> Kurzform"),
-        (date(2026, 7, 11), "Samstag -> Deep-Dive"),
-        (date(2026, 7, 5), "Sonntag -> kein Newsletter-Tag"),
+        (date(2026, 7, 8), "Mittwoch -> Kurzform", artikel),
+        (date(2026, 7, 11), "Samstag -> Deep-Dive", artikel),
+        (date(2026, 7, 5), "Sonntag -> kein Newsletter-Tag", artikel),
+        (date(2026, 7, 8), "Mittwoch, aber nur 2 Artikel -> Abbruch", artikel[:2]),
     ]
 
-    for tag, label in testfaelle:
+    for tag, label, artikel_fuer_test in testfaelle:
         print(f"\n=== {label} ({tag.isoformat()}) ===")
         try:
-            ergebnis = generate_newsletter(artikel, heute=tag)
+            ergebnis = generate_newsletter(artikel_fuer_test, heute=tag)
         except RuntimeError as e:
             print(f"[FEHLER] {e}")
             continue
