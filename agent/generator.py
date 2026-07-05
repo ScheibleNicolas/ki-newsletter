@@ -18,9 +18,13 @@ from __future__ import annotations
 import json
 import os
 from datetime import date
+from pathlib import Path
 
+from dotenv import load_dotenv
 from google import genai
 from google.genai import types
+
+load_dotenv(Path(__file__).parent / ".env")
 
 MODELL = "gemini-2.5-flash"
 

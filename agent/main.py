@@ -16,6 +16,10 @@ from dataclasses import asdict
 from datetime import date
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+load_dotenv(Path(__file__).parent / ".env")
+
 import fetcher
 import generator
 import memory
