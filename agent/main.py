@@ -7,10 +7,17 @@
 5. Ergebnis als JSON unter docs/ausgaben/DATUM.json speichern
 6. Newsletter als MP3 vorlesen lassen (tts.py) - nur an Newsletter-Tagen
 7. Ausgabenseite + Index erstellen (website.py) - nur an Newsletter-Tagen
+
+Mit --test-mittwoch / --test-samstag lässt sich die Pipeline an jedem
+Wochentag testen, ohne auf den echten Mittwoch/Samstag warten zu müssen.
+Das echte Tagesdatum bleibt dabei für Dateinamen/Anzeige erhalten (nur der
+Modus wird erzwungen) - so überschreibt ein Testlauf nie versehentlich die
+echte Ausgabe eines vergangenen oder kommenden Mittwochs/Samstags.
 """
 
 from __future__ import annotations
 
+import argparse
 import json
 from dataclasses import asdict
 from datetime import date
@@ -30,8 +37,33 @@ AUSGABEN_VERZEICHNIS = Path(__file__).parent.parent / "docs" / "ausgaben"
 AUDIO_VERZEICHNIS = Path(__file__).parent.parent / "docs" / "audio"
 
 
+def _parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="KI-Newsletter Pipeline")
+    gruppe = parser.add_mutually_exclusive_group()
+    gruppe.add_argument(
+        "--test-mittwoch",
+        action="store_true",
+        help="Pipeline wie an einem Mittwoch (Kurzform) ausführen, unabhängig vom echten Wochentag.",
+    )
+    gruppe.add_argument(
+        "--test-samstag",
+        action="store_true",
+        help="Pipeline wie an einem Samstag (Deep-Dive) ausführen, unabhängig vom echten Wochentag.",
+    )
+    return parser.parse_args()
+
+
 def main() -> None:
+    args = _parse_args()
     heute = date.today()
+
+    modus_erzwingen = None
+    if args.test_mittwoch:
+        modus_erzwingen = "kurzform"
+        print(f"[TEST-MODUS] Wochentag wird als Mittwoch (Kurzform) behandelt, echtes Datum {heute.isoformat()} bleibt für Dateinamen erhalten.\n")
+    elif args.test_samstag:
+        modus_erzwingen = "deep-dive"
+        print(f"[TEST-MODUS] Wochentag wird als Samstag (Deep-Dive) behandelt, echtes Datum {heute.isoformat()} bleibt für Dateinamen erhalten.\n")
 
     quellen = fetcher.lade_quellen()
     alle_artikel = fetcher.hole_alle_artikel(quellen)
@@ -44,7 +76,9 @@ def main() -> None:
     neue_artikel_dicts = [asdict(a) for a in neue_artikel]
 
     try:
-        newsletter = generator.generate_newsletter(neue_artikel_dicts, heute=heute)
+        newsletter = generator.generate_newsletter(
+            neue_artikel_dicts, heute=heute, modus_erzwingen=modus_erzwingen
+        )
     except RuntimeError as e:
         print(f"[FEHLER] Newsletter konnte nicht generiert werden: {e}")
         return

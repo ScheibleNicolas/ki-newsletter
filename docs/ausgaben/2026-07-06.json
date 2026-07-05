@@ -1,0 +1,136 @@
+{
+  "modus": "kurzform",
+  "datum": "2026-07-06",
+  "titel": "KI-Innovationen, Finanzmärkte und globale Ereignisse im Fokus",
+  "storys": [
+    {
+      "titel": "Trauerfeier für Irans ehemaligen Obersten Führer: Mojtaba Khamenei abwesend",
+      "zusammenfassung": "Millionen von Trauernden versammelten sich in Teheran zur Beerdigung des ehemaligen obersten Führers des Iran, Ayatollah Ali Khamenei, was ein zutiefst politisches Ereignis darstellte. Sein Sohn Mojtaba Khamenei war auffälligerweise abwesend, was inmitten des Führungswechsels im Land Spekulationen anheizt. Die Trauerfeier unterstreicht die politische Botschaft des neuen Regimes im Iran und die Forderung nach Rache gegen die USA und Israel.",
+      "schlagwoerter": [
+        "Iran",
+        "Politik",
+        "Ayatollah Khamenei",
+        "Trauerfeier"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cevllyj9vv3o?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Waldbrände in Südfrankreich zwingen 10.000 Menschen zur Evakuierung",
+      "zusammenfassung": "Ein schnell um sich greifendes Waldbrand in Südfrankreich hat rund 10.000 Menschen zur Evakuierung gezwungen. Das Feuer hat bereits über 1.500 Hektar Land verbrannt. Die Situation verdeutlicht die zunehmende Gefahr durch Waldbrände in der Region.",
+      "schlagwoerter": [
+        "Frankreich",
+        "Waldbrand",
+        "Evakuierung",
+        "Naturkatastrophe"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.aljazeera.com/video/newsfeed/2026/7/5/10000-people-evacuated-as-wildfire-tears-through-southern-france?traffic_source=rss",
+      "quelle_name": "Al Jazeera English",
+      "kategorie": "international"
+    },
+    {
+      "titel": "AfD-Parteitag: Weidel und Chrupalla wiedergewählt, Ambitionen auf Regierungsbeteiligung",
+      "zusammenfassung": "Alice Weidel und Tino Chrupalla wurden auf dem AfD-Bundesparteitag in Erfurt als Parteivorsitzende wiedergewählt. Die Parteiführung betonte ihren Anspruch, in den Ländern und ab 2029 auch auf Bundesebene regieren zu wollen. Begleitet wurde der Parteitag von weitgehend friedlichen Protesten zehntausender Menschen.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Politik",
+        "AfD",
+        "Parteitag",
+        "Wahlen"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.tagesschau.de/inland/innenpolitik/afd-weidel-chrupalla-wiederwahl-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Infineon eröffnet neue Chipfabrik in Dresden und stärkt deutschen Technologiestandort",
+      "zusammenfassung": "Infineon hat eine neue, hochmoderne Chipfabrik in Dresden eröffnet, die als eine der weltweit modernsten Produktionsstätten für Halbleiter gilt. Diese Eröffnung stärkt die internationale Bedeutung Sachsens als Technologie-Standort. Die Nachfrage nach Mikrochips steigt global an, was diese Investition besonders relevant macht.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Technologie",
+        "Halbleiter",
+        "Infineon",
+        "Dresden",
+        "Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/unternehmen/infineon-chipfabrik-dresden-100.html",
+      "quelle_name": "Tagesschau Wirtschaft",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Analysten warnen vor 'Snapback' am Aktienmarkt, KI-Hardware-Momentum hält an",
+      "zusammenfassung": "Analysten warnen vor einem bevorstehenden „Snapback“ am Aktienmarkt, bei dem ein Großteil der diesjährigen Gewinne verloren gehen könnte, da Spekulationen extreme Niveaus erreichen. Dennoch wird erwartet, dass die Dynamik im Bereich der KI-Hardware weiter anhält und bestimmte KI-Aktien in der Jahreshälfte stark zulegen könnten. Die kommende Woche wird zudem von Zinserhöhungsanpassungen und den Fed-Sitzungsprotokollen beeinflusst.",
+      "schlagwoerter": [
+        "Finanzen",
+        "Aktienmarkt",
+        "KI-Hardware",
+        "Wirtschaftsprognose",
+        "Marktvolatilität"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-suffer-snapback-lose-194341951.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Kryptowährungen unter Druck: Bitcoin und Ethereum mit deutlichen Verlusten",
+      "zusammenfassung": "Der Kryptowährungsmarkt zeigt sich volatil: Bitcoin ist um 53% gefallen, während Ethereum in einem Monat 22% verlor und weitere Rückgänge befürchtet werden. Trotz der Unsicherheit bleibt die Frage, ob der aktuelle Zeitpunkt eine Kaufgelegenheit darstellt, insbesondere angesichts anstehender FOMC-Minuten. Die Volatilität unterstreicht die Spekulationsfreudigkeit im Kryptobereich.",
+      "schlagwoerter": [
+        "Finanzen",
+        "Kryptowährung",
+        "Bitcoin",
+        "Ethereum",
+        "Marktanalyse"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-down-53-finally-time-205000614.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "OpenAI stellt GPT-5.5 vor: Intelligenter und leistungsfähiger für komplexe Aufgaben",
+      "zusammenfassung": "OpenAI hat GPT-5.5 vorgestellt, sein bisher intelligentestes Modell, das für komplexe Aufgaben wie Codierung, Forschung und Datenanalyse entwickelt wurde. Es ist schneller, leistungsfähiger und bietet neue Funktionen. Dieses Modell ist ein wichtiger Schritt in der Entwicklung von KI-Systemen für professionelle Anwendungen.",
+      "schlagwoerter": [
+        "KI",
+        "OpenAI",
+        "GPT-5.5",
+        "Technologie",
+        "Künstliche Intelligenz"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://openai.com/index/introducing-gpt-5-5",
+      "quelle_name": "OpenAI Blog",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "USA hebt Beschränkungen für Anthropic's leistungsstärkste KI-Modelle auf",
+      "zusammenfassung": "Die US-Regierung hat Beschränkungen für Anthropic's leistungsstärkste KI-Modelle aufgehoben und deeskaliert damit einen Streit mit der Trump-Administration. Dies ermöglicht es Anthropic, seine fortschrittlichsten Technologien wieder online zu bringen. Die Entscheidung signalisiert eine bedeutende Entwicklung in der Regulierung von Spitzentechnologien im KI-Sektor.",
+      "schlagwoerter": [
+        "KI",
+        "Anthropic",
+        "USA",
+        "Regulierung",
+        "Technologiepolitik"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.nytimes.com/2026/06/30/technology/us-lifts-restrictions-anthropic.html",
+      "quelle_name": "NYT Technology",
+      "kategorie": "ki-tech"
+    }
+  ],
+  "schlagwoerter": [
+    "KI",
+    "Wirtschaft",
+    "Politik",
+    "Finanzen",
+    "Technologie",
+    "Internationale Beziehungen",
+    "Umwelt",
+    "Deutschland"
+  ]
+}

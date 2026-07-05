@@ -270,7 +270,11 @@ Artikelliste:
     }
 
 
-def generate_newsletter(artikel_liste: list[dict], heute: date | None = None) -> dict:
+def generate_newsletter(
+    artikel_liste: list[dict],
+    heute: date | None = None,
+    modus_erzwingen: str | None = None,
+) -> dict:
     """Erstellt den Newsletter-Inhalt für den aktuellen (oder übergebenen) Tag.
 
     Mittwoch -> Kurzform, Samstag -> Deep-Dive, sonst kein Newsletter. Beide
@@ -278,24 +282,35 @@ def generate_newsletter(artikel_liste: list[dict], heute: date | None = None) ->
     KATEGORIE_REIHENFOLGE), Samstag hat höhere Mengen-Quoten pro Kategorie
     und ggf. eine zusätzliche Einordnungs-Story.
 
+    modus_erzwingen ("kurzform" oder "deep-dive") überschreibt die
+    Wochentagsermittlung, z.B. für Testläufe an einem beliebigen Tag - "heute"
+    bleibt dabei unverändert das echte Datum (für Dateinamen/Anzeige), nur der
+    Modus wird erzwungen.
+
     Wirft ZuWenigArtikelFehler, wenn an einem Newsletter-Tag weniger als
     MINDEST_ARTIKEL echte Artikel übergeben werden.
     """
     heute = heute or date.today()
-    wochentag = heute.weekday()
 
-    if wochentag == MITTWOCH:
-        return _erstelle_ausgabe(artikel_liste, heute, "kurzform")
-    elif wochentag == SAMSTAG:
-        return _erstelle_ausgabe(artikel_liste, heute, "deep-dive")
+    if modus_erzwingen is not None:
+        modus = modus_erzwingen
+    elif heute.weekday() == MITTWOCH:
+        modus = "kurzform"
+    elif heute.weekday() == SAMSTAG:
+        modus = "deep-dive"
     else:
-        return {
-            "modus": "kein-newsletter-tag",
-            "datum": heute.isoformat(),
-            "titel": "",
-            "storys": [],
-            "schlagwoerter": [],
-        }
+        modus = "kein-newsletter-tag"
+
+    if modus in ("kurzform", "deep-dive"):
+        return _erstelle_ausgabe(artikel_liste, heute, modus)
+
+    return {
+        "modus": "kein-newsletter-tag",
+        "datum": heute.isoformat(),
+        "titel": "",
+        "storys": [],
+        "schlagwoerter": [],
+    }
 
 
 def _test_artikel() -> list[dict]:
