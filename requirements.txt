@@ -1,3 +1,5 @@
 feedparser
 pyyaml
 google-genai
+google-cloud-texttospeech
+gTTS
