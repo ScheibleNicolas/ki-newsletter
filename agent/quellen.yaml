@@ -3,22 +3,26 @@
 # Jede Quelle hat folgende Felder:
 #   name        - Anzeigename der Quelle
 #   url         - RSS/Atom-Feed-URL (null, falls kein offizieller Feed existiert)
-#   kategorie   - international / deutschland / finanzen / ki-tech
+#   kategorie   - international / deutschland / finanzen / ki-tech / sport / good-news
 #   sprache     - de / en
 #   prioritaet  - hoch / mittel (Vorschlag, bei Bedarf anpassen)
 #   hinweis     - optionale Anmerkung, z.B. wenn kein offizieller Feed existiert
 #
 # Hinweis zur Kategorie-Umstellung (2026-07-05): Das ursprüngliche Schema
-# (ki-international / ki-deutsch / wirtschaft-politik) wurde durch das neue
-# 4-Kategorien-Schema ersetzt, das generator.py/website.py/tts.py für die
+# (ki-international / ki-deutsch / wirtschaft-politik) wurde durch ein neues
+# Kategorien-Schema ersetzt, das generator.py/website.py/tts.py für die
 # Gliederung der Ausgaben verwenden. Bestehende Quellen wurden wie folgt
 # überführt: die KI/Tech-Quellen (unabhängig von der Sprache) -> ki-tech,
 # allgemeine Nachrichtenquellen -> international bzw. deutschland,
-# Finanzquellen -> finanzen.
+# Finanzquellen -> finanzen. Am 2026-07-07 kamen die Kategorien sport und
+# good-news hinzu; "breaking-news" ist KEINE Quellen-Kategorie, sondern wird
+# von Gemini pro Ausgabe aus besonders wichtigen Meldungen anderer Kategorien
+# ausgewählt (siehe generator.py).
 #
-# Stand der Recherche: 2026-07-05. RSS-URLs von Firmen/Medien ändern sich
-# gelegentlich (Redesigns, Substack-Migrationen etc.) - bei Fehlern in der
-# Newsletter-Pipeline zuerst hier prüfen, ob die URL noch gültig ist.
+# Stand der Recherche: 2026-07-05 (Sport/Good-News: 2026-07-07). RSS-URLs von
+# Firmen/Medien ändern sich gelegentlich (Redesigns, Substack-Migrationen
+# etc.) - bei Fehlern in der Newsletter-Pipeline zuerst hier prüfen, ob die
+# URL noch gültig ist.
 
 quellen:
   # ─────────────────────────────────────────────
@@ -202,3 +206,53 @@ quellen:
     kategorie: ki-tech
     sprache: en
     prioritaet: mittel
+
+  # ─────────────────────────────────────────────
+  # Sport
+  # ─────────────────────────────────────────────
+  - name: "Cyclingnews"
+    url: "https://www.cyclingnews.com/rss"
+    kategorie: sport
+    sprache: en
+    prioritaet: hoch
+
+  - name: "Kicker Fußball"
+    url: "https://newsfeed.kicker.de/news/aktuell"
+    kategorie: sport
+    sprache: de
+    prioritaet: hoch
+    hinweis: >
+      Die ursprünglich vorgeschlagene URL (kicker.de/rss/fussball) liefert
+      HTTP 403 (Bot-Schutz, geprüft am 2026-07-07) - auch mit Browser-User-
+      Agent. Die oben stehende URL (kicker.de eigener Newsfeed-Subdomain)
+      wurde stattdessen verifiziert (200, echte Fußball-Meldungen).
+
+  - name: "Sportschau"
+    url: "https://www.sportschau.de/index~rss2.xml"
+    kategorie: sport
+    sprache: de
+    prioritaet: mittel
+    hinweis: >
+      Die ursprünglich vorgeschlagene URL (.../news/rss_sportschau_nachrichten.xml)
+      liefert HTTP 404 (geprüft am 2026-07-07); die oben stehende URL wurde
+      stattdessen verifiziert (200, echte Sportmeldungen).
+
+  # ─────────────────────────────────────────────
+  # Good News
+  # ─────────────────────────────────────────────
+  - name: "Positive News"
+    url: "https://www.positive.news/feed"
+    kategorie: good-news
+    sprache: en
+    prioritaet: mittel
+
+  - name: "Good News Magazin"
+    url: "https://www.goodnewsmagazin.de/feed"
+    kategorie: good-news
+    sprache: de
+    prioritaet: mittel
+    hinweis: >
+      Die ursprünglich vorgeschlagene Domain gute-nachrichten.net existiert
+      nicht mehr (DNS-Fehler, geprüft am 2026-07-07); goodnewsmagazin.de/feed
+      wurde stattdessen als funktionierender deutschsprachiger Good-News-Feed
+      verifiziert (200, echte Meldungen).

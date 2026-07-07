@@ -5,7 +5,9 @@
 3. Neue Artikel als gesehen markieren (memory.py)
 4. Newsletter aus den neuen Artikeln generieren (generator.py)
 5. Ergebnis als JSON unter docs/ausgaben/DATUM.json speichern
-6. Newsletter als MP3 vorlesen lassen (tts.py) - nur an Newsletter-Tagen
+6. Newsletter als MP3 vorlesen lassen (tts.py) - nur an Newsletter-Tagen. Ist
+   die Gemini-Audio-API nicht verfügbar, liefert tts.py None (kein Fallback),
+   die Seite wird dann ohne Audio erstellt.
 7. Ausgabenseite + Index erstellen (website.py) - nur an Newsletter-Tagen
 
 Mit --test-mittwoch / --test-samstag lässt sich die Pipeline an jedem
@@ -93,8 +95,7 @@ def main() -> None:
     html_pfad = None
     audio_pfad = None
     if newsletter["modus"] != "kein-newsletter-tag":
-        audio_pfad = AUDIO_VERZEICHNIS / f"{heute.isoformat()}.mp3"
-        tts.text_zu_mp3(newsletter, audio_pfad)
+        audio_pfad = tts.text_zu_mp3(newsletter, AUDIO_VERZEICHNIS / f"{heute.isoformat()}.mp3")
         html_pfad = website.erstelle_ausgabe_seite(newsletter, audio_pfad)
         website_url = f"{WEBSITE_BASIS_URL}/{heute.isoformat()}.html"
         emailer.sende_benachrichtigung(newsletter, website_url)

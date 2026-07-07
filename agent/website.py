@@ -2,9 +2,15 @@
 HTML-Ausgabenseite und pflegt den Gesamt-Index (docs/index.html, docs/index.json).
 
 Storys werden nach Kategorie gruppiert angezeigt, in der Reihenfolge aus
-generator.KATEGORIE_REIHENFOLGE (International -> Deutschland -> Finanzen ->
-KI & Tech), damit Website und Audio (tts.py) konsistent derselben Gliederung
-folgen.
+generator.KATEGORIE_REIHENFOLGE (Breaking News -> Internationales ->
+Deutschland -> Finanzen -> KI & Tech -> Sport -> Good News), damit Website und
+Audio (tts.py) konsistent derselben Gliederung folgen. Breaking News wird nur
+angezeigt, wenn Storys dafür vorhanden sind, erscheint dann aber ganz oben und
+optisch hervorgehoben (roter Rahmen/Hintergrund).
+
+audio_pfad ist optional: liefert tts.py keine MP3 (z.B. weil die Gemini-Audio-
+API nicht verfügbar war), wird die Seite ohne <audio>-Element erzeugt statt auf
+eine nicht existierende Datei zu verweisen.
 """
 
 from __future__ import annotations
@@ -29,8 +35,18 @@ MONATE_DE = [
 ]
 
 MODUS_LABEL = {
-    "kurzform": "Kurzform",
-    "deep-dive": "Deep-Dive",
+    "kurzform": "Mittwochsausgabe",
+    "deep-dive": "Samstagsausgabe",
+}
+
+KATEGORIE_ICON = {
+    "breaking-news": "🚨",
+    "international": "🌍",
+    "deutschland": "🇩🇪",
+    "finanzen": "📈",
+    "ki-tech": "🤖",
+    "sport": "⚽",
+    "good-news": "🌟",
 }
 
 GRUNDSTIL = """
@@ -105,15 +121,18 @@ def _gruppiere_nach_kategorie(storys: list[dict]) -> dict[str, list[dict]]:
 
 def _kategorie_abschnitt_html(kategorie: str, storys: list[dict]) -> str:
     label = KATEGORIE_LABEL.get(kategorie, kategorie.replace("-", " ").title())
+    icon = KATEGORIE_ICON.get(kategorie, "")
+    anzeige_label = f"{icon} {label}".strip()
     storys_html = "".join(_story_html(s) for s in storys)
+    klasse = "kategorie kategorie--breaking-news" if kategorie == "breaking-news" else "kategorie"
     return f"""
-    <section class="kategorie">
-      <h2 class="kategorie-titel">{html.escape(label)}</h2>
+    <section class="{klasse}">
+      <h2 class="kategorie-titel">{html.escape(anzeige_label)}</h2>
       {storys_html}
     </section>"""
 
 
-def _ausgabe_html(newsletter: dict, audio_relativ: str) -> str:
+def _ausgabe_html(newsletter: dict, audio_relativ: str | None) -> str:
     titel = html.escape(newsletter.get("titel", ""))
     modus = newsletter.get("modus", "")
     datum = newsletter.get("datum", "")
@@ -122,6 +141,11 @@ def _ausgabe_html(newsletter: dict, audio_relativ: str) -> str:
     reihenfolge = KATEGORIE_REIHENFOLGE + [k for k in gruppen if k not in KATEGORIE_REIHENFOLGE]
     abschnitte_html = "".join(
         _kategorie_abschnitt_html(k, gruppen[k]) for k in reihenfolge if gruppen.get(k)
+    )
+    audio_html = (
+        f'<audio controls preload="none" src="{html.escape(audio_relativ)}"></audio>'
+        if audio_relativ
+        else ""
     )
 
     return f"""<!doctype html>
@@ -135,6 +159,10 @@ def _ausgabe_html(newsletter: dict, audio_relativ: str) -> str:
     .kategorie {{ border-top: 2px solid #262a33; padding-top: 1.6rem; margin-top: 1.8rem; }}
     .kategorie:first-of-type {{ border-top: none; padding-top: 0; margin-top: 1.6rem; }}
     .kategorie-titel {{ font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: #7dd3fc; margin: 0 0 0.8rem; }}
+    .kategorie--breaking-news {{ border: 2px solid #ef4444 !important; background: #2a1414; border-radius: 10px; padding: 1.2rem 1.4rem !important; margin-top: 1.8rem !important; }}
+    .kategorie--breaking-news:first-of-type {{ margin-top: 0 !important; }}
+    .kategorie--breaking-news .kategorie-titel {{ color: #f87171; font-size: 0.95rem; }}
+    .kategorie--breaking-news .story {{ border-top-color: #3f1d1d; }}
     .story {{ border-top: 1px solid #23262e; padding: 1.2rem 0; }}
     .story:first-of-type {{ border-top: none; padding-top: 0; }}
     .story h3 {{ font-size: 1.1rem; margin: 0 0 0.5rem; }}
@@ -151,7 +179,7 @@ def _ausgabe_html(newsletter: dict, audio_relativ: str) -> str:
     <p class="datum">{html.escape(_datum_lesbar(datum))}</p>
     <h1>{titel}</h1>
     {_badge_html(modus)}
-    <audio controls preload="none" src="{html.escape(audio_relativ)}"></audio>
+    {audio_html}
     {abschnitte_html}
     <a class="zurueck" href="../index.html">&larr; Alle Ausgaben</a>
   </div>
@@ -215,19 +243,26 @@ def _aktualisiere_index(neuer_eintrag: dict) -> None:
         f.write(_index_html(eintraege))
 
 
-def erstelle_ausgabe_seite(newsletter_dict: dict, audio_pfad: Path | str) -> Path:
-    """Erstellt docs/ausgaben/DATUM.html und aktualisiert docs/index.html/.json."""
+def erstelle_ausgabe_seite(newsletter_dict: dict, audio_pfad: Path | str | None) -> Path:
+    """Erstellt docs/ausgaben/DATUM.html und aktualisiert docs/index.html/.json.
+
+    audio_pfad darf None sein, wenn tts.py keine MP3 erzeugen konnte - die
+    Seite wird dann ohne <audio>-Element erstellt."""
     datum = newsletter_dict["datum"]
-    audio_pfad = Path(audio_pfad)
+    audio_pfad = Path(audio_pfad) if audio_pfad else None
 
     AUSGABEN_VERZEICHNIS.mkdir(parents=True, exist_ok=True)
     html_pfad = AUSGABEN_VERZEICHNIS / f"{datum}.html"
 
-    audio_relativ = os.path.relpath(audio_pfad, html_pfad.parent).replace(os.sep, "/")
+    audio_relativ = (
+        os.path.relpath(audio_pfad, html_pfad.parent).replace(os.sep, "/") if audio_pfad else None
+    )
     with open(html_pfad, "w", encoding="utf-8") as f:
         f.write(_ausgabe_html(newsletter_dict, audio_relativ))
 
-    audio_relativ_docs = os.path.relpath(audio_pfad, DOCS_VERZEICHNIS).replace(os.sep, "/")
+    audio_relativ_docs = (
+        os.path.relpath(audio_pfad, DOCS_VERZEICHNIS).replace(os.sep, "/") if audio_pfad else None
+    )
     html_relativ_docs = os.path.relpath(html_pfad, DOCS_VERZEICHNIS).replace(os.sep, "/")
     _aktualisiere_index({
         "datum": datum,
@@ -247,6 +282,15 @@ def _test_newsletter() -> dict:
         "datum": date.today().isoformat(),
         "titel": "KI-Newsletter Deep-Dive, Testausgabe",
         "storys": [
+            {
+                "titel": "Zentralbanken greifen gemeinsam nach Marktschock ein",
+                "zusammenfassung": "Testtext für eine Breaking-News-Meldung, wie sie nur an seltenen, außergewöhnlich wichtigen Tagen erscheinen würde.",
+                "schlagwoerter": ["Marktschock", "Zentralbanken"],
+                "typ": "kurzmeldung",
+                "quelle_url": "https://example.com/zentralbanken-eingreifen",
+                "quelle_name": "Reuters",
+                "kategorie": "breaking-news",
+            },
             {
                 "titel": "G7-Gipfel einigt sich auf gemeinsame Erklärung",
                 "zusammenfassung": "Testtext zu einer internationalen Meldung mit 120-180 Wörtern, wie sie in der echten Samstagsausgabe vorkommen würde.",
@@ -291,6 +335,24 @@ def _test_newsletter() -> dict:
                 "quelle_url": "https://example.com/deepmind-protein",
                 "quelle_name": "Google DeepMind Blog",
                 "kategorie": "ki-tech",
+            },
+            {
+                "titel": "Bundesliga-Rückrunde startet mit Topspiel",
+                "zusammenfassung": "Testtext zu einer Sport-Meldung.",
+                "schlagwoerter": ["Bundesliga", "Fußball"],
+                "typ": "kurzmeldung",
+                "quelle_url": "https://example.com/kicker-bundesliga-topspiel",
+                "quelle_name": "Kicker Fußball",
+                "kategorie": "sport",
+            },
+            {
+                "titel": "Wiederaufforstungsprojekt übertrifft Ziel deutlich",
+                "zusammenfassung": "Testtext zu einer Good-News-Meldung.",
+                "schlagwoerter": ["Umwelt", "Wiederaufforstung"],
+                "typ": "kurzmeldung",
+                "quelle_url": "https://example.com/positive-news-wiederaufforstung",
+                "quelle_name": "Positive News",
+                "kategorie": "good-news",
             },
         ],
         "schlagwoerter": ["Reasoning", "KI-Agenten", "Regulierung"],

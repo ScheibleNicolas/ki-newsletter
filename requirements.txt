@@ -1,6 +1,7 @@
 feedparser
 pyyaml
 google-genai
-google-cloud-texttospeech
-gTTS
+pydub
+audioop-lts
+imageio-ffmpeg
 python-dotenv

@@ -1,5 +1,21 @@
 [
   {
+    "datum": "2026-07-08",
+    "titel": "Ihr wöchentlicher KI/Tech/Wirtschaft-News-Überblick",
+    "modus": "kurzform",
+    "schlagwoerter": [
+      "Künstliche Intelligenz",
+      "Geopolitik",
+      "Wirtschaft",
+      "Nachhaltigkeit",
+      "Internationale Beziehungen",
+      "Deutschland",
+      "Sport"
+    ],
+    "audio_pfad": null,
+    "html_pfad": "ausgaben/2026-07-08.html"
+  },
+  {
     "datum": "2026-07-06",
     "titel": "KI-Innovationen, Finanzmärkte und globale Ereignisse im Fokus",
     "modus": "kurzform",
