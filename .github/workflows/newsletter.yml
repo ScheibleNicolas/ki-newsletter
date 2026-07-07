@@ -1,0 +1,88 @@
+# ---------------------------------------------------------------------------
+# Anleitung: Secrets in GitHub eintragen
+#
+# Dieser Workflow braucht drei Secrets, damit er Newsletter generieren und
+# Benachrichtigungsmails verschicken kann:
+#   - GEMINI_API_KEY       (aus agent/.env, Feld GEMINI_API_KEY)
+#   - GMAIL_ADDRESS        (aus agent/.env, Feld GMAIL_ADDRESS)
+#   - GMAIL_APP_PASSWORD   (aus agent/.env, Feld GMAIL_APP_PASSWORD)
+#
+# So trägst du sie ein:
+#   1. Im Browser zum GitHub-Repo gehen
+#   2. Settings -> Secrets and variables -> Actions
+#   3. "New repository secret" klicken
+#   4. Name (z. B. GEMINI_API_KEY) und den Wert aus agent/.env eintragen,
+#      "Add secret" klicken
+#   5. Schritte 3-4 für GMAIL_ADDRESS und GMAIL_APP_PASSWORD wiederholen
+#
+# Die Werte aus agent/.env NICHT in dieses YAML schreiben oder committen -
+# agent/.env bleibt lokal und ist in .gitignore ausgeschlossen.
+# ---------------------------------------------------------------------------
+
+name: KI Newsletter
+
+on:
+  schedule:
+    # Mittwoch 06:00 UTC = 08:00 Uhr Deutschland (Winterzeit) / 08:00 Sommerzeit...
+    # Deutschland ist UTC+1 (Winter) bzw. UTC+2 (Sommer) - 06:00 UTC entspricht
+    # damit ganzjährig ungefähr 08:00 Uhr deutscher Zeit.
+    - cron: "0 6 * * 3"
+    # Samstag 07:00 UTC = ca. 09:00 Uhr Deutschland
+    - cron: "0 7 * * 6"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ki-newsletter
+  cancel-in-progress: false
+
+jobs:
+  newsletter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: newsletter.db zwischenspeichern (gesehene Artikel)
+        uses: actions/cache@v4
+        with:
+          path: agent/newsletter.db
+          # Schlüssel ist pro Lauf eindeutig, damit am Ende IMMER ein neuer
+          # Cache-Eintrag mit dem aktuellen Stand gespeichert wird (sonst
+          # überspringt actions/cache das Speichern bei gleichem Schlüssel).
+          # restore-keys hat keinen Wochentag im Präfix, damit sowohl der
+          # Mittwochs- als auch der Samstagslauf denselben, zuletzt
+          # gespeicherten Stand der Datenbank wiederfindet.
+          key: newsletter-db-${{ github.run_id }}
+          restore-keys: |
+            newsletter-db-
+
+      - name: Python installieren
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: "pip"
+
+      - name: Abhängigkeiten installieren
+        run: pip install -r requirements.txt
+
+      - name: Newsletter-Pipeline ausführen
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python agent/main.py
+
+      - name: Generierte Dateien committen und pushen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          if git diff --staged --quiet; then
+            echo "Keine Änderungen in docs/, nichts zu committen."
+          else
+            git commit -m "Automatische Newsletter-Ausgabe"
+            git push
+          fi
