@@ -27,6 +27,7 @@ from dotenv import load_dotenv
 
 load_dotenv(Path(__file__).parent / ".env")
 
+import emailer
 import fetcher
 import generator
 import memory
@@ -35,6 +36,7 @@ import website
 
 AUSGABEN_VERZEICHNIS = Path(__file__).parent.parent / "docs" / "ausgaben"
 AUDIO_VERZEICHNIS = Path(__file__).parent.parent / "docs" / "audio"
+WEBSITE_BASIS_URL = "https://scheiblenicolas.github.io/ki-newsletter/ausgaben"
 
 
 def _parse_args() -> argparse.Namespace:
@@ -94,6 +96,8 @@ def main() -> None:
         audio_pfad = AUDIO_VERZEICHNIS / f"{heute.isoformat()}.mp3"
         tts.text_zu_mp3(newsletter, audio_pfad)
         html_pfad = website.erstelle_ausgabe_seite(newsletter, audio_pfad)
+        website_url = f"{WEBSITE_BASIS_URL}/{heute.isoformat()}.html"
+        emailer.sende_benachrichtigung(newsletter, website_url)
 
     print("\n=== Zusammenfassung ===")
     print(f"Artikel geladen: {len(alle_artikel)}")
