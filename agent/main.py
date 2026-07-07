@@ -103,7 +103,8 @@ def main() -> None:
     print("\n=== Zusammenfassung ===")
     print(f"Artikel geladen: {len(alle_artikel)}")
     print(f"Davon neu: {len(neue_artikel)}")
-    print(f"Modus: {newsletter['modus']}")
+    modus_anzeige = website.MODUS_LABEL.get(newsletter["modus"], newsletter["modus"])
+    print(f"Modus: {modus_anzeige}")
     print(f"Titel: {newsletter['titel'] or '(kein Newsletter heute)'}")
     print(f"Gespeichert unter: {ausgabe_pfad}")
     if html_pfad:
