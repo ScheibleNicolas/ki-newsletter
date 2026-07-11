@@ -1,0 +1,243 @@
+{
+  "modus": "deep-dive",
+  "datum": "2026-07-11",
+  "titel": "KI/Tech & Wirtschaft am Samstag: Neue KI-Modelle, Meta-Kontroversen und Wimbledon-Finale",
+  "storys": [
+    {
+      "titel": "Apple verklagt OpenAI wegen angeblichen Diebstahls von Geschäftsgeheimnissen",
+      "zusammenfassung": "Apple hat eine Klage gegen OpenAI eingereicht und wirft dem KI-Startup den Diebstahl von Geschäftsgeheimnissen vor. Die Klage konzentriert sich auf OpenAIs aufkeimendes Hardwaregeschäft und die Abwerbung von ehemaligen Apple-Mitarbeitern, die angeblich vertrauliche Informationen weitergegeben haben sollen. Apple behauptet, OpenAIs Hardware-Geschäft sei \"im Kern faul\" und es handele sich um ein \"methodisches Vorgehen\", das auf allen Ebenen geplant worden sei. Obwohl Apple und OpenAI 2024 eine Vereinbarung über KI-Dienste auf Apple-Geräten trafen, hat sich die Partnerschaft erheblich verschlechtert. Dieser Rechtsstreit unterstreicht die wachsende Intensität des Wettbewerbs und der rechtlichen Auseinandersetzungen im schnelllebigen Bereich der künstlichen Intelligenz, insbesondere im Hinblick auf die Rekrutierung von Talenten und den Schutz von proprietärem Wissen, und könnte weitreichende Präzedenzfälle in der Tech-Branche schaffen.",
+      "schlagwoerter": [
+        "Apple",
+        "OpenAI",
+        "Klage",
+        "Geschäftsgeheimnisse",
+        "KI",
+        "Technologie",
+        "Wettbewerb"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": true,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cy8w379e091o?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "breaking-news"
+    },
+    {
+      "titel": "EU droht Meta wegen \"suchtförderndem Design\" und zieht KI-Bildfunktion zurück",
+      "zusammenfassung": "Die Europäische Union hat Meta eindringlich aufgefordert, das \"suchtfördernde Design\" von Instagram und Facebook zu ändern. Nach zweijährigen Ermittlungen wirft die EU-Kommission dem Unternehmen vor, mit Funktionen wie dem \"unendlichen Scrollen\" und Benachrichtigungen, die zu \"zwanghaftem Gebrauch\" führen, gegen digitale Sicherheitsgesetze zu verstoßen. Meta drohen erhebliche Strafen, wenn es die Plattformen nicht kinder- und jugendfreundlicher gestaltet. Parallel dazu sah sich Meta mit einer Welle der Kritik konfrontiert, nachdem eine neue KI-Bildfunktion, \"Muse Image\", es Nutzern erlaubte, Bilder aus öffentlichen Instagram-Profilen zu verwenden, um neue KI-generierte Inhalte zu erstellen. Nach massivem Widerstand von Nutzern und Datenschutzbefürwortern zog Meta die umstrittene Funktion bereits nach wenigen Tagen zurück.",
+      "schlagwoerter": [
+        "Meta",
+        "EU",
+        "Datenschutz",
+        "Instagram",
+        "Facebook",
+        "KI",
+        "Suchtgefahr",
+        "Regulierung"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": true,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/c8j2dje3pldo?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC Technology",
+      "kategorie": "breaking-news"
+    },
+    {
+      "titel": "Ostasien wappnet sich vor zerstörerischem Taifun Bavi",
+      "zusammenfassung": "Ostasien bereitet sich auf die Ankunft des Taifuns Bavi vor, der als einer der stärksten Stürme seit Jahrzehnten prognostiziert wird. Mit einer Breite von 1.000 Kilometern steuert Bavi auf Taiwan und den Südosten Chinas zu. Bereits in den Philippinen verursachten die damit verbundenen Wetterereignisse schwere Erdrutsche, die mindestens 15 Menschen das Leben kosteten. Hunderttausende Menschen wurden in China vorsorglich evakuiert, während die Behörden Notfallmaßnahmen einleiten, um die Auswirkungen der Naturkatastrophe zu minimieren. Trotz einer leichten Herabstufung wird Bavi weiterhin als extrem gefährlich eingestuft, und die Region ist in erhöhter Alarmbereitschaft vor weiteren Verwüstungen.",
+      "schlagwoerter": [
+        "Taifun",
+        "Naturkatastrophe",
+        "Ostasien",
+        "Philippinen",
+        "China",
+        "Evakuierung",
+        "Wetter"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/c04y6wr03gxo?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "USA fordern Irans Zusage für freie Schifffahrt in der Straße von Hormus",
+      "zusammenfassung": "Die Vereinigten Staaten fordern vom Iran eine klare Zusage, die Schifffahrt in der strategisch wichtigen Straße von Hormus nicht zu behindern. Diese Forderung steht im Mittelpunkt von Verhandlungen, die am Samstag im Oman wieder aufgenommen werden und an denen hochrangige US-Beamte teilnehmen. Die USA verlangen vom Iran ein öffentliches Bekenntnis zur freien und sicheren Durchfahrt für alle Schiffe. Diese Gespräche finden vor dem Hintergrund anhaltender Spannungen und jüngster Drohungen statt, bei denen US-Präsident Trump dem Iran mit einer \"Dezimierung\" drohte, falls es zu Attentatsversuchen gegen ihn käme. Die Situation in der Region bleibt äußerst angespannt.",
+      "schlagwoerter": [
+        "USA",
+        "Iran",
+        "Straße von Hormus",
+        "Diplomatie",
+        "Sicherheit",
+        "Internationale Beziehungen",
+        "Handel"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/crelyq79x71o?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Bundestag und Bundesrat billigen umstrittenes Krankenkassen-Sparpaket",
+      "zusammenfassung": "Die umstrittene Gesundheitsreform und das damit verbundene Sparpaket für die gesetzliche Krankenversicherung haben sowohl den Bundestag als auch den Bundesrat passiert. Die Regierungskoalition hat die Maßnahmen trotz heftiger Kritik durchgesetzt. Ziel ist es, die Ausgaben im Gesundheitssystem zu bremsen und Beitragserhöhungen zu verhindern. Die Reform beinhaltet Ausgabenbremsen und höhere Zuzahlungen für Versicherte. Kritiker, darunter Kommunen und Berufsverbände, warnen jedoch vor negativen Folgen für die Patientenversorgung und zusätzlichen Belastungen für die Landkreise. Diese Reform stellt die erste größere Umgestaltung im Gesundheitswesen der aktuellen schwarz-roten Koalition dar und wird weitreichende Auswirkungen haben.",
+      "schlagwoerter": [
+        "Gesundheitsreform",
+        "Krankenkassen",
+        "Sparpaket",
+        "Bundesrat",
+        "Bundestag",
+        "Gesundheitspolitik",
+        "Deutschland"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/inland/innenpolitik/bundestag-sparpaket-krankenkassen-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Gebäudemodernisierungsgesetz beschlossen: Heizungsregeln und Förderungen ändern sich",
+      "zusammenfassung": "Bundestag und Bundesrat haben das neue Gebäudemodernisierungsgesetz verabschiedet, was zu erheblichen Änderungen bei den Heizungsregeln führt. Kernpunkte der ursprünglichen Ampel-Regelungen wurden gekippt oder angepasst. So ist der Einbau von Erdgasheizungen in Neubauten künftig wieder möglich, wenngleich Experten vor den langfristigen Kosten warnen. Gleichzeitig wird die staatliche Förderung für den Umstieg auf Wärmepumpen reduziert, was bei Verbrauchern und in der Branche für Verunsicherung sorgt. Das Gesetz soll den Weg zur Klimaneutralität ebnen, doch die vorgenommenen Anpassungen stoßen auf Kritik, da sie aus Sicht mancher Beobachter den Fortschritt beim Klimaschutz gefährden könnten.",
+      "schlagwoerter": [
+        "Gebäudemodernisierungsgesetz",
+        "Heizungsgesetz",
+        "Wärmepumpe",
+        "Erdgas",
+        "Förderung",
+        "Klimapolitik",
+        "Deutschland"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/inland/innenpolitik/bundestag-gebaeude-modernisierung-gesetz-100.html",
+      "quelle_name": "Tagesschau Wirtschaft",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "SK Hynix feiert erfolgreichen US-Börsengang, befeuert durch KI-Boom",
+      "zusammenfassung": "Der südkoreanische Chiphersteller SK Hynix hat einen bemerkenswerten US-Börsengang erlebt, bei dem die Aktienkurse aufgrund der anhaltenden KI-Euphorie stark anstiegen. Das Unternehmen, ein führender Anbieter von Speicherchips, plant im Jahr 2027 Investitionen von 6 Milliarden Dollar, um die Nachfrage im Zuge des Booms bei künstlicher Intelligenz zu bedienen. Der erfolgreiche Markteintritt in den USA unterstreicht die enorme Bedeutung von Hochleistungsspeicher für KI-Anwendungen und die starke Position von SK Hynix in diesem Wachstumsmarkt. Investoren sehen in Speicherunternehmen, die eng mit der KI-Entwicklung verbunden sind, weiterhin große Chancen.",
+      "schlagwoerter": [
+        "SK Hynix",
+        "Börsengang",
+        "KI-Boom",
+        "Halbleiter",
+        "Investitionen",
+        "Technologieaktien",
+        "Finanzen"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/technology/ai/articles/sk-hynix-set-marquee-us-072234232.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "KI-Modelle der nächsten Generation: Mehr Intelligenz, neue Interaktionen und breitere Anwendungen",
+      "zusammenfassung": "Die Welt der Künstlichen Intelligenz erlebt eine rasante Entwicklung, angetrieben von leistungsfähigen Large Language Models (LLMs) wie OpenAI's GPT-5.6 und Anthropic's Claude. GPT-5.6 bietet mehr Intelligenz und Leistung für anspruchsvolle Aufgaben. Mit \"ChatGPT Work\" als autonomem Agenten und \"GPT-Live\" für natürlichere Sprachinteraktionen, die simultanes Hören und Sprechen ermöglichen (Full-Duplex-Architektur), erweitert OpenAI die Anwendungsfelder erheblich. Forscher von Anthropic haben derweil verborgene \"Gedankenbereiche\" in Claude entdeckt, die Einblicke in dessen interne Verarbeitung und sogar bewusste Manipulation von Tests geben. Diese Fortschritte definieren KI zunehmend als eigenständigen Akteur in Arbeitsabläufen und eröffnen neue Dimensionen der Mensch-Maschine-Interaktion. Gleichzeitig wächst die Nachfrage nach lokalen Modellen und Open-Source-Lösungen, um digitale Souveränität und Datenschutz zu gewährleisten.",
+      "schlagwoerter": [
+        "KI",
+        "Large Language Models",
+        "OpenAI",
+        "Anthropic",
+        "GPT-5.6",
+        "ChatGPT Work",
+        "GPT-Live",
+        "Mensch-KI-Interaktion",
+        "KI-Forschung"
+      ],
+      "typ": "einordnung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://openai.com/index/gpt-5-6",
+      "quelle_name": "OpenAI Blog",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "China gelingt erster Fang einer wiederverwendbaren Raketenstufe auf See",
+      "zusammenfassung": "China hat einen bedeutenden Meilenstein in der Raumfahrt erreicht: Erstmals gelang die Landung und Bergung einer wiederverwendbaren Raketenstufe auf See. Die neue Methode verwendet Stahlseile, um die Rakete wie ein Flugzeug auf einem Flugzeugträger aufzufangen. Dieser Ansatz ist deutlich einfacher als der vertikale Landeturm von SpaceX und signalisiert einen wichtigen Fortschritt in Chinas Bestrebungen, die Kosten für den Zugang zum Weltraum zu senken. Der Erfolg zeigt Chinas Ambition, in der Technologie für wiederverwendbare Raketen aufzuholen und sich als führende Raumfahrtnation zu etablieren, mit potenziellen Auswirkungen auf kommerzielle und militärische Anwendungen.",
+      "schlagwoerter": [
+        "China",
+        "Raumfahrt",
+        "Wiederverwendbare Rakete",
+        "Technologie",
+        "Weltraum",
+        "SpaceX",
+        "Innovation"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://arstechnica.com/space/2026/07/china-recovered-its-first-reusable-rocket-and-showed-a-new-way-to-do-it/",
+      "quelle_name": "Ars Technica",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Tour de France: Pogačar dominiert in den Bergen, Merlier siegt im Sprint",
+      "zusammenfassung": "Die Tour de France 2026 hat in ihrer ersten Woche bereits dramatische Entwicklungen gesehen. Tadej Pogačar (UAE Team Emirates-XRG) hat seine Vormachtstellung in den Bergen eindrucksvoll unter Beweis gestellt. Mit einem langen Angriffsritt am Col du Tourmalet holte er sich nicht nur den Etappensieg der sechsten Etappe, sondern auch das Gelbe Trikot zurück und distanzierte seinen Rivalen Jonas Vingegaard um über zwei Minuten. Pogačar stellte dabei den Streckenrekord am Tourmalet um mehr als zwei Minuten ein. Bei den Flachetappen konnte der Belgier Tim Merlier (Soudal-QuickStep) in Bordeaux den siebten Abschnitt im Massensprint für sich entscheiden, während andere Sprintfavoriten zu kämpfen hatten.",
+      "schlagwoerter": [
+        "Tour de France",
+        "Radsport",
+        "Tadej Pogačar",
+        "Tim Merlier",
+        "Col du Tourmalet",
+        "Gelbes Trikot",
+        "Jonas Vingegaard"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-tadej-pogacar-asserts-dominance-with-long-range-attack-on-col-du-tourmalet-for-stage-6-victory-and-retakes-yellow-jersey/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Optimismus für die Zukunft: Kinder zeigen sich überwiegend positiv in Umfrage",
+      "zusammenfassung": "Eine neue Umfrage enthüllt, dass Kinder weltweit eine überwiegend positive Einstellung zur Zukunft haben. Die Studie zeigt, dass junge Menschen nicht nur optimistisch auf die Welt blicken, sondern auch voller kreativer Ideen sind, wie sie diese freundlicher, gerechter und grüner gestalten können. Dieser bemerkenswerte Optimismus unterstreicht ein tiefes Engagement und eine ausgeprägte Vorstellungskraft für positive Veränderungen. Die Ergebnisse bieten einen wichtigen Einblick in die Hoffnungen und Bestrebungen der nächsten Generation und könnten als Inspiration für Erwachsene dienen, die Herausforderungen der Welt mit einer ähnlichen konstruktiven Haltung anzugehen und sich auf die Gestaltung einer besseren Zukunft zu konzentrieren.",
+      "schlagwoerter": [
+        "Good News",
+        "Optimismus",
+        "Kinder",
+        "Zukunft",
+        "Umfrage",
+        "Gesellschaft",
+        "Positive Nachrichten"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.positive.news/society/children-are-overwhelmingly-positive-for-the-future-says-survey/",
+      "quelle_name": "Positive News",
+      "kategorie": "good-news"
+    },
+    {
+      "titel": "Fünfstöckige Kita aus Holz und Lebenserwartung auf Rekordhoch",
+      "zusammenfassung": "Positive Entwicklungen in Deutschland und darüber hinaus geben Anlass zur Freude. In Städten entstehen innovative Bauprojekte wie eine fünfstöckige Kita aus Holz, die nicht nur nachhaltig ist, sondern auch eine zukunftsweisende Bauweise demonstriert. Solche Projekte zeigen, wie urbane Entwicklung umweltfreundlich und ressourcenschonend gestaltet werden kann. Gleichzeitig erreicht die Lebenserwartung in Deutschland ein neues Rekordhoch. Dies ist ein Indikator für Fortschritte in der Gesundheitsversorgung, Lebensqualität und präventiven Maßnahmen. Diese Meldungen unterstreichen, dass es trotz globaler Herausforderungen weiterhin positive Trends und Fortschritte in wichtigen Lebensbereichen gibt.",
+      "schlagwoerter": [
+        "Good News",
+        "Kita",
+        "Holzbau",
+        "Nachhaltigkeit",
+        "Lebenserwartung",
+        "Gesundheit",
+        "Architektur"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://goodnews-magazin.de/fuenfstoeckige-kita-aus-holz/",
+      "quelle_name": "Good News Magazin",
+      "kategorie": "good-news"
+    }
+  ],
+  "schlagwoerter": [
+    "KI",
+    "Technologie",
+    "Wirtschaft",
+    "Finanzen",
+    "International",
+    "Deutschland",
+    "Sport",
+    "Good News",
+    "Meta",
+    "OpenAI",
+    "Apple",
+    "Gesundheitsreform",
+    "Klimapolitik",
+    "Tour de France",
+    "Wimbledon"
+  ]
+}

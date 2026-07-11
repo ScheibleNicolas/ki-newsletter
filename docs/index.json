@@ -1,5 +1,29 @@
 [
   {
+    "datum": "2026-07-11",
+    "titel": "KI/Tech & Wirtschaft am Samstag: Neue KI-Modelle, Meta-Kontroversen und Wimbledon-Finale",
+    "modus": "deep-dive",
+    "schlagwoerter": [
+      "KI",
+      "Technologie",
+      "Wirtschaft",
+      "Finanzen",
+      "International",
+      "Deutschland",
+      "Sport",
+      "Good News",
+      "Meta",
+      "OpenAI",
+      "Apple",
+      "Gesundheitsreform",
+      "Klimapolitik",
+      "Tour de France",
+      "Wimbledon"
+    ],
+    "audio_pfad": "audio/2026-07-11.mp3",
+    "html_pfad": "ausgaben/2026-07-11.html"
+  },
+  {
     "datum": "2026-07-08",
     "titel": "Ihr wöchentlicher KI/Tech/Wirtschaft-News-Überblick",
     "modus": "kurzform",
