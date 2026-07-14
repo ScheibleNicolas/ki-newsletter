@@ -1,11 +1,15 @@
 # ---------------------------------------------------------------------------
 # Anleitung: Secrets in GitHub eintragen
 #
-# Dieser Workflow braucht drei Secrets, damit er Newsletter generieren und
+# Dieser Workflow braucht vier Secrets, damit er Newsletter generieren und
 # Benachrichtigungsmails verschicken kann:
-#   - GEMINI_API_KEY       (aus agent/.env, Feld GEMINI_API_KEY)
-#   - GMAIL_ADDRESS        (aus agent/.env, Feld GMAIL_ADDRESS)
-#   - GMAIL_APP_PASSWORD   (aus agent/.env, Feld GMAIL_APP_PASSWORD)
+#   - GEMINI_API_KEY         (aus agent/.env, Feld GEMINI_API_KEY)
+#   - GMAIL_ADDRESS          (aus agent/.env, Feld GMAIL_ADDRESS)
+#   - GMAIL_APP_PASSWORD     (aus agent/.env, Feld GMAIL_APP_PASSWORD)
+#   - NEWSLETTER_EMPFAENGER  (kommagetrennte Empfänger-Liste, z.B.
+#                             "a@example.com,b@example.com" - Ersatz für
+#                             agent/empfaenger.txt, das in .gitignore steht
+#                             und daher in Actions nicht existiert)
 #
 # So trägst du sie ein:
 #   1. Im Browser zum GitHub-Repo gehen
@@ -13,7 +17,8 @@
 #   3. "New repository secret" klicken
 #   4. Name (z. B. GEMINI_API_KEY) und den Wert aus agent/.env eintragen,
 #      "Add secret" klicken
-#   5. Schritte 3-4 für GMAIL_ADDRESS und GMAIL_APP_PASSWORD wiederholen
+#   5. Schritte 3-4 für GMAIL_ADDRESS, GMAIL_APP_PASSWORD und
+#      NEWSLETTER_EMPFAENGER wiederholen
 #
 # Die Werte aus agent/.env NICHT in dieses YAML schreiben oder committen -
 # agent/.env bleibt lokal und ist in .gitignore ausgeschlossen.
@@ -73,6 +78,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          NEWSLETTER_EMPFAENGER: ${{ secrets.NEWSLETTER_EMPFAENGER }}
         run: python agent/main.py
 
       - name: Generierte Dateien committen und pushen

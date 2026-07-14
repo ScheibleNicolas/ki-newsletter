@@ -1,9 +1,17 @@
-"""Verschickt eine Benachrichtigungs-E-Mail an alle Empfänger aus
-agent/empfaenger.txt, sobald eine neue Newsletter-Ausgabe online ist.
+"""Verschickt eine Benachrichtigungs-E-Mail an alle Empfänger, sobald eine neue
+Newsletter-Ausgabe online ist.
 
 Die Mail enthält nur Titel, Wochentag, einen Link zur Ausgabenseite und die
 Schlagwörter - der volle Inhalt bleibt bewusst auf der Website, die Mail ist
 nur der Hinweis darauf.
+
+Empfänger-Quelle: agent/empfaenger.txt ist in .gitignore (lokale, private
+Liste) und existiert daher in GitHub Actions nicht. Deshalb wird zuerst
+empfaenger.txt versucht, und nur falls die Datei fehlt, ersatzweise die
+Umgebungsvariable NEWSLETTER_EMPFAENGER (kommagetrennte Liste, aus agent/.env
+lokal bzw. aus einem GitHub Secret in Actions) gelesen - so funktioniert die
+Benachrichtigung in beiden Umgebungen, ohne die Empfänger-Adressen zu
+committen.
 """
 
 from __future__ import annotations
@@ -31,11 +39,7 @@ WOCHENTAG_LABEL = {
 }
 
 
-def _lade_empfaenger() -> list[str]:
-    if not EMPFAENGER_PFAD.exists():
-        print(f"[WARNUNG] {EMPFAENGER_PFAD} nicht gefunden, Benachrichtigung wird übersprungen.")
-        return []
-
+def _empfaenger_aus_datei() -> list[str]:
     empfaenger = []
     with open(EMPFAENGER_PFAD, "r", encoding="utf-8") as f:
         for zeile in f:
@@ -43,6 +47,28 @@ def _lade_empfaenger() -> list[str]:
             if not zeile or zeile.startswith("#"):
                 continue
             empfaenger.append(zeile)
+    return empfaenger
+
+
+def _empfaenger_aus_umgebungsvariable() -> list[str]:
+    roh = os.getenv("NEWSLETTER_EMPFAENGER", "")
+    return [teil.strip() for teil in roh.split(",") if teil.strip()]
+
+
+def _lade_empfaenger() -> list[str]:
+    """Liest die Empfänger zuerst aus empfaenger.txt (lokale, private Liste,
+    siehe Moduldocstring); existiert die Datei nicht (z.B. in GitHub Actions,
+    wo sie wegen .gitignore fehlt), wird ersatzweise die kommagetrennte
+    Umgebungsvariable NEWSLETTER_EMPFAENGER verwendet."""
+    if EMPFAENGER_PFAD.exists():
+        return _empfaenger_aus_datei()
+
+    empfaenger = _empfaenger_aus_umgebungsvariable()
+    if not empfaenger:
+        print(
+            f"[WARNUNG] Weder {EMPFAENGER_PFAD} noch die Umgebungsvariable "
+            "NEWSLETTER_EMPFAENGER gefunden, Benachrichtigung wird übersprungen."
+        )
     return empfaenger
 
 
