@@ -1,14 +1,29 @@
 """Newsletter-Generator: erstellt per Gemini die Mittwochs- und Samstags-Ausgabe
 aus einer Liste von Artikeln (siehe fetcher.py). Beide Ausgaben sind gleich
 strukturiert (Kategorien in KATEGORIE_REIHENFOLGE: breaking-news, international,
-deutschland, finanzen, ki-tech, sport, good-news) und nutzen dieselben
-Mengen-Quoten pro Kategorie; einziger inhaltlicher Unterschied ist der optionale
-Einordnungs-Absatz, den nur die Samstagsausgabe erhalten kann.
+deutschland, finanzen, ki-tech, sport, good-news); einziger inhaltlicher
+Unterschied ist der optionale Einordnungs-Absatz, den nur die Samstagsausgabe
+erhalten kann.
 
 Hinweis: Die ursprünglich vorgesehene Bibliothek "google-generativeai" und das
 Modell "gemini-1.5-flash" sind inzwischen abgeschaltet (gemini-1.5-flash liefert
 HTTP 404). Verwendet wird daher das aktuelle, offiziell unterstützte SDK
 "google-genai" mit dem Modell "gemini-2.5-flash".
+
+Format: Kurz und scanbar statt Fließtext-lastig. Jede reguläre Story besteht
+aus maximal 2-3 Sätzen; lieber 4-6 kurze, eigenständige Meldungen pro Kategorie
+als 2 lange. Es gibt keine starren Mengen-Quoten mehr - Gemini bewertet pro
+Kategorie selbst, wie viele Artikel wirklich relevant sind, innerhalb einer
+Mindest- (KATEGORIE_MENGE_MIN) und Höchstgrenze (KATEGORIE_MENGE_MAX). Die
+Kategorie "sport" hat zusätzlich ein eigenes Stichpunkt-Format (Ergebnisse und
+Fakten statt Kommentar/Fließtext, siehe SPORT_HINWEIS), und "good-news" ist auf
+maximal 1 Story und zwei enge Themenfelder beschränkt (siehe
+GOOD_NEWS_HINWEIS) und darf komplett entfallen.
+
+Die Newsletter-Überschrift wird NICHT zusammen mit den Storys erzeugt, sondern
+in einem zweiten, separaten Gemini-Aufruf NACH der Story-Auswahl
+(_erstelle_titel) - so leitet sich die Überschrift aus dem tatsächlich
+generierten Inhalt ab, statt vorab geraten zu werden.
 
 Schutz gegen Halluzinationen: Der Prompt verbietet erfundene Informationen
 explizit, jede Story muss auf einen echten Artikel (quelle_url/quelle_name)
@@ -19,14 +34,15 @@ erfragt, sondern nach der Antwort deterministisch aus dem echten Quellartikel
 übernommen (_kategorien_zuweisen) - so kann Gemini auch hier nichts erfinden.
 
 Sonderfall "breaking-news": Das ist keine Quellen-Kategorie (quellen.yaml kennt
-sie nicht), sondern eine seltene Sonderauszeichnung. Gemini markiert dafür
-einzelne Storys mit "ist_breaking_news": true; Python übernimmt diese Markierung
-erst NACH der regulären, quellenbasierten Kategorie-Zuweisung und verschiebt nur
-dann die Story nach "breaking-news" (_wende_breaking_news_an) - auch hier bleibt
-die quelle_url-Prüfung vorgeschaltet, Gemini kann also keine frei erfundene
+sie nicht), sondern eine SEHR seltene Sonderauszeichnung mit hoher Hürde:
+mehrere unabhängige Quellen müssen dasselbe Ereignis zeitgleich als
+Top-Meldung führen UND das Ereignis muss von außergewöhnlicher Tragweite sein
+(siehe BREAKING_NEWS_HINWEIS). Gemini markiert dafür einzelne Storys mit
+"ist_breaking_news": true; Python übernimmt diese Markierung erst NACH der
+regulären, quellenbasierten Kategorie-Zuweisung und verschiebt nur dann die
+Story nach "breaking-news" (_wende_breaking_news_an) - auch hier bleibt die
+quelle_url-Prüfung vorgeschaltet, Gemini kann also keine frei erfundene
 Breaking-News-Meldung einschleusen, sondern nur eine echte Story umetikettieren.
-
-Zieldauer: ca. 15-20 Min Audio (ca. 2200-2800 Wörter) für beide Ausgabetage.
 """
 
 from __future__ import annotations
@@ -51,7 +67,7 @@ SAMSTAG = 5
 MINDEST_ARTIKEL = 3
 
 # "breaking-news" ist keine echte Quellen-Kategorie (siehe Moduldocstring),
-# daher wird sie in KATEGORIE_REIHENFOLGE_ECHT (Verfügbarkeits-/Quotencheck
+# daher wird sie in KATEGORIE_REIHENFOLGE_ECHT (Verfügbarkeits-/Mengencheck
 # gegen echte Artikel) bewusst ausgeklammert, taucht aber in der Ausgabe-
 # Reihenfolge (KATEGORIE_REIHENFOLGE) ganz vorne auf.
 KATEGORIE_REIHENFOLGE = [
@@ -68,40 +84,96 @@ KATEGORIE_LABEL = {
     "good-news": "Good News",
 }
 
-# Mengen-Quoten pro Kategorie (gelten für Mittwoch UND Samstag gleichermaßen).
-KATEGORIE_MENGE_TEXT = {
-    "international": "genau 2",
-    "deutschland": "genau 2",
-    "finanzen": "genau 2",
-    "ki-tech": "4 bis 5",
-    "sport": "genau 2",
-    "good-news": "1 bis 2",
-}
-KATEGORIE_MENGE_MAX = {
-    "breaking-news": 3,
+# Mindest-/Höchstgrenze je Kategorie (gelten für Mittwoch UND Samstag
+# gleichermaßen). Das ist KEINE starre Quote mehr, sondern ein Rahmen: Gemini
+# wählt innerhalb dieser Grenzen selbst, wie viele Artikel wirklich relevant
+# sind (siehe RELEVANZ_HINWEIS). "good-news" ist bewusst ausgenommen (eigene,
+# engere Regel, siehe GOOD_NEWS_HINWEIS).
+KATEGORIE_MENGE_MIN = {
     "international": 2,
     "deutschland": 2,
     "finanzen": 2,
-    "ki-tech": 5,
+    "ki-tech": 2,
     "sport": 2,
-    "good-news": 2,
+    "good-news": 0,
 }
-_ZIEL_WOERTER_GESAMT = "2200-2800"
+KATEGORIE_MENGE_MAX = {
+    "breaking-news": 2,
+    "international": 6,
+    "deutschland": 6,
+    "finanzen": 6,
+    "ki-tech": 6,
+    "sport": 6,
+    "good-news": 1,
+}
 
 VERBOT_ERFINDEN = (
     "Fasse NUR die folgenden Artikel zusammen. Erfinde keine Informationen. "
     "Wenn ein Thema nicht in den Artikeln vorkommt, erwähne es nicht."
 )
 
+FORMAT_HINWEIS = """
+Format je Story (gilt für alle Kategorien außer "sport", siehe
+SPORT_HINWEIS, und außer der optionalen Einordnungs-Story): maximal 2-3 kurze,
+prägnante Sätze - kein ausführlicher Absatz, keine Wiederholung des Titels im
+Fließtext. Wähle lieber 4-6 kurze, eigenständige Meldungen pro Kategorie als 2
+lange - Kürze und Auswahlqualität stehen klar vor Vollständigkeit.
+"""
+
+RELEVANZ_HINWEIS = """
+Bewerte für JEDE Kategorie jeden Artikel explizit auf Relevanz für einen
+deutschen Leser mit Interesse an KI, Tech, Wirtschaft und Sport, bevor du ihn
+auswählst - nicht jeder Artikel, der formal in eine Kategorie fällt, ist auch
+relevant. Sortiere insbesondere aus:
+- lokale Naturereignisse/Unglücke ohne überregionale oder globale Bedeutung,
+- deutsche Gesetzes- oder Verwaltungsdetails ohne erkennbaren persönlichen
+  oder wirtschaftlichen Bezug für die Leserschaft,
+- Nischenpolitik/Lokalpolitik ohne bundesweite oder internationale Tragweite.
+Wähle lieber weniger, aber wirklich relevante Artikel, als eine Kategorie mit
+Füllmaterial bis zur Höchstgrenze aufzublähen.
+"""
+
+SPORT_HINWEIS = """
+Sonderformat für die Kategorie "sport": KEIN Fließtext, kein Kommentar, keine
+Wertung - ausschließlich Ergebnisse und Fakten als kurze Stichpunkte, die
+Zeilen durch "\\n" getrennt und jede Zeile beginnend mit "- ". Beispiele für
+das erwartete Format:
+- Bei einer Rundfahrt (z.B. Tour de France): "- Etappe 14: Sieger Name, Zeit,
+  Abstand auf Platz 2/3.\\n- Gesamtwertung: 1. Name +0:00, 2. Name +0:45, 3.
+  Name +1:12."
+- Bei einem Mannschaftsspiel/Turnier (z.B. Fußball-WM): "- Deutschland -
+  Spanien 2:1 (Tore: Müller 23', Havertz 67' / Morata 55').\\n- Tabelle Gruppe
+  X: 1. Deutschland 6 Pkt, 2. Spanien 3 Pkt."
+Nutze ausschließlich Zahlen, Namen, Ergebnisse und Zeiten aus den Artikeln -
+keine Adjektive wie "spektakulär" oder "historisch", keine
+Spielverlaufsbeschreibung in ganzen Sätzen.
+"""
+
+GOOD_NEWS_HINWEIS = """
+Sonderregel für die Kategorie "good-news": Wähle HÖCHSTENS 1 Story, und nur,
+wenn sie eindeutig in eines dieser beiden engen Themenfelder fällt:
+(a) Tiere, Natur oder Umwelt (z.B. Artenschutz-Erfolg, Wiederaufforstung,
+Rettung bedrohter Tiere), oder
+(b) ein wirklich bahnbrechender medizinischer Fortschritt (z.B. Durchbruch bei
+einer bislang schwer therapierbaren Krankheit) - keine gewöhnliche
+Gesundheits- oder Studienmeldung.
+Ist unter den verfügbaren "good-news"-Artikeln keiner eindeutig einem der
+beiden Themenfelder zuzuordnen, wähle KEINE Story für diese Kategorie aus -
+die Kategorie entfällt dann komplett in dieser Ausgabe. Das ist ausdrücklich
+erwünscht und wird der Normalfall sein, nicht die Ausnahme.
+"""
+
 BREAKING_NEWS_HINWEIS = """
 Zur Kategorie "breaking-news": Das ist KEINE reguläre Kategorie mit eigenen
-Quellartikeln, sondern eine SEHR SELTENE Sonderauszeichnung für maximal 3 der
+Quellartikeln, sondern eine SEHR SELTENE Sonderauszeichnung für maximal 2 der
 wichtigsten Meldungen der gesamten Ausgabe. Der Normalfall ist 0 - an den
 allermeisten Tagen gibt es KEINE Breaking News, das ist ausdrücklich
 erwünscht. Markiere eine Story nur dann zusätzlich mit "ist_breaking_news":
-true, wenn mindestens eine Bedingung eindeutig erfüllt ist:
-- mehrere UNABHÄNGIGE der obigen Artikel (auch über Kategorien hinweg)
-  berichten zeitgleich über dasselbe konkrete Ereignis, ODER
+true, wenn BEIDE Bedingungen gemeinsam eindeutig erfüllt sind:
+- mindestens zwei UNABHÄNGIGE der obigen Artikel (unterschiedliche Quellen,
+  auch über Kategorien hinweg) berichten zeitgleich über GENAU DASSELBE
+  konkrete Ereignis und führen es erkennbar als Top-Meldung (nicht nur
+  beiläufig erwähnt), UND
 - das Ereignis ist von historischer/außergewöhnlicher Tragweite auf
   gesamtgesellschaftlicher oder globaler Ebene (z.B. Kriegsausbruch,
   Regierungssturz, Naturkatastrophe mit vielen Opfern, Börsencrash,
@@ -112,12 +184,11 @@ Produkt oder Modell-Update (auch nicht von großen Firmen wie OpenAI, Google
 oder Anthropic), ein Quartalsbericht, ein Rekordhoch/-tief an der Börse ohne
 Schock-Charakter, eine Forschungsmeldung, ein Gipfeltreffen mit erwartbarem
 Ergebnis, ein Sportresultat - auch wenn die Formulierung im Artikel
-("bahnbrechend", "historisch" o.ä.) das nahelegt. Im Zweifel IMMER gegen
-Breaking News entscheiden. Markiere niemals mehr als 1-2 Storys als Breaking
-News, außer die Beweislage ist überwältigend eindeutig. Wird eine Story als
-Breaking News markiert, zähle sie NICHT zusätzlich zur Quote ihrer
-ursprünglichen Kategorie - sie erscheint dann ausschließlich unter Breaking
-News.
+("bahnbrechend", "historisch" o.ä.) das nahelegt, und auch wenn nur EINE
+Bedingung oben erfüllt ist. Im Zweifel IMMER gegen Breaking News entscheiden.
+Wird eine Story als Breaking News markiert, zähle sie NICHT zusätzlich zur
+Auswahl ihrer ursprünglichen Kategorie - sie erscheint dann ausschließlich
+unter Breaking News.
 """
 
 
@@ -138,7 +209,7 @@ def _client() -> genai.Client:
 
 def _artikel_fuer_prompt(artikel_liste: list[dict]) -> str:
     """Gruppiert die Artikel nach Kategorie und nummeriert sie durchgehend,
-    damit Gemini die Mengen-Quote pro Kategorie einhalten kann."""
+    damit Gemini die Auswahl pro Kategorie relevanzbasiert treffen kann."""
     bloecke = []
     zaehler = 1
 
@@ -224,9 +295,9 @@ def _wende_breaking_news_an(storys: list[dict]) -> list[dict]:
 
 
 def _begrenze_pro_kategorie(storys: list[dict], max_je_kategorie: dict[str, int]) -> list[dict]:
-    """Erzwingt die Mengen-Quote hart im Code, falls Gemini die Vorgabe im
+    """Erzwingt die Höchstgrenze hart im Code, falls Gemini die Vorgabe im
     Prompt nicht einhält (z.B. zu viele Meldungen in einer Kategorie).
-    Die Einordnungs-Story zählt nicht zur Quote und bleibt immer erhalten."""
+    Die Einordnungs-Story zählt nicht zur Grenze und bleibt immer erhalten."""
     gezaehlt: dict[str, int] = {}
     begrenzt = []
     for story in storys:
@@ -239,8 +310,8 @@ def _begrenze_pro_kategorie(storys: list[dict], max_je_kategorie: dict[str, int]
         if anzahl >= max_anzahl:
             print(
                 f"[HINWEIS] Story '{story.get('titel', '')}' überschreitet die "
-                f"Quote von {max_anzahl} für Kategorie '{kategorie}' und wird "
-                "nicht übernommen."
+                f"Höchstgrenze von {max_anzahl} für Kategorie '{kategorie}' und "
+                "wird nicht übernommen."
             )
             continue
         gezaehlt[kategorie] = anzahl + 1
@@ -256,18 +327,61 @@ def _kategorie_verfuegbarkeit_text(artikel_liste: list[dict]) -> str:
     return "\n".join(zeilen)
 
 
-def _kategorie_quoten_text() -> str:
-    zeilen = [
-        f"- {kategorie}: {KATEGORIE_MENGE_TEXT[kategorie]} Meldungen"
-        for kategorie in KATEGORIE_REIHENFOLGE_ECHT
-    ]
+def _kategorie_mengen_text() -> str:
+    zeilen = []
+    for kategorie in KATEGORIE_REIHENFOLGE_ECHT:
+        if kategorie == "good-news":
+            zeilen.append(f"- {kategorie}: siehe eigene Sonderregel unten (höchstens 1, oft 0)")
+            continue
+        minimum = KATEGORIE_MENGE_MIN[kategorie]
+        maximum = KATEGORIE_MENGE_MAX[kategorie]
+        zeilen.append(
+            f"- {kategorie}: mindestens {minimum}, höchstens {maximum} Meldungen - "
+            f"aber NUR so viele, wie nach dem Relevanzfilter unten wirklich "
+            f"relevant sind (auch weniger als {minimum}, falls nicht genug "
+            "relevante Artikel vorhanden sind)"
+        )
     return "\n".join(zeilen)
+
+
+def _titel_fuer_prompt(storys: list[dict]) -> str:
+    zeilen = []
+    for story in storys:
+        label = KATEGORIE_LABEL.get(story.get("kategorie"), story.get("kategorie") or "")
+        zeilen.append(f"- [{label}] {story.get('titel', '')}: {story.get('zusammenfassung', '')}")
+    return "\n".join(zeilen)
+
+
+def _erstelle_titel(storys: list[dict], heute: date) -> str:
+    """Leitet die Newsletter-Überschrift ERST NACH der Story-Auswahl aus den
+    tatsächlich generierten Storys ab (separater Gemini-Aufruf), statt sie
+    vorab zu erraten - siehe Moduldocstring."""
+    if not storys:
+        return ""
+
+    prompt = f"""Du bist Redakteur eines KI/Tech/Wirtschaft-Newsletters auf Deutsch.
+
+Unten stehen alle Storys, die für die heutige Ausgabe ({heute.isoformat()})
+bereits fertig ausgewählt sind. Formuliere dafür EINE prägnante, konkrete
+Newsletter-Überschrift auf Deutsch, die den tatsächlichen Inhalt dieser
+Ausgabe widerspiegelt - keine generische Formulierung wie "KI-Newsletter vom
+{heute.isoformat()}", sondern inhaltlich am wichtigsten oder am häufigsten
+wiederkehrenden Thema der Ausgabe orientiert. Erfinde dabei keine neuen
+Fakten, nutze ausschließlich was in den Storys unten steht.
+
+Antworte NUR mit JSON in exakt diesem Format:
+{{"titel": "Überschrift"}}
+
+Storys dieser Ausgabe:
+{_titel_fuer_prompt(storys)}
+"""
+    daten = _rufe_gemini_json(prompt)
+    return daten.get("titel", "")
 
 
 def _erstelle_ausgabe(artikel_liste: list[dict], heute: date, modus: str) -> dict:
     _pruefe_mindestanzahl(artikel_liste)
 
-    laenge_hinweis = "ca. 120-180 Wörter Zusammenfassung je Meldung"
     typ_hinweis = '"typ" ist immer "kurzmeldung".'
     einordnung_hinweis = ""
     if modus == "deep-dive":
@@ -280,6 +394,7 @@ Zusätzlich NUR für diese Ausgabe (Samstag): Falls ein einzelnes KI/Tech-Thema
 aus der Kategorie "ki-tech" die Woche klar dominiert hat, füge GENAU EINE
 zusätzliche Story mit "typ": "einordnung" hinzu, die dieses Thema in 150-200
 Wörtern einordnet und erklärt (Feld "kategorie" dieser Story ist "ki-tech").
+Diese Einordnungs-Story ist die einzige Ausnahme vom 2-3-Sätze-Format oben.
 Falls kein Thema klar dominiert hat, füge KEINE Einordnung hinzu."""
 
     prompt = f"""Du bist Redakteur eines KI/Tech/Wirtschaft-Newsletters auf Deutsch.
@@ -291,30 +406,28 @@ gruppierten Artikelliste verwenden.
 Verfügbare Artikel pro Kategorie:
 {_kategorie_verfuegbarkeit_text(artikel_liste)}
 
-Wähle pro Kategorie die folgende Anzahl der relevantesten Meldungen aus
-({laenge_hinweis}). Das ist eine harte Vorgabe: wähle für JEDE Kategorie mit
-mindestens einem verfügbaren Artikel (siehe Liste oben) auch mindestens eine
-Meldung aus, und wähle NIE mehr Meldungen als die obere Grenze der jeweiligen
-Spanne aus, selbst wenn eine andere Kategorie mehr interessante Artikel
-bietet. Überspringe eine Kategorie nur, wenn für sie laut obiger Liste 0
-Artikel vorhanden sind - erfinde niemals zusätzliche Meldungen, um eine leere
-Kategorie zu füllen.
+{FORMAT_HINWEIS}
+{RELEVANZ_HINWEIS}
+Wähle pro Kategorie innerhalb dieser Grenzen aus (überspringe eine Kategorie
+nur, wenn für sie laut obiger Liste 0 Artikel vorhanden sind, oder wenn laut
+Relevanzfilter keiner ihrer Artikel wirklich relevant ist - erfinde niemals
+zusätzliche Meldungen, um eine Kategorie aufzufüllen):
 
-{_kategorie_quoten_text()}
+{_kategorie_mengen_text()}
+{SPORT_HINWEIS}
+{GOOD_NEWS_HINWEIS}
 {BREAKING_NEWS_HINWEIS}
 {einordnung_hinweis}
-
-Zielumfang der gesamten Ausgabe: ca. {_ZIEL_WOERTER_GESAMT} Wörter (entspricht
-bei natürlicher Moderation ca. 15-20 Minuten Vorlesezeit).
 
 Jede Story MUSS "quelle_url" und "quelle_name" enthalten - übernimm dafür
 exakt die URL und den Quellennamen aus der Artikelliste, erfinde niemals eine
 URL. {typ_hinweis} Optionales Feld "ist_breaking_news" (true/false, siehe oben).
 
-Antworte NUR mit JSON in exakt diesem Format (keine weiteren Felder):
+Antworte NUR mit JSON in exakt diesem Format (keine weiteren Felder, noch
+KEINE Newsletter-Überschrift - die wird in einem separaten Schritt danach aus
+den fertigen Storys abgeleitet):
 
 {{
-  "titel": "Newsletter-Titel für diese Ausgabe",
   "storys": [
     {{
       "titel": "Artikeltitel",
@@ -337,11 +450,12 @@ Artikelliste:
     storys = _kategorien_zuweisen(storys, artikel_liste)
     storys = _wende_breaking_news_an(storys)
     storys = _begrenze_pro_kategorie(storys, KATEGORIE_MENGE_MAX)
+    titel = _erstelle_titel(storys, heute)
 
     return {
         "modus": modus,
         "datum": heute.isoformat(),
-        "titel": daten.get("titel", ""),
+        "titel": titel,
         "storys": storys,
         "schlagwoerter": daten.get("schlagwoerter", []),
     }
@@ -356,8 +470,8 @@ def generate_newsletter(
 
     Mittwoch -> Kurzform, Samstag -> Deep-Dive, sonst kein Newsletter. Beide
     Ausgaben sind gleich strukturiert (Storys mit "kategorie" in
-    KATEGORIE_REIHENFOLGE) und nutzen dieselben Mengen-Quoten pro Kategorie;
-    nur Samstag kann zusätzlich eine Einordnungs-Story enthalten.
+    KATEGORIE_REIHENFOLGE); nur Samstag kann zusätzlich eine
+    Einordnungs-Story enthalten.
 
     modus_erzwingen ("kurzform" oder "deep-dive") überschreibt die
     Wochentagsermittlung, z.B. für Testläufe an einem beliebigen Tag - "heute"
