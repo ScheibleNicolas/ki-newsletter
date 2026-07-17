@@ -59,8 +59,6 @@ GRUNDSTIL = """
     .badge--kurzform { background: #14342e; color: #6ee7b7; }
     .badge--deep-dive { background: #33281a; color: #fbbf24; }
     .badge--sonstiges { background: #2a2a33; color: #c7c7d1; }
-    .tags { margin: 0.6rem 0 0; }
-    .tag { display: inline-block; background: #1c1f26; color: #9aa0a6; border-radius: 6px; padding: 0.15rem 0.55rem; font-size: 0.78rem; margin: 0 0.4rem 0.4rem 0; }
 """
 
 
@@ -75,13 +73,6 @@ def _badge_html(modus: str) -> str:
         modus, "badge--sonstiges"
     )
     return f'<span class="badge {css_klasse}">{html.escape(label)}</span>'
-
-def _tags_html(schlagwoerter: list[str]) -> str:
-    if not schlagwoerter:
-        return ""
-    pills = "".join(f'<span class="tag">{html.escape(s)}</span>' for s in schlagwoerter)
-    return f'<div class="tags">{pills}</div>'
-
 
 def _quelle_html(story: dict) -> str:
     quelle_url = story.get("quelle_url")
@@ -106,7 +97,6 @@ def _story_html(story: dict) -> str:
       {einordnung_label}
       <h3>{titel}</h3>
       <p>{zusammenfassung}</p>
-      {_tags_html(story.get("schlagwoerter", []))}
       {_quelle_html(story)}
     </article>"""
 
@@ -143,7 +133,43 @@ def _ausgabe_html(newsletter: dict, audio_relativ: str | None) -> str:
         _kategorie_abschnitt_html(k, gruppen[k]) for k in reihenfolge if gruppen.get(k)
     )
     audio_html = (
-        f'<audio controls preload="none" src="{html.escape(audio_relativ)}"></audio>'
+        f'<audio id="player" controls preload="none" src="{html.escape(audio_relativ)}"></audio>'
+        if audio_relativ
+        else ""
+    )
+    sticky_player_html = (
+        """
+  <div class="sticky-player" id="stickyPlayer">
+    <div class="sticky-player__inner">
+      <button class="sticky-player__toggle" id="stickyToggle" type="button" aria-label="Abspielen">&#9654;</button>
+      <div class="sticky-player__bar"><div class="sticky-player__progress" id="stickyProgress"></div></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var audio = document.getElementById('player');
+      var sticky = document.getElementById('stickyPlayer');
+      var toggle = document.getElementById('stickyToggle');
+      var progress = document.getElementById('stickyProgress');
+      if (!audio || !sticky || !window.IntersectionObserver) return;
+
+      var beobachter = new IntersectionObserver(function (eintraege) {
+        var sichtbar = eintraege[0].isIntersecting;
+        sticky.classList.toggle('sticky-player--sichtbar', !sichtbar);
+      }, { threshold: 0 });
+      beobachter.observe(audio);
+
+      toggle.addEventListener('click', function () {
+        if (audio.paused) { audio.play(); } else { audio.pause(); }
+      });
+      audio.addEventListener('play', function () { toggle.innerHTML = '&#10074;&#10074;'; toggle.setAttribute('aria-label', 'Pause'); });
+      audio.addEventListener('pause', function () { toggle.innerHTML = '&#9654;'; toggle.setAttribute('aria-label', 'Abspielen'); });
+      audio.addEventListener('timeupdate', function () {
+        if (!audio.duration) return;
+        progress.style.width = (audio.currentTime / audio.duration * 100) + '%';
+      });
+    })();
+  </script>"""
         if audio_relativ
         else ""
     )
@@ -172,10 +198,18 @@ def _ausgabe_html(newsletter: dict, audio_relativ: str | None) -> str:
     .quelle {{ margin: 0.7rem 0 0; font-size: 0.82rem; color: #9aa0a6; }}
     audio {{ width: 100%; margin: 1.4rem 0; }}
     .zurueck {{ display: inline-block; margin-top: 2rem; font-size: 0.9rem; }}
+    .zurueck--oben {{ margin-top: 0; margin-bottom: 1.2rem; }}
+    .sticky-player {{ position: fixed; left: 0; right: 0; bottom: 0; background: #1c1f26; border-top: 1px solid #2a2d36; box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.35); padding: 0.6rem 1rem; transform: translateY(100%); transition: transform 0.25s ease; z-index: 50; }}
+    .sticky-player--sichtbar {{ transform: translateY(0); }}
+    .sticky-player__inner {{ max-width: 700px; margin: 0 auto; display: flex; align-items: center; gap: 0.9rem; }}
+    .sticky-player__toggle {{ flex: 0 0 auto; width: 2.3rem; height: 2.3rem; border-radius: 50%; border: none; background: #7dd3fc; color: #0f1115; font-size: 0.9rem; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; }}
+    .sticky-player__bar {{ flex: 1 1 auto; height: 4px; border-radius: 999px; background: #2a2d36; overflow: hidden; }}
+    .sticky-player__progress {{ height: 100%; width: 0%; background: #7dd3fc; }}
   </style>
 </head>
 <body>
   <div class="container">
+    <a class="zurueck zurueck--oben" href="../index.html">&larr; Alle Ausgaben</a>
     <p class="datum">{html.escape(_datum_lesbar(datum))}</p>
     <h1>{titel}</h1>
     {_badge_html(modus)}
@@ -183,6 +217,7 @@ def _ausgabe_html(newsletter: dict, audio_relativ: str | None) -> str:
     {abschnitte_html}
     <a class="zurueck" href="../index.html">&larr; Alle Ausgaben</a>
   </div>
+  {sticky_player_html}
 </body>
 </html>
 """
@@ -195,16 +230,44 @@ def _lade_index() -> list[dict]:
         return json.load(f)
 
 
-def _index_html(eintraege: list[dict]) -> str:
-    karten = []
+def _gruppiere_nach_monat(eintraege: list[dict]) -> list[tuple[int, int, list[dict]]]:
+    """Gruppiert die (absteigend nach Datum sortierten) Ausgaben in
+    absteigende (Jahr, Monat, Ausgaben)-Blöcke, ohne die Sortierung
+    aufzubrechen (siehe _aktualisiere_index)."""
+    gruppen: list[tuple[int, int, list[dict]]] = []
     for e in eintraege:
-        karten.append(f"""
-    <a class="karte" href="{html.escape(e['html_pfad'])}">
-      <p class="datum">{html.escape(_datum_lesbar(e['datum']))}</p>
-      <h2>{html.escape(e['titel'])}</h2>
-      {_badge_html(e['modus'])}
-      {_tags_html(e.get('schlagwoerter', []))}
-    </a>""")
+        d = date.fromisoformat(e["datum"])
+        if gruppen and gruppen[-1][0] == d.year and gruppen[-1][1] == d.month:
+            gruppen[-1][2].append(e)
+        else:
+            gruppen.append((d.year, d.month, [e]))
+    return gruppen
+
+
+def _index_html(eintraege: list[dict]) -> str:
+    gruppen = _gruppiere_nach_monat(eintraege)
+    heute = date.today()
+    index_offen = next(
+        (i for i, (jahr, monat, _) in enumerate(gruppen) if jahr == heute.year and monat == heute.month),
+        0 if gruppen else None,
+    )
+
+    monate_html = []
+    for i, (jahr, monat, monats_eintraege) in enumerate(gruppen):
+        karten = []
+        for e in monats_eintraege:
+            karten.append(f"""
+      <a class="karte" href="{html.escape(e['html_pfad'])}">
+        <p class="datum">{html.escape(_datum_lesbar(e['datum']))}</p>
+        <h2>{html.escape(e['titel'])}</h2>
+        {_badge_html(e['modus'])}
+      </a>""")
+        offen_attr = " open" if i == index_offen else ""
+        monate_html.append(f"""
+    <details class="monat"{offen_attr}>
+      <summary class="monat-titel">{html.escape(MONATE_DE[monat - 1])} {jahr}</summary>
+      <div class="monat-inhalt">{"".join(karten)}</div>
+    </details>""")
 
     return f"""<!doctype html>
 <html lang="de">
@@ -214,6 +277,13 @@ def _index_html(eintraege: list[dict]) -> str:
   <title>KI-Newsletter, Archiv</title>
   <style>
 {GRUNDSTIL}
+    .monat {{ border-top: 1px solid #23262e; padding: 1rem 0; }}
+    .monat:first-of-type {{ border-top: none; }}
+    .monat-titel {{ cursor: pointer; font-size: 1.1rem; font-weight: 600; color: #e6e6e6; list-style: none; padding: 0.3rem 0; }}
+    .monat-titel::-webkit-details-marker {{ display: none; }}
+    .monat-titel::before {{ content: "\\25B8"; display: inline-block; margin-right: 0.5rem; color: #7dd3fc; transition: transform 0.15s ease; }}
+    .monat[open] > .monat-titel::before {{ transform: rotate(90deg); }}
+    .monat-inhalt {{ margin-top: 0.4rem; }}
     .karte {{ display: block; text-decoration: none; color: inherit; border-top: 1px solid #23262e; padding: 1.4rem 0; }}
     .karte:first-of-type {{ border-top: none; }}
     .karte h2 {{ font-size: 1.15rem; margin: 0.3rem 0 0.5rem; color: #e6e6e6; }}
@@ -223,7 +293,7 @@ def _index_html(eintraege: list[dict]) -> str:
   <div class="container">
     <h1>KI-Newsletter</h1>
     <p class="datum">Alle Ausgaben</p>
-    {"".join(karten) if karten else "<p>Noch keine Ausgaben vorhanden.</p>"}
+    {"".join(monate_html) if monate_html else "<p>Noch keine Ausgaben vorhanden.</p>"}
   </div>
 </body>
 </html>

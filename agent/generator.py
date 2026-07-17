@@ -93,13 +93,13 @@ KATEGORIE_MENGE_MIN = {
     "international": 2,
     "deutschland": 2,
     "finanzen": 2,
-    "ki-tech": 2,
+    "ki-tech": 5,
     "sport": 2,
     "good-news": 0,
 }
 KATEGORIE_MENGE_MAX = {
     "breaking-news": 2,
-    "international": 6,
+    "international": 4,
     "deutschland": 6,
     "finanzen": 6,
     "ki-tech": 6,
@@ -136,14 +136,20 @@ Füllmaterial bis zur Höchstgrenze aufzublähen.
 SPORT_HINWEIS = """
 Sonderformat für die Kategorie "sport": KEIN Fließtext, kein Kommentar, keine
 Wertung - ausschließlich Ergebnisse und Fakten als kurze Stichpunkte, die
-Zeilen durch "\\n" getrennt und jede Zeile beginnend mit "- ". Beispiele für
-das erwartete Format:
-- Bei einer Rundfahrt (z.B. Tour de France): "- Etappe 14: Sieger Name, Zeit,
-  Abstand auf Platz 2/3.\\n- Gesamtwertung: 1. Name +0:00, 2. Name +0:45, 3.
-  Name +1:12."
+Zeilen durch "\\n" getrennt und jede Zeile beginnend mit "- ". Fasse ALLE
+Etappen/Spiele zusammen, die seit der letzten Ausgabe stattgefunden haben und
+in den Artikeln vorkommen (nicht nur die letzte einzelne Etappe oder das
+letzte Spiel) - jede davon als eigene Stichpunkt-Zeile. Zeige danach
+zusätzlich die aktuelle Gesamtwertung bzw. Tabelle als eigene Stichpunkt-Zeile
+mit den Top 5. Beispiele für das erwartete Format:
+- Bei einer Rundfahrt (z.B. Tour de France): "- Etappe 13: Sieger Name, Zeit,
+  Abstand auf Platz 2/3.\\n- Etappe 14: Sieger Name, Zeit, Abstand auf Platz
+  2/3.\\n- Gesamtwertung Top 5: 1. Name +0:00, 2. Name +0:45, 3. Name +1:12,
+  4. Name +1:40, 5. Name +2:05."
 - Bei einem Mannschaftsspiel/Turnier (z.B. Fußball-WM): "- Deutschland -
-  Spanien 2:1 (Tore: Müller 23', Havertz 67' / Morata 55').\\n- Tabelle Gruppe
-  X: 1. Deutschland 6 Pkt, 2. Spanien 3 Pkt."
+  Spanien 2:1 (Tore: Müller 23', Havertz 67' / Morata 55').\\n- Frankreich -
+  Brasilien 0:0.\\n- Tabelle Gruppe X Top 5: 1. Deutschland 6 Pkt, 2. Spanien
+  4 Pkt, 3. Frankreich 3 Pkt, 4. Brasilien 1 Pkt, 5. Name 0 Pkt."
 Nutze ausschließlich Zahlen, Namen, Ergebnisse und Zeiten aus den Artikeln -
 keine Adjektive wie "spektakulär" oder "historisch", keine
 Spielverlaufsbeschreibung in ganzen Sätzen.
@@ -151,16 +157,22 @@ Spielverlaufsbeschreibung in ganzen Sätzen.
 
 GOOD_NEWS_HINWEIS = """
 Sonderregel für die Kategorie "good-news": Wähle HÖCHSTENS 1 Story, und nur,
-wenn sie eindeutig in eines dieser beiden engen Themenfelder fällt:
+wenn sie eindeutig in eines dieser beiden engen Themenfelder fällt UND
+emotional berührt sowie echte Good Vibes gibt - keine bloß "nette" Meldung:
 (a) Tiere, Natur oder Umwelt (z.B. Artenschutz-Erfolg, Wiederaufforstung,
 Rettung bedrohter Tiere), oder
-(b) ein wirklich bahnbrechender medizinischer Fortschritt (z.B. Durchbruch bei
-einer bislang schwer therapierbaren Krankheit) - keine gewöhnliche
-Gesundheits- oder Studienmeldung.
-Ist unter den verfügbaren "good-news"-Artikeln keiner eindeutig einem der
-beiden Themenfelder zuzuordnen, wähle KEINE Story für diese Kategorie aus -
-die Kategorie entfällt dann komplett in dieser Ausgabe. Das ist ausdrücklich
-erwünscht und wird der Normalfall sein, nicht die Ausnahme.
+(b) ein wirklich bahnbrechender medizinischer Fortschritt, der emotional
+berührt (z.B. Durchbruch bei einer bislang schwer therapierbaren Krankheit) -
+keine gewöhnliche Gesundheits- oder Studienmeldung.
+Ausdrücklich NICHT geeignet, selbst wenn positiv formuliert: alles aus Tech
+oder Business (neue Produkte, Firmen-Investitionen, Effizienz- oder
+Nachhaltigkeits-Gadgets o.ä. - ein cleveres Solarfaltdach oder Ähnliches auf
+diesem Niveau zählt ausdrücklich NICHT als Good News). Ist unter den
+verfügbaren "good-news"-Artikeln keiner eindeutig einem der beiden
+Themenfelder zuzuordnen und wirklich emotional berührend, wähle KEINE Story
+für diese Kategorie aus - die Kategorie entfällt dann komplett in dieser
+Ausgabe. Das ist ausdrücklich erwünscht und wird der Normalfall sein, nicht
+die Ausnahme.
 """
 
 BREAKING_NEWS_HINWEIS = """
@@ -335,6 +347,19 @@ def _kategorie_mengen_text() -> str:
             continue
         minimum = KATEGORIE_MENGE_MIN[kategorie]
         maximum = KATEGORIE_MENGE_MAX[kategorie]
+        if kategorie == "ki-tech":
+            zeilen.append(
+                f"- {kategorie}: HARTES Minimum von {minimum}, höchstens {maximum} "
+                "Meldungen - anders als bei den übrigen Kategorien ist dieses Minimum "
+                f"NICHT optional: Wähle IMMER mindestens {minimum} Artikel aus dieser "
+                "Kategorie aus, sofern mindestens so viele Artikel laut obiger Liste "
+                "verfügbar sind, auch wenn dafür Artikel mit aufgenommen werden "
+                "müssen, die nach dem Relevanzfilter unten eher am unteren Ende der "
+                "Relevanz liegen. Nur wenn tatsächlich weniger als "
+                f"{minimum} Artikel für diese Kategorie verfügbar sind, darf die "
+                "Anzahl darunter liegen."
+            )
+            continue
         zeilen.append(
             f"- {kategorie}: mindestens {minimum}, höchstens {maximum} Meldungen - "
             f"aber NUR so viele, wie nach dem Relevanzfilter unten wirklich "

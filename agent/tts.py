@@ -148,10 +148,26 @@ def _erstelle_podcast_skript(newsletter: dict) -> dict[str, str]:
 
 Verwandle die folgenden, bereits recherchierten Meldungen JE KATEGORIE in
 einen natürlich gesprochenen Moderationstext. Das ist kein stures Vorlesen
-von Stichpunkten, sondern echte Moderation: baue eigene Übergänge zwischen
-den Meldungen einer Kategorie, kommentiere kurz, und gib gelegentlich (nicht
-bei jeder Meldung) eine kurze eigene Einordnung ("was das bedeutet...",
-"interessant dabei ist...", "spannend daran ist..."). {VERBOT_ERFINDEN_SKRIPT}
+von Stichpunkten, sondern eine lockere, lebendige Moderation, wie ein
+Mensch sie tatsächlich spricht - kein reines Vorlesen von Titel und
+Zusammenfassung:
+- Baue eigene Übergänge zwischen den Meldungen einer Kategorie und
+  kommentiere kurz statt Fakten nur aneinanderzureihen.
+- Baue gelegentlich (nicht bei jeder Meldung) eine kurze eigene Einordnung
+  ein ("was das bedeutet...", "interessant dabei ist...", "spannend daran
+  ist...").
+- Baue an mindestens einer Stelle pro Kategorie eine echte Überraschung oder
+  Betonung ein, z.B. "Das ist wirklich bemerkenswert...", "Damit hätte kaum
+  jemand gerechnet...", "Und jetzt kommt der spannende Teil...".
+- Setze gelegentlich kurze, lockere Einwürfe ("Kurz gesagt: ...", "Man stelle
+  sich das mal vor...", "Ehrlich gesagt...").
+- Erlaube gelegentlich einen leichten, dezenten Humor, wenn es zur Meldung
+  passt - nie auf Kosten von Betroffenen und nie bei ernsten Themen.
+- Gestalte den Übergang am ENDE eines Kategorie-Textes so, dass er neugierig
+  auf das nächste Thema macht (leichter Cliffhanger oder Ausblick), statt nur
+  neutral abzuschließen.
+Insgesamt soll es klingen wie ein Moderator, der die Themen selbst spannend
+findet - nicht wie eine vorgelesene Zusammenfassung. {VERBOT_ERFINDEN_SKRIPT}
 
 Newsletter-Titel: "{newsletter.get('titel') or 'KI-Newsletter'}"
 Datum: {newsletter.get('datum', '')}
