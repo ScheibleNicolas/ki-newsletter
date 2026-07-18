@@ -1,5 +1,31 @@
 [
   {
+    "datum": "2026-07-18",
+    "titel": "KI-Machtkampf spitzt sich zu: China fordert US-Dominanz, EU reguliert Google",
+    "modus": "deep-dive",
+    "schlagwoerter": [
+      "KI",
+      "Tech",
+      "Wirtschaft",
+      "Politik",
+      "Raumfahrt",
+      "Finanzen",
+      "Sport",
+      "Tour de France",
+      "Fußball-WM",
+      "Sicherheit",
+      "Umwelt",
+      "Deutschland",
+      "USA",
+      "China",
+      "EU",
+      "Gesundheit",
+      "Energie"
+    ],
+    "audio_pfad": "audio/2026-07-18.mp3",
+    "html_pfad": "ausgaben/2026-07-18.html"
+  },
+  {
     "datum": "2026-07-15",
     "titel": "Globale Spannungen belasten Börsen; KI-Welle rollt mit Blasenrisiko",
     "modus": "kurzform",

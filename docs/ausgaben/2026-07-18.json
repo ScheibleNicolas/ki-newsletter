@@ -1,0 +1,466 @@
+{
+  "modus": "deep-dive",
+  "datum": "2026-07-18",
+  "titel": "KI-Machtkampf spitzt sich zu: China fordert US-Dominanz, EU reguliert Google",
+  "storys": [
+    {
+      "titel": "Eskalation im Golfkonflikt: USA und Iran melden gegenseitige Angriffe",
+      "zusammenfassung": "Die USA und Iran berichten die siebte Nacht in Folge von gegenseitigen Angriffen in der Golfregion. Iranische Beamte warnen, dass die Politik der Verhandlungen vorbei sei und eine weitere Eskalation droht, während US-Angriffe Infrastruktur wie Kraftwerke und Wasseranlagen in Iran treffen. Diese Intensivierung der Spannungen führt zu fallenden Kursen für Gold, Silber und Kryptowährungen an den Finanzmärkten.",
+      "schlagwoerter": [
+        "Golfkonflikt",
+        "USA",
+        "Iran",
+        "Angriffe",
+        "Geopolitik",
+        "Finanzmärkte"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": true,
+      "quelle_url": "https://www.tagesschau.de/ausland/asien/iran-angriffe-usa-104.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "breaking-news"
+    },
+    {
+      "titel": "Trump droht Kanada mit Zöllen wegen Waldbränden",
+      "zusammenfassung": "US-Präsident Trump droht Kanada mit der Einführung neuer Zölle, falls das Land nicht für die Kosten der Luftverschmutzung aufkommt, die durch die Waldbrände in den USA verursacht wird. Kanadische Behörden und Klimaexperten betonen hingegen die gemeinsame Verantwortung im Kampf gegen den Klimawandel, der die Brandbedingungen verschärft. Die Rauchentwicklung stellt auch eine potenzielle Gefahr für Großstädte im Norden der USA dar.",
+      "schlagwoerter": [
+        "USA",
+        "Kanada",
+        "Trump",
+        "Zölle",
+        "Waldbrände",
+        "Umwelt",
+        "Politik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cwyq93j34lgo?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Philippinen verurteilen chinesisches KI-Video als rassistisch",
+      "zusammenfassung": "Die Philippinen haben ein von chinesischen Staatsmedien veröffentlichtes KI-Video scharf verurteilt, das Filipinos als Affen darstellt und Gebietsansprüche im Südchinesischen Meer singt. Manila bezeichnete das Video als rassistisch und als Versuch, die nationalen Souveränitätsansprüche zu verhöhnen. Der Vorfall verschärft die bereits bestehenden Spannungen zwischen den beiden Ländern in der umstrittenen Region.",
+      "schlagwoerter": [
+        "Philippinen",
+        "China",
+        "KI",
+        "Rassismus",
+        "Geopolitik",
+        "Südchinesisches Meer"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cj632307934o?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "EU schlägt Lockerung der CO2-Emissionskürzungen für Unternehmen vor",
+      "zusammenfassung": "Die EU-Kommission plant eine Reform ihres Emissionshandelssystems, um Unternehmen mehr Zeit zur Reduzierung ihres CO2-Ausstoßes zu geben und sie finanziell zu entlasten. Die Vorschläge sehen vor, die Einnahmen aus dem Emissionshandel gezielter in Dekarbonisierungsprojekte zu lenken. Diese Pläne stoßen jedoch auf geteilte Reaktionen, da sie einerseits die Industrie unterstützen, andererseits aber Bedenken hinsichtlich der Klimaziele aufwerfen.",
+      "schlagwoerter": [
+        "EU",
+        "Klimaschutz",
+        "Emissionshandel",
+        "Unternehmen",
+        "Wirtschaftspolitik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/ckgv0zd497zo?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Indiens Skyroot Aerospace startet erste kommerzielle Rakete",
+      "zusammenfassung": "Das indische Raumfahrt-Start-up Skyroot Aerospace hat mit Vikram-1 erfolgreich die erste kommerzielle Rakete Indiens ins All geschickt, die für den Orbit konzipiert ist. Dieser Start markiert einen wichtigen Meilenstein für das Unternehmen, das als Indiens erstes 'Space-Tech-Einhorn' gilt. Der Erfolg unterstreicht Indiens wachsende Präsenz und Fähigkeiten im globalen Raumfahrtsektor.",
+      "schlagwoerter": [
+        "Indien",
+        "Raumfahrt",
+        "Start-up",
+        "Technologie",
+        "Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/clyekv7rld3o?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Debatte um Leihmutterschaft bei CDU-Politiker Spahn",
+      "zusammenfassung": "Die Elternschaft von CDU-Politiker Jens Spahn und seinem Ehemann mithilfe einer Leihmutter in den USA hat eine hitzige Debatte innerhalb der CDU ausgelöst. Mehrere Parteifreunde fordern Spahns Rücktritt, da Leihmutterschaft in Deutschland verboten ist. Spahn verteidigte seine Entscheidung als nicht einfach und überlässt der Fraktion die Entscheidung über seine Zukunft.",
+      "schlagwoerter": [
+        "Deutschland",
+        "CDU",
+        "Politik",
+        "Jens Spahn",
+        "Leihmutterschaft",
+        "Gesellschaft"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/inland/spahn-ruecktrittsforderungen-cdu-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Innenminister Dobrindt warnt vor verschärfter Sicherheitslage",
+      "zusammenfassung": "Bundesinnenminister Dobrindt (CSU) schätzt die Bedrohungslage in Deutschland angesichts vermehrter Meldungen als hoch ein. Er erklärte, dass Anschlagspläne gegen das Land klar erkennbar seien. Diese Warnung unterstreicht die Notwendigkeit erhöhter Wachsamkeit und Sicherheitsmaßnahmen im ganzen Bundesgebiet.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Sicherheit",
+        "Terrorismus",
+        "Politik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/inland/sicherheit-dobrindt-anschlagsgefahr-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "VW-Streit um 100.000 Jobs eskaliert vor Sommerpause",
+      "zusammenfassung": "An den Standorten des angeschlagenen Autobauers Volkswagen eskaliert der Streit um die Zukunft von 100.000 Arbeitsplätzen und vier Werken kurz vor Beginn der Werksferien. Die Belegschaft ist in großer Sorge und der Betriebsrat fordert von VW-Chef Blume Klarheit. Die aufgeheizte Stimmung deutet auf schwierige Verhandlungen nach der Rückkehr aus den Ferien hin.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Volkswagen",
+        "Automobilindustrie",
+        "Arbeitsplätze",
+        "Wirtschaft",
+        "Betriebsrat"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/unternehmen/vw-volkswagen-zukunft-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "BGH-Urteil: Anspruch auf Klimaanlage am Balkon",
+      "zusammenfassung": "Der Bundesgerichtshof (BGH) hat entschieden, dass Wohnungseigentümer grundsätzlich das Recht haben, ein Klimagerät auf ihrem Balkon einbauen zu lassen. Eine Hausgemeinschaft muss dies im Allgemeinen gestatten. Das Urteil schafft wichtige Klarheit für viele Haushalte angesichts steigender Temperaturen und des Bedürfnisses nach Kühlung in den eigenen vier Wänden.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Recht",
+        "Immobilien",
+        "Verbraucher",
+        "Klimaanlage",
+        "BGH"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/verbraucher/klimaanlagen-balkon-wohnungseigentuemer-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Bundesnetzagentur schafft Wettbewerb im Bahnfernverkehr",
+      "zusammenfassung": "Die Bundesnetzagentur hat trotz Länderkritik ihre Pläne bestätigt, wonach die Deutsche Bahn auf stark genutzten Strecken Platz für Konkurrenten schaffen muss. Dies ebnet den Weg für das italienische Bahnunternehmen Italo und fördert den Wettbewerb im deutschen Fernverkehr. Verkehrsminister Schnieder warnt jedoch davor, dass sich der Fernverkehr dann nur noch auf lukrative Strecken konzentrieren könnte.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Bahn",
+        "Wettbewerb",
+        "Infrastruktur",
+        "Verkehr",
+        "Bundesnetzagentur"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/unternehmen/bundesnetzagentur-entscheidung-fernverkehr-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Niedrigwasser im Rhein beeinträchtigt Schifffahrt",
+      "zusammenfassung": "Der Pegelstand des Rheins ist bereits jetzt so niedrig, dass Schiffe nur noch mit etwa einem Drittel ihrer normalen Last fahren können, was zu erheblichen wirtschaftlichen Problemen führt. In Hitzeperioden werden begradigte Flüsse zum Problem, da sie bei normalem Wasserstand zwar nützlich sind, aber extrem empfindlich auf Wassermangel reagieren. Dies hat Auswirkungen auf die Schifffahrt, Energieversorgung und Umwelt.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Rhein",
+        "Niedrigwasser",
+        "Schifffahrt",
+        "Wirtschaft",
+        "Umwelt",
+        "Energie"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/unternehmen/schifffahrt-niedrigwasser-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Netflix-Aktie fällt nach enttäuschenden Prognosen",
+      "zusammenfassung": "Die Aktienkurse von Netflix sind eingebrochen, nachdem das Unternehmen enttäuschende Wachstumsprognosen veröffentlicht und weniger Einblick in die Zuschauerdaten gewährt hat. Dies verunsichert Investoren und deutet auf eine Verlangsamung des Wachstums hin. Trotz des Einsatzes von KI in vielen Produktionen bleibt die Börse skeptisch gegenüber der zukünftigen Entwicklung.",
+      "schlagwoerter": [
+        "Netflix",
+        "Aktienmarkt",
+        "Unternehmen",
+        "Tech",
+        "Streaming"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/markets/stocks/articles/u-futures-weaken-netflix-guidance-092645473.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Chip-Sektor nähert sich Bärenmarkt",
+      "zusammenfassung": "Der globale Chip-Sektor hat in jüngster Zeit einen Wertverlust von 3,3 Billionen Dollar erlitten und nähert sich damit einem Bärenmarkt. Dieser Rückgang deutet auf eine breitere Schwäche im Technologiesektor hin, die auch den deutschen Aktienmarkt belastet. Die Sorgen vor einer Überhitzung und die zunehmende Konkurrenz wirken sich auf die Bewertung von Chipherstellern aus.",
+      "schlagwoerter": [
+        "Chip-Industrie",
+        "Aktienmarkt",
+        "Technologie",
+        "Wirtschaft",
+        "Bärenmarkt"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/markets/article/the-33-trillion-chip-sell-off-is-nearing-a-bear-market-chart-of-the-day-100000286.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Globale Aktienfonds ziehen weiter Kapital an",
+      "zusammenfassung": "Globale Aktienfonds haben die achte Woche in Folge Zuflüsse verzeichnet, angetrieben von Optimismus bezüglich der Unternehmensgewinne. Dies signalisiert ein anhaltendes Vertrauen der Anleger in den Aktienmarkt. Trotz internationaler Spannungen und technischer Schwächen im Chip-Sektor bleibt die Stimmung positiv, da die Berichtssaison vielversprechende Aussichten bietet.",
+      "schlagwoerter": [
+        "Aktienmarkt",
+        "Investment",
+        "Wirtschaft",
+        "Finanzen",
+        "Unternehmensgewinne"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/markets/stocks/articles/global-equity-funds-draw-inflows-101203262.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Libyen erklärt großes Ölfelfund für kommerziell",
+      "zusammenfassung": "Libyen hat ein großes Ölfelfund als kommerziell nutzbar erklärt, was die Wiederbelebung der Ölproduktion des Landes vorantreiben soll. Diese Entdeckung könnte Libyens Position auf dem globalen Energiemarkt stärken und zur Erholung seiner Wirtschaft beitragen. Der Schritt ist ein wichtiger Impuls für die Energieversorgung und die internationalen Rohstoffmärkte.",
+      "schlagwoerter": [
+        "Libyen",
+        "Öl",
+        "Energie",
+        "Wirtschaft",
+        "Rohstoffe"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/energy/articles/libya-declares-major-oil-discovery-093000857.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Chinesische Zhongji Innolight plant Milliarden-Listing",
+      "zusammenfassung": "Das chinesische Unternehmen Zhongji Innolight, ein führender Anbieter im Bereich der optischen Komponenten, bereitet ein Listing in Hongkong vor, das bis zu 7 Milliarden Dollar einbringen könnte. Dieser Schritt unterstreicht die wachsende Bedeutung chinesischer Technologieunternehmen auf den internationalen Kapitalmärkten. Der Börsengang wird voraussichtlich erhebliche Auswirkungen auf den globalen Tech- und Finanzsektor haben.",
+      "schlagwoerter": [
+        "China",
+        "IPO",
+        "Börsengang",
+        "Technologie",
+        "Finanzen",
+        "Zhongji Innolight"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/markets/stocks/articles/zhongji-innolight-steps-closer-hong-084131388.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Einordnung: Chinas KI-Ambitionen fordern US-Dominanz heraus",
+      "zusammenfassung": "Die globale KI-Landschaft erlebt derzeit eine Phase intensiven Wettbewerbs und rapiden Fortschritts. Chinas Technologieunternehmen, angeführt von Start-ups wie Moonshot AI mit ihrem neuen Modell Kimi K3, drängen massiv in den Markt und stellen eine direkte Herausforderung für etablierte US-Anbieter wie OpenAI und Anthropic dar. Diese Entwicklung unterstreicht Chinas Ambitionen, die Vorherrschaft in der künstlichen Intelligenz zu erlangen und gleichzeitig deren Zugang als 'globales öffentliches Gut' zu positionieren.\n\nGleichzeitig arbeitet die Branche an der Verbesserung der KI-Sicherheit und -Resilienz. OpenAI hat beispielsweise GPT-Red entwickelt, ein automatisiertes Red-Teaming-System, das als 'Super-Hacker' dient, um die eigenen Modelle robuster gegen Cyberangriffe und Fehlfunktionen zu machen. Auch die Regulierung spielt eine immer größere Rolle: Die EU zwingt Google dazu, Android für konkurrierende KI-Assistenten vollständig zu öffnen und Suchdaten zu teilen, um einen fairen Wettbewerb zu gewährleisten. Der Einsatz von KI erstreckt sich zudem auf immer mehr Bereiche, von der Filmproduktion bei Netflix bis hin zu Infrastrukturmanagement, während der Bedarf an Rechenleistung für das Training dieser Modelle weiter stark ansteigt und zu neuen Partnerschaften führt.",
+      "schlagwoerter": [
+        "KI",
+        "China",
+        "USA",
+        "Wettbewerb",
+        "Regulierung",
+        "KI-Sicherheit",
+        "OpenAI",
+        "Google",
+        "Moonshot AI"
+      ],
+      "typ": "einordnung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/unternehmen/ki-konkurrenz-china-usa-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "OpenAI führt GPT-Red zur Verbesserung der KI-Sicherheit ein",
+      "zusammenfassung": "OpenAI hat GPT-Red vorgestellt, ein automatisiertes Red-Teaming-System, das durch Selbstspiel die KI-Sicherheit und die Robustheit gegenüber Prompt-Injection-Angriffen verbessern soll. Dieses LLM dient als 'Super-Hacker', um die Flaggschiff-Modelle von OpenAI widerstandsfähiger zu machen. GPT-Red ist ein wichtiger Schritt, um die Sicherheit und Ausrichtung von KI-Systemen zu gewährleisten.",
+      "schlagwoerter": [
+        "KI",
+        "OpenAI",
+        "Sicherheit",
+        "Forschung",
+        "GPT-Red"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
+      "quelle_name": "OpenAI Blog",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "EU zwingt Google zur Öffnung von Android für KI-Konkurrenten",
+      "zusammenfassung": "Die EU-Kommission hat Google verbindliche Auflagen erteilt, Android für konkurrierende KI-Assistenten vollständig zu öffnen und Suchdaten zu teilen. Ziel ist es, Google daran zu hindern, seine marktbeherrschende Stellung im Android-Ökosystem zu nutzen, um sich Vorteile im Bereich der KI zu verschaffen. Google warnt, dass diese Änderungen die Benutzerfreundlichkeit und -sicherheit gefährden könnten.",
+      "schlagwoerter": [
+        "EU",
+        "Google",
+        "Android",
+        "KI",
+        "Wettbewerbsrecht",
+        "Technologie",
+        "Regulierung"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://arstechnica.com/gadgets/2026/07/its-official-eu-will-force-google-to-share-search-data-and-open-up-ai-on-android/",
+      "quelle_name": "Ars Technica",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Meta plant 10 Mrd. Dollar Deal mit Anthropic für Rechenleistung",
+      "zusammenfassung": "Meta Platforms befindet sich in Gesprächen, um Rechenleistung an das KI-Start-up Anthropic zu vermieten, in einem potenziellen Deal im Wert von 10 Milliarden Dollar. Diese Verhandlungen unterstreichen die enorme Nachfrage und Knappheit an Rechenkapazitäten für die Entwicklung künstlicher Intelligenz. Für Meta könnte dies ein neues Geschäftsfeld erschließen und seine massive Infrastruktur monetarisieren.",
+      "schlagwoerter": [
+        "Meta",
+        "Anthropic",
+        "KI",
+        "Rechenleistung",
+        "Infrastruktur",
+        "Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.nytimes.com/2026/07/17/technology/meta-anthropic-ai-computing-power.html",
+      "quelle_name": "NYT Technology",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Tour de France 2026: Ergebnisse und Gesamtwertung",
+      "zusammenfassung": "- Etappe 13: Sieger Mauro Schmid (Jayco-AlUla). Tom Pidcock (Ineos Grenadiers) rückt in der Gesamtwertung auf Platz 3 vor und gewinnt über 7 Minuten.\n- Etappe 12: Sieger Tim Merlier (Soudal Quick-Step). Schwerer Massensturz nach dem Sprint.\n- Etappe 11: Sieger Søren Wærenskjold (Uno-X Mobility). Die Etappe war mit durchschnittlich 50,91 km/h die schnellste der Tourgeschichte.\n- Gesamtwertung Top 3: 1. Tadej Pogačar, 2. Jonas Vingegaard, 3. Tom Pidcock.",
+      "schlagwoerter": [
+        "Radsport",
+        "Tour de France",
+        "Pogačar",
+        "Pidcock",
+        "Schmid",
+        "Merlier",
+        "Wærenskjold",
+        "Vingegaard",
+        "Ergebnisse"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/tour-de-france-mauro-schmid-outduels-harold-tejada-in-two-rider-matchup-at-the-line-on-stage-13/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "WNBA: Clark gelingt historische Statline, Sabally-Schwestern verletzt",
+      "zusammenfassung": "- Caitlin Clark gelingt historische Statline.\n- Satou Sabally ist seit drei Wochen wegen einer Gehirnerschütterung nicht spielberechtigt.\n- Nyara Sabally erneut verletzt.",
+      "schlagwoerter": [
+        "Basketball",
+        "WNBA",
+        "Caitlin Clark",
+        "Sabally-Schwestern",
+        "Verletzungen"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.kicker.de/toronto-gegen-atlanta-2026-wnba-5190749/spielbericht#omrss",
+      "quelle_name": "Kicker Fußball",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Formel 1 - Großer Preis von Belgien: News zum Rennen",
+      "zusammenfassung": "- Lando Norris erhält Startplatzstrafe von zehn Plätzen für den Großen Preis von Belgien.\n- Kimi Antonelli zeigte sich im freien Training in Spa-Francorchamps in Bestform.\n- Nico Hülkenberg ist weiterhin ohne WM-Punkt, zeigt sich aber völlig unbesorgt über Gerüchte einer Ablösung bei Audi.",
+      "schlagwoerter": [
+        "Formel 1",
+        "Motorsport",
+        "Belgien",
+        "Lando Norris",
+        "Nico Hülkenberg",
+        "Kimi Antonelli",
+        "Rennsport"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.kicker.de/grand-prix-von-belgien-2026-2/1236751/formel1-rennbericht#omrss",
+      "quelle_name": "Kicker Fußball",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Deutsche Fußball-Transfers und Personalien",
+      "zusammenfassung": "- Der SC Freiburg verpflichtet Yannik Engelhardt aus Como.\n- Der 1. FC Kaiserslautern holt Erencan Yardimci (Leihe mit Kauf-Vereinbarung) von der TSG Hoffenheim.\n- Der WM-Shootingstar Johan Manzambi wechselt für mindestens 60 Millionen Euro vom SC Freiburg zu Aston Villa.\n- Arminia Bielefeld ernennt Maximilian Bauer zum neuen Kapitän.",
+      "schlagwoerter": [
+        "Fußball",
+        "Bundesliga",
+        "Transfers",
+        "SC Freiburg",
+        "1. FC Kaiserslautern",
+        "Arminia Bielefeld"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.kicker.de/rueckkehr-perfekt-freiburg-verpflichtet-engelhardt-1236130/artikel#omrss",
+      "quelle_name": "Kicker Fußball",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Dopingverfahren gegen Owen Ansah, Funktionär wegen Sportwetten gesperrt",
+      "zusammenfassung": "- Die NADA leitet ein Verfahren gegen den deutschen Rekordsprinter Owen Ansah vom Hamburger SV ein.\n- Ryan Gold, Director of College Scouting der Arizona Cardinals, wurde wegen Verstößen gegen die Glücksspielrichtlinien der NFL auf unbestimmte Zeit gesperrt.",
+      "schlagwoerter": [
+        "Doping",
+        "Sportwetten",
+        "Leichtathletik",
+        "NFL",
+        "Owen Ansah"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.sportschau.de/regional/ndr/nada-leitet-verfahren-gegen-top-sprinter-owen-ansah-ein,owen-ansah-110.html",
+      "quelle_name": "Sportschau",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "HPV-Impfung senkt Todesfälle durch Gebärmutterhalskrebs in England auf Rekordtief",
+      "zusammenfassung": "Eine neue Studie aus England belegt, dass die HPV-Impfung die Todesfälle durch Gebärmutterhalskrebs bei jungen Frauen auf einen historischen Tiefstand gesenkt hat. Zwischen 2020 und 2024 gab es bei Frauen zwischen 20 und 24 Jahren in England keinen einzigen Todesfall. Dies ist ein bahnbrechender medizinischer Fortschritt, der nachweislich Leben rettet.",
+      "schlagwoerter": [
+        "Good News",
+        "Medizin",
+        "HPV-Impfung",
+        "Gesundheit",
+        "Krebsforschung"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://goodnews-magazin.de/hpv-impfung-senkt-todesfaelle-in-uk/",
+      "quelle_name": "Good News Magazin",
+      "kategorie": "good-news"
+    }
+  ],
+  "schlagwoerter": [
+    "KI",
+    "Tech",
+    "Wirtschaft",
+    "Politik",
+    "Raumfahrt",
+    "Finanzen",
+    "Sport",
+    "Tour de France",
+    "Fußball-WM",
+    "Sicherheit",
+    "Umwelt",
+    "Deutschland",
+    "USA",
+    "China",
+    "EU",
+    "Gesundheit",
+    "Energie"
+  ]
+}
