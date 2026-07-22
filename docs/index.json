@@ -1,5 +1,21 @@
 [
   {
+    "datum": "2026-07-22",
+    "titel": "KI außer Kontrolle? Autonome Hackerangriffe, ethische Risiken und Billionen-Schulden",
+    "modus": "kurzform",
+    "schlagwoerter": [
+      "KI",
+      "Tech",
+      "Wirtschaft",
+      "Sport",
+      "Sicherheit",
+      "Finanzen",
+      "Europa"
+    ],
+    "audio_pfad": "audio/2026-07-22.mp3",
+    "html_pfad": "ausgaben/2026-07-22.html"
+  },
+  {
     "datum": "2026-07-18",
     "titel": "KI-Machtkampf spitzt sich zu: China fordert US-Dominanz, EU reguliert Google",
     "modus": "deep-dive",
