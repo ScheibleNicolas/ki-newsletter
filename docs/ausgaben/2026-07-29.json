@@ -1,0 +1,453 @@
+{
+  "modus": "kurzform",
+  "datum": "2026-07-29",
+  "titel": "KI-Boom und globale Turbulenzen: Milliarden-Investitionen treffen auf Kriege und Krisen",
+  "storys": [
+    {
+      "titel": "Tödliches Erdbeben in Japan: Rettungsarbeiten laufen gegen die Zeit",
+      "zusammenfassung": "Ein starkes Erdbeben hat Japans Insel Kyushu getroffen, mit über 100 Nachbeben und mindestens 13 Todesopfern. Die Rettungskräfte kämpfen unter Hochdruck, um Überlebende aus den Trümmern zu bergen, während die Zahl der Opfer weiter steigt.",
+      "schlagwoerter": [
+        "Japan",
+        "Erdbeben",
+        "Naturkatastrophe",
+        "Rettung"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": true,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cgk43y21j0do?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "breaking-news"
+    },
+    {
+      "titel": "Eskalation im Nahen Osten: USA und Saudi-Arabien greifen Ziele im Irak an",
+      "zusammenfassung": "Die Spannungen im Nahen Osten haben sich mit gemeinsamen Luftangriffen der USA und Saudi-Arabiens auf pro-iranische Milizen im Irak verschärft. Dies erfolgte nach Berichten über iranische Angriffe auf US-Stützpunkte in Jordanien und Schiffe in der Straße von Hormus.",
+      "schlagwoerter": [
+        "Naher Osten",
+        "USA",
+        "Iran",
+        "Saudi-Arabien",
+        "Irak",
+        "Konflikt"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": true,
+      "quelle_url": "https://www.aljazeera.com/news/2026/7/29/iran-hits-us-in-jordan-us-saudi-strikes-on-iraq-is-war-spreading?traffic_source=rss",
+      "quelle_name": "Al Jazeera English",
+      "kategorie": "breaking-news"
+    },
+    {
+      "titel": "EU-Krisenchefin fordert schärfere Klimaschutzmaßnahmen angesichts europäischer Waldbrände",
+      "zusammenfassung": "Angesichts der verheerenden Waldbrände in Frankreich und Spanien drängt die EU-Krisenchefin auf beschleunigte Klimaschutzmaßnahmen und erhöhte Investitionen. Eine neue Hitzewelle droht die Lage in den betroffenen Regionen zusätzlich zu verschärfen.",
+      "schlagwoerter": [
+        "EU",
+        "Klimawandel",
+        "Waldbrände",
+        "Europa",
+        "Klimapolitik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.aljazeera.com/news/2026/7/29/eu-crisis-chief-urges-tougher-climate-action-amid-france-spain-wildfires?traffic_source=rss",
+      "quelle_name": "Al Jazeera English",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Russland erlässt Haftbefehl gegen Telegram-Gründer Pawel Durow wegen Terrorismusvorwürfen",
+      "zusammenfassung": "Der russische Geheimdienst FSB hat Haftbefehl gegen Pawel Durow, den Gründer des Messenger-Dienstes Telegram, erlassen. Ihm wird vorgeworfen, die Verbreitung von Inhalten für die Rekrutierung durch ukrainische Geheimdienste und terroristische Gruppen ermöglicht zu haben.",
+      "schlagwoerter": [
+        "Russland",
+        "Telegram",
+        "Pawel Durow",
+        "Terrorismus",
+        "Technologie",
+        "Geopolitik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cj4kexqkpzno?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Ukrainische Drohnenangriffe setzen russische Industriestandorte in Brand",
+      "zusammenfassung": "Ukrainische Drohnen haben mehrere Industriestandorte in Russland angegriffen und Brände ausgelöst. Berichte deuten auf Schäden hin, darunter evakuierte Lagerhallen eines führenden russischen Online-Einzelhändlers in Rjasan.",
+      "schlagwoerter": [
+        "Ukraine",
+        "Russland",
+        "Drohnenangriffe",
+        "Krieg",
+        "Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.aljazeera.com/news/2026/7/29/russian-industrial-sites-on-fire-after-ukrainian-drone-attacks?traffic_source=rss",
+      "quelle_name": "Al Jazeera English",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Niedrigwasser auf Rhein und Donau beeinträchtigt deutsche Binnenschifffahrt",
+      "zusammenfassung": "Das anhaltende Niedrigwasser auf wichtigen deutschen Flüssen wie Rhein und Donau schränkt die Binnenschifffahrt massiv ein. Sichtbare Kiesbänke und trockene Uferbereiche behindern den Transport und wirken sich auf die Wirtschaft aus.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Niedrigwasser",
+        "Rhein",
+        "Donau",
+        "Schifffahrt",
+        "Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/inland/gesellschaft/niedrigwasser-rhein-donau-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Bundeskabinett einigt sich auf neue Energiegesetze: Folgen für Haushalte und Windenergie",
+      "zusammenfassung": "Das deutsche Kabinett hat sich auf neue Energiegesetze geeinigt, die Auswirkungen auf private Solaranlagen und den Ausbau der Windenergie haben werden. Experten bewerten den Kompromiss als wichtigen Schritt zur Energiewende.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Energiegesetze",
+        "Solar",
+        "Windenergie",
+        "Energiewende",
+        "Politik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wissen/klima/faq-eeg-reform-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Deutsche Staatsverschuldung steigt auf über 2,6 Billionen Euro",
+      "zusammenfassung": "Die Verschuldung von Bund, Ländern und Kommunen in Deutschland ist auf insgesamt 2.662,2 Milliarden Euro gestiegen. Dies entspricht einer Pro-Kopf-Verschuldung von fast 32.000 Euro.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Staatsverschuldung",
+        "Wirtschaft",
+        "Finanzen"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/konjunktur/verschuldung-anstieg-pro-kopf-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "BMW kündigt Stellenabbau von rund 8.000 Jobs bis 2027 an",
+      "zusammenfassung": "Als letzter großer deutscher Autobauer hat BMW ein umfassendes Stellenabbauprogramm angekündigt, das bis Ende 2027 rund 8.000 Arbeitsplätze betreffen soll. Die Maßnahme ist eine Reaktion auf die anhaltende Krise in der deutschen Automobilindustrie.",
+      "schlagwoerter": [
+        "Deutschland",
+        "BMW",
+        "Stellenabbau",
+        "Automobilindustrie",
+        "Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/unternehmen/bmw-stellenabbau-104.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Deutsche Bank erzielt Gewinnsprung dank starker Investmentbank-Geschäfte",
+      "zusammenfassung": "Die Deutsche Bank hat dank ihrer Investmentbank einen deutlichen Gewinnsprung verzeichnet und ist zuversichtlich, ihre Ziele für 2028 übertreffen zu können. Dies trägt zur Stabilisierung des DAX in einem sonst schwierigen Marktumfeld bei.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Deutsche Bank",
+        "Finanzen",
+        "Investmentbank",
+        "Gewinn",
+        "DAX"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/unternehmen/deutsche-bank-gewinnsprung-investmentbank-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Frist für Steuererklärung 2025 endet: Erstattung von über 1.000 Euro oft möglich",
+      "zusammenfassung": "Steuerpflichtige haben nur noch bis zum 31. Juli Zeit, ihre Steuererklärung für 2025 einzureichen. Mithilfe von Elster, Apps oder Steuerberatern lässt sich oft eine Erstattung von mehr als 1.000 Euro erzielen.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Steuererklärung",
+        "Finanzen",
+        "Verbraucher",
+        "Frist"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/verbraucher/steuererklaerung-abgabefrist-100.html",
+      "quelle_name": "Tagesschau Wirtschaft",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "SK Hynix erzielt Rekordgewinn, enttäuscht aber Anleger",
+      "zusammenfassung": "Der Halbleiterhersteller SK Hynix hat einen Rekordgewinn verzeichnet, konnte damit jedoch die Erwartungen der Anleger nicht erfüllen. Dies deutet auf eine kritische Haltung gegenüber der Chip-Branche hin, die von hohen Leverage-Kosten geprägt ist.",
+      "schlagwoerter": [
+        "SK Hynix",
+        "Halbleiter",
+        "Gewinn",
+        "Aktienmarkt",
+        "Investoren"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/markets/article/sk-hynixs-record-profit-fails-to-impress-investors-130352334.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Globale Märkte im Fokus: Fed-Entscheidung und AI-Gewinne stehen bevor",
+      "zusammenfassung": "Die globalen Aktienmärkte, darunter Dow, S&P 500 und Nasdaq, halten sich stabil, während Anleger auf die bevorstehende Zinsentscheidung der Fed und die Quartalsergebnisse von KI-Unternehmen warten. Die erneuten Feindseligkeiten im Iran-Krieg sorgen jedoch für zusätzliche Anspannung.",
+      "schlagwoerter": [
+        "Aktienmarkt",
+        "Fed",
+        "Zinsentscheidung",
+        "KI",
+        "Wirtschaft",
+        "Geopolitik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-july-29-dow-sp-500-nasdaq-082009165.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Meta und BlackRock gründen 14-Milliarden-Dollar-Joint-Venture für KI-Rechenzentren",
+      "zusammenfassung": "Meta und BlackRock haben ein 14 Milliarden US-Dollar schweres Joint Venture zur Finanzierung von KI-Rechenzentren ins Leben gerufen. Dieses Vorhaben soll Meta helfen, die enormen Kosten für den Ausbau seiner KI-Infrastruktur zu senken.",
+      "schlagwoerter": [
+        "Meta",
+        "BlackRock",
+        "KI",
+        "Rechenzentren",
+        "Investitionen",
+        "Technologie"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/technology/ai/articles/meta-meta-blackrock-blk-form-124707417.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Trump behauptet, Zölle hätten General Motors gerettet, obwohl sie Milliarden kosten",
+      "zusammenfassung": "Präsident Trump erklärte, Zölle hätten General Motors gerettet, obwohl das Unternehmen bis zu 3,5 Milliarden Dollar durch Importzölle verlieren wird. Diese Aussage unterstreicht die Spannungen zwischen politischer Rhetorik und wirtschaftlichen Realitäten im US-Handel.",
+      "schlagwoerter": [
+        "Trump",
+        "Zölle",
+        "Handelspolitik",
+        "General Motors",
+        "US-Wirtschaft",
+        "Automobilindustrie"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/economy/policy/articles/tariffs-saved-general-motors-trump-123000324.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Fed-Sitzung unter erhöhter Anspannung: Keine Zinserhöhung erwartet, doch Iran-Krieg sorgt für Nervosität",
+      "zusammenfassung": "Die US-Notenbank Federal Reserve hält ihr zweitägiges Treffen ab, wobei erwartet wird, dass die Zinsen stabil bleiben. Die anhaltenden Spannungen durch den Iran-Krieg verleihen der Sitzung jedoch eine zusätzliche Unsicherheit und könnten zu einer überraschenden Zinsanhebung führen.",
+      "schlagwoerter": [
+        "Fed",
+        "Zinsentscheidung",
+        "Inflation",
+        "Märkte",
+        "Iran-Krieg",
+        "Wirtschaftspolitik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/economy/live/fed-meeting-live-federal-reserve-july-interest-rate-decision-141813444.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Amazon Q2-Ergebnisse im Rampenlicht: AWS-Wachstum und KI-Ausgaben im Fokus",
+      "zusammenfassung": "Die bevorstehenden Quartalsergebnisse von Amazon werden das Wachstum von AWS und die umfangreichen Investitionen in KI-Technologien in den Mittelpunkt rücken. Analysten beobachten genau, wie sich die hohen KI-Ausgaben auf die Profitabilität auswirken.",
+      "schlagwoerter": [
+        "Amazon",
+        "AWS",
+        "KI",
+        "Quartalsergebnisse",
+        "Tech-Aktien",
+        "Cloud Computing"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/news/amazon-q2-earnings-to-put-spotlight-on-aws-growth-amid-ai-spending-115622323.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Google DeepMind stellt neue Gemini Flash KI-Modelle vor",
+      "zusammenfassung": "Google DeepMind hat eine Reihe neuer Gemini-Modelle vorgestellt, darunter Gemini 3.6 Flash, 3.5 Flash-Lite und 3.5 Flash Cyber. Diese Modelle zielen darauf ab, Leistung und Effizienz für verschiedene Anwendungen weiter zu verbessern.",
+      "schlagwoerter": [
+        "Google DeepMind",
+        "Gemini",
+        "KI-Modelle",
+        "Künstliche Intelligenz",
+        "Technologie"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/",
+      "quelle_name": "Google DeepMind Blog",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "KI erweitert menschliche Aufgabenbereiche am Arbeitsplatz",
+      "zusammenfassung": "Neue Studien von OpenAI zeigen, wie KI die Arbeitswelt verändert, indem Nutzer von ChatGPT Aufgaben über verschiedene Rollen hinweg übernehmen und Jobgrenzen neu definieren. Dies deutet auf eine Expansion der menschlichen Tätigkeiten durch KI hin, anstatt eine reine Automatisierung.",
+      "schlagwoerter": [
+        "KI",
+        "Arbeitswelt",
+        "ChatGPT",
+        "Automatisierung",
+        "Produktivität",
+        "OpenAI"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work",
+      "quelle_name": "OpenAI Blog",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Cyberagentur sucht Science-Fiction-Autor für Zukunftsprojekte",
+      "zusammenfassung": "Die bundeseigene Cyberagentur sucht einen Science-Fiction-Autor, um ihre Foresight-Projekte in Romanform aufzubereiten. Ziel ist es, neue Perspektiven für Forschung und Innovation in der Cybersicherheit zu gewinnen.",
+      "schlagwoerter": [
+        "Cyberagentur",
+        "Science-Fiction",
+        "Zukunftstechnologien",
+        "Cybersicherheit",
+        "Innovation"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://t3n.de/news/ungewoehnliche-stellenausschreibung-warum-die-cyberagentur-jetzt-einen-science-fiction-autor-sucht-1755461/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+      "quelle_name": "t3n.de",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "US-Bundesstaat verbietet KI-Nacktbilder: xAI klagt dagegen",
+      "zusammenfassung": "Der US-Bundesstaat Minnesota hat ein Gesetz erlassen, das Anbieter für KI-generierte Nacktbilder haftbar macht, was umgehend eine Klage von Elon Musks xAI nach sich zog. Dies entfacht eine Debatte über Regulierung, KI-Ethik und die Verantwortlichkeit von Technologieunternehmen.",
+      "schlagwoerter": [
+        "KI-Ethik",
+        "Recht",
+        "Elon Musk",
+        "xAI",
+        "Regulierung",
+        "KI-Bilder"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://t3n.de/news/xai-klage-minnesota-nudification-ki-gesetz-1755493/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+      "quelle_name": "t3n.de",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "FIFA-Präsident Infantino will WM-Anteile an private Investoren verkaufen – Widerstand wächst",
+      "zusammenfassung": "FIFA-Präsident Gianni Infantino treibt seinen Plan voran, Anteile an der Fußball-Weltmeisterschaft an private Investoren zu verkaufen, und hat den Mitgliedsverbänden eine Frist bis zum 19. September gesetzt. Dieser Schritt stößt auf heftigen Widerstand der UEFA und deutscher Fußballfunktionäre, die einen Boykott der Pläne diskutieren.",
+      "schlagwoerter": [
+        "FIFA",
+        "Fußball-WM",
+        "Infantino",
+        "UEFA",
+        "Investoren",
+        "Boykott"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.sportschau.de/fussball/investorenplan-fifa-setzt-verbaenden-frist,uefa-fifa-frist-100.html",
+      "quelle_name": "Sportschau",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "DFB-Frauen testen im Oktober gegen Australien und Japan; Bundesliga legt neue Regeln fest",
+      "zusammenfassung": "Die deutsche Fußball-Nationalmannschaft der Frauen wird im Oktober in Karlsruhe und Bremen auf hochkarätige Gegner wie Australien und Japan treffen. Unterdessen hat die Bundesliga eine neue Regelung eingeführt, die das Bedecken des Mundes während eines Streits mit einer Strafe belegt.",
+      "schlagwoerter": [
+        "DFB-Frauen",
+        "Fußball",
+        "Länderspiele",
+        "Bundesliga",
+        "Regeln",
+        "Deutschland"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.sportschau.de/fussball/bundesliga/bundesliga-legt-strafe-fuers-bedecken-des-mundes-fest,regeln-hand-mund-karte-100.html",
+      "quelle_name": "Sportschau",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Manuel Neuer deutet Karriereende an; Deutsche Kicker in der NFL",
+      "zusammenfassung": "Manuel Neuer, der Torhüter des FC Bayern, hat nach 21 Jahren als Profi sein Karriereende angedeutet und tendiert zu einem Rücktritt nach Saisonende. Unterdessen hat der deutsche Kicker Lenny Krieg eine neue Chance bei den Green Bay Packers in der NFL erhalten.",
+      "schlagwoerter": [
+        "Manuel Neuer",
+        "Karriereende",
+        "FC Bayern",
+        "NFL",
+        "Lenny Krieg",
+        "Fußball"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.sportschau.de/regional/br/br-neuer-kuendigt-karriereende-an-sieht-stark-danach-aus-102.html",
+      "quelle_name": "Sportschau",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Malaika Mihambo führt deutsches EM-Team an; Offizielle Bewerbung für Tour de France Grand Départ 2029",
+      "zusammenfassung": "Malaika Mihambo wird das deutsche Team bei den Leichtathletik-Europameisterschaften in Birmingham anführen, der DLV nominierte weitere Athleten. Indessen wurde die offizielle deutsche Bewerbung für den Grand Départ der Tour de France 2029 übergeben, wobei die fünfte Ausgabe der Tour de France Femmes 2026 in der Schweiz startet.",
+      "schlagwoerter": [
+        "Leichtathletik",
+        "Malaika Mihambo",
+        "EM",
+        "Tour de France",
+        "Radsport",
+        "Deutschland"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.sportschau.de/leichtathletik/em/das-dlv-team-fuer-birmingham-nominierung,deutsches-team-leichtathletik-em-birmingham-2026-100.html",
+      "quelle_name": "Sportschau",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Leopardenpopulation in Sambia erholt sich dank synthetischer Felle",
+      "zusammenfassung": "Eine Initiative in Sambia, bei der echte Leopardenfelle durch synthetische Alternativen ersetzt werden, trägt maßgeblich zur Erholung der lokalen Leopardenpopulation bei. Forscher bestätigen, dass diese Maßnahme zum Artenschutz in Westsambia Erfolge zeigt.",
+      "schlagwoerter": [
+        "Leoparden",
+        "Artenschutz",
+        "Sambia",
+        "Umweltschutz",
+        "Wildtiere",
+        "Good News"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.positive.news/environment/leopards-recover-in-zambia-as-communities-swap-skins-for-synthetics/",
+      "quelle_name": "Positive News",
+      "kategorie": "good-news"
+    }
+  ],
+  "schlagwoerter": [
+    "KI",
+    "Technologie",
+    "Wirtschaft",
+    "Finanzen",
+    "Sport",
+    "Deutschland",
+    "International",
+    "Cybersicherheit",
+    "Klimawandel",
+    "Automobilindustrie",
+    "Radsport",
+    "Fußball",
+    "Artenschutz"
+  ]
+}

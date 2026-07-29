@@ -1,5 +1,27 @@
 [
   {
+    "datum": "2026-07-29",
+    "titel": "KI-Boom und globale Turbulenzen: Milliarden-Investitionen treffen auf Kriege und Krisen",
+    "modus": "kurzform",
+    "schlagwoerter": [
+      "KI",
+      "Technologie",
+      "Wirtschaft",
+      "Finanzen",
+      "Sport",
+      "Deutschland",
+      "International",
+      "Cybersicherheit",
+      "Klimawandel",
+      "Automobilindustrie",
+      "Radsport",
+      "Fußball",
+      "Artenschutz"
+    ],
+    "audio_pfad": "audio/2026-07-29.mp3",
+    "html_pfad": "ausgaben/2026-07-29.html"
+  },
+  {
     "datum": "2026-07-25",
     "titel": "Autonome KI-Angriffe: Berlin sieht Paradigmenwechsel in der Cybersicherheit",
     "modus": "deep-dive",
