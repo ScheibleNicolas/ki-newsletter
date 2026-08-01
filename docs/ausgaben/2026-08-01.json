@@ -1,0 +1,315 @@
+{
+  "modus": "deep-dive",
+  "datum": "2026-08-01",
+  "titel": "Ceuta-Krise spaltet EU: Spanien kritisiert und Mitgliedsstaaten handeln",
+  "storys": [
+    {
+      "titel": "Spain attacks 'selfish' response of some EU countries to Ceuta migrant crossings",
+      "zusammenfassung": "Spanien kritisiert die \"egoistische\" Reaktion einiger EU-Länder auf die Migrationsbewegung in Ceuta. Italien hat als Reaktion auf die Szenen in Ceuta das Schengen-Abkommen mit Spanien vorübergehend ausgesetzt, während Frankreich seine Grenzkontrollen verschärfen will. Die EU-Kommission hat Spanien unterdessen Unterstützung angeboten.",
+      "schlagwoerter": [
+        "Migration",
+        "EU",
+        "Spanien",
+        "Marokko",
+        "Grenzschutz"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": true,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cx2v91xn1z9o?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "breaking-news"
+    },
+    {
+      "titel": "Ansturm auf Exklave: Was Ceuta für die EU bedeutet",
+      "zusammenfassung": "Die Massenmigration in die spanische Exklave Ceuta hat erneut eine Debatte über Migrationsregelungen in der EU ausgelöst. Die Situation verdeutlicht, wie Marokko die Migration als Druckmittel einsetzt und zwingt die Mitgliedsstaaten, ihre Positionen zum Grenzschutz zu überdenken. Zehntausende Migranten erreichten Ceuta, wobei mindestens 57 Menschen ums Leben kamen.",
+      "schlagwoerter": [
+        "Migration",
+        "EU",
+        "Spanien",
+        "Marokko",
+        "Grenzschutz"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": true,
+      "quelle_url": "https://www.tagesschau.de/ausland/europa/ceuta-migration-spanien-eu-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "breaking-news"
+    },
+    {
+      "titel": "Russische Angriffe auf Kiew töten mindestens neun Menschen",
+      "zusammenfassung": "Russland hat seine Luftangriffe auf die Ukraine verstärkt, wobei die Hauptstadt Kiew erneut Ziel tödlicher Raketenangriffe wurde. Mindestens neun Menschen wurden getötet und viele weitere verletzt, da teilweise eingestürzte Gebäude in Brand gerieten.",
+      "schlagwoerter": [
+        "Ukraine",
+        "Russland",
+        "Krieg",
+        "Kiew",
+        "Geopolitik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/ce973yvk7pko?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Iran greift Kuwait an und droht der Region mit „Flammen des Krieges“",
+      "zusammenfassung": "Kuwait meldet, dass mehrere wichtige Einrichtungen von iranischen Drohnen angegriffen und zerstört wurden. Teheran droht der Region mit einer weiteren Eskalation des Konflikts und den „Flammen des Krieges“.",
+      "schlagwoerter": [
+        "Iran",
+        "Kuwait",
+        "Konflikt",
+        "Geopolitik",
+        "Naher Osten"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.aljazeera.com/news/liveblog/2026/7/31/iran-war-live-iran-says-it-has-a-plan-to-respond-to-any-us-attacks?traffic_source=rss",
+      "quelle_name": "Al Jazeera English",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Hunderte entkommen griechischen Waldbränden über das Meer",
+      "zusammenfassung": "Rund 500 Menschen, hauptsächlich Touristen, mussten mit Booten aus Agios Vasileios evakuiert werden, nachdem sie von Waldbränden eingeschlossen waren. Starke Winde fachen die Flammen in der Region Rethymno auf Kreta weiter an, während die Brände in ganz Europa wüten.",
+      "schlagwoerter": [
+        "Griechenland",
+        "Waldbrände",
+        "Klima",
+        "Europa",
+        "Evakuierung"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/c0kmzx8vpv4o?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Donauregelstände zwingen Ungarns einziges Atomkraftwerk zur Abschaltung",
+      "zusammenfassung": "Aufgrund historisch niedriger Wasserstände der Donau musste Ungarns einziges Atomkraftwerk Paks heruntergefahren werden. Dies ist eine Folge einer Reihe von langanhaltenden Hitzewellen und geringen Niederschlägen, die auch Rumänien, Bulgarien und Serbien betreffen.",
+      "schlagwoerter": [
+        "Donau",
+        "Klimawandel",
+        "Energie",
+        "Atomkraft",
+        "Ungarn",
+        "Europa"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cn0nqv05g0do?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "SPD und Union streiten über Rente nach 45 Beitragsjahren",
+      "zusammenfassung": "Innerhalb der deutschen Koalition treten zunehmend Differenzen über die Rentenpläne zutage, insbesondere bezüglich der abschlagsfreien Rente nach 45 Beitragsjahren. Während SPD-Generalsekretär Klüssendorf daran festhalten will, besteht Unions-Fraktionschef Frei auf dem Aus dieses Modells.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Rente",
+        "Sozialpolitik",
+        "Koalition",
+        "Bundestag"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/inland/rentenreform-vorschlag-cdu-reaktionen-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Rekord-Niedrigwasser im Rhein belastet Binnenschifffahrt in NRW",
+      "zusammenfassung": "Der Rhein erreicht historisch niedrige Pegelstände, was eine große Herausforderung für die Binnenschifffahrt in Nordrhein-Westfalen darstellt. Dies hat auch finanzielle Auswirkungen auf Unternehmen, die nun alternative Transportwege prüfen müssen, um die Wirtschaftlichkeit zu gewährleisten.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Rhein",
+        "Niedrigwasser",
+        "Binnenschifffahrt",
+        "Wirtschaft",
+        "Umwelt"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/inland/regional/nordrheinwestfalen/niedrigwasser-rhein-104.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Bahn-Chefin Palla kritisiert \"organisierte Verantwortungslosigkeit\"",
+      "zusammenfassung": "Bahnchefin Palla übt scharfe Kritik an der \"organisierten Verantwortungslosigkeit\" im Management des Staatskonzerns Deutsche Bahn. Sie bemängelt, dass Verantwortung hin- und hergeschoben wird und es kaum Konsequenzen bei Fehlern gibt, sieht aber auch \"Helden\" im Unternehmen.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Deutsche Bahn",
+        "Management",
+        "Infrastruktur",
+        "Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/palla-kritik-bahn-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Ab August greift Rechtsanspruch auf Ganztagsbetreuung für Grundschulkinder",
+      "zusammenfassung": "Ab August wird in Deutschland stufenweise der Rechtsanspruch auf eine Ganztagsbetreuung für Grundschulkinder eingeführt, der acht Stunden Bildung und Betreuung pro Tag umfasst. Dies bedeutet neue Regelungen und Informationen, die Eltern nun beachten müssen.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Bildung",
+        "Ganztagsbetreuung",
+        "Familie",
+        "Sozialpolitik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/inland/gesellschaft/ganztagsbetreuung-grundschule-start-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Zahl der Arbeitslosen steigt im Juli über drei Millionen",
+      "zusammenfassung": "Die Arbeitslosenzahl in Deutschland hat im Juli die Drei-Millionen-Marke überschritten. Die Bundesagentur für Arbeit erklärt dies mit saisonalen Effekten, sieht aber auch eine Fortsetzung einer längerfristigen Entwicklung auf dem Arbeitsmarkt.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Arbeitsmarkt",
+        "Arbeitslosigkeit",
+        "Wirtschaft",
+        "Konjunktur"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/konjunktur/arbeitslose-zahlen-juli-100.html",
+      "quelle_name": "Tagesschau Wirtschaft",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Deutsche Wirtschaft mit Mini-Wachstum",
+      "zusammenfassung": "Die deutsche Wirtschaft konnte trotz der Belastungen durch den Iran-Krieg zuletzt ein minimales Wachstum verzeichnen. Dies folgt auf positive Konjunkturdaten wie steigende Industrieaufträge, Produktion und Exporte, die zuvor bereits eine Erholung andeuteten.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Wirtschaftswachstum",
+        "Konjunktur",
+        "BIP"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/konjunktur/bip-wirtschaftswachstum-deutschland-100.html",
+      "quelle_name": "Tagesschau Wirtschaft",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Amazon stock soars after Q2 earnings beat expectations as AI, chip businesses see $25 billion run rate",
+      "zusammenfassung": "Die Amazon-Aktie steigt nach übertroffenen Quartalsergebnissen deutlich, angetrieben durch das boomende Cloud-Geschäft AWS. Insbesondere die Bereiche KI und Chipsätze tragen mit einem jährlichen Umsatz von 25 Milliarden Dollar maßgeblich zum Wachstum bei.",
+      "schlagwoerter": [
+        "Finanzen",
+        "Amazon",
+        "Quartalszahlen",
+        "KI",
+        "Cloud",
+        "Aktienmarkt"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/news/amazon-stock-soars-after-q2-earnings-beat-expectations-as-ai-chip-businesses-see-25-billion-run-rate-115622323.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Tesla ‘considers quitting China’",
+      "zusammenfassung": "Gerüchte, dass Tesla einen Rückzug aus dem wichtigen chinesischen Markt erwägt, haben die Finanzwelt bewegt. Diese Spekulationen wurden jedoch von Elon Musk dementiert, der betonte, dass Teslas China-Geschäft nicht zum Verkauf stehe.",
+      "schlagwoerter": [
+        "Finanzen",
+        "Tesla",
+        "China",
+        "Elektroautos",
+        "Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/markets/stocks/articles/tesla-considers-quitting-china-100822656.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Saudi PIF's $55 billion EA deal gets EU approval under subsidy rules",
+      "zusammenfassung": "Der Kauf von Electronic Arts durch den saudi-arabischen Staatsfonds PIF im Wert von 55 Milliarden Dollar hat die EU-Zulassung unter den Subventionsregeln erhalten. Die Übernahme soll am 4. August abgeschlossen werden.",
+      "schlagwoerter": [
+        "Finanzen",
+        "M&A",
+        "Saudi-Arabien",
+        "Electronic Arts",
+        "EU",
+        "Gaming"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/media-advertising/articles/saudi-pifs-55-billion-ea-103748132.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Global equity fund inflows surge to three week highs",
+      "zusammenfassung": "Globale Aktienfonds verzeichnen die höchsten Zuflüsse seit drei Wochen, was auf eine wieder steigende Investitionsbereitschaft hindeutet. Anleger zeigen verstärktes Interesse an den weltweiten Aktienmärkten.",
+      "schlagwoerter": [
+        "Finanzen",
+        "Aktienfonds",
+        "Investitionen",
+        "Globaler Markt"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/markets/stocks/articles/global-equity-fund-inflows-surge-094352631.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Gemini Robotics ER 2: powering robotics with video understanding, task orchestration, and multi-robot collaboration",
+      "zusammenfassung": "Google DeepMind stellt Gemini Robotics ER 2 vor, eine neue Generation von KI-Modellen für Roboter. Diese ermöglichen Robotern, Aufgaben besser zu verstehen, zu koordinieren und in Multi-Roboter-Szenarien zusammenzuarbeiten, was einen Fortschritt in der \"Ganzkörperintelligenz\" darstellt.",
+      "schlagwoerter": [
+        "KI",
+        "Robotik",
+        "Google DeepMind",
+        "Forschung",
+        "Technologie"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/",
+      "quelle_name": "Google DeepMind Blog",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "KI-Müdigkeit: Fast drei Viertel der Wissensarbeiter wollen die Zeit vor ChatGPT zurück",
+      "zusammenfassung": "Eine Studie zeigt, dass fast drei Viertel der Wissensarbeiter eine \"KI-Müdigkeit\" empfinden und sich die Zeit vor der Einführung von ChatGPT zurückwünschen. Trotz des Versprechens höherer Produktivität führt der Einsatz von KI oft zu Frustration unter den Mitarbeitern.",
+      "schlagwoerter": [
+        "KI",
+        "Arbeitswelt",
+        "ChatGPT",
+        "Mitarbeiter",
+        "Produktivität",
+        "Studie"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://t3n.de/news/ki-muedigkeit-wissensarbeiter-studie-1755296/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+      "quelle_name": "t3n.de",
+      "kategorie": "ki-tech"
+    }
+  ],
+  "schlagwoerter": [
+    "KI",
+    "Tech",
+    "Wirtschaft",
+    "Sport",
+    "Migration",
+    "Klima",
+    "Geopolitik",
+    "Deutschland",
+    "EU",
+    "Finanzen",
+    "Datenschutz",
+    "Urheberrecht",
+    "Energie",
+    "Infrastruktur",
+    "Arbeitsmarkt"
+  ]
+}

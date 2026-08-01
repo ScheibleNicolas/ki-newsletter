@@ -1,5 +1,29 @@
 [
   {
+    "datum": "2026-08-01",
+    "titel": "Ceuta-Krise spaltet EU: Spanien kritisiert und Mitgliedsstaaten handeln",
+    "modus": "deep-dive",
+    "schlagwoerter": [
+      "KI",
+      "Tech",
+      "Wirtschaft",
+      "Sport",
+      "Migration",
+      "Klima",
+      "Geopolitik",
+      "Deutschland",
+      "EU",
+      "Finanzen",
+      "Datenschutz",
+      "Urheberrecht",
+      "Energie",
+      "Infrastruktur",
+      "Arbeitsmarkt"
+    ],
+    "audio_pfad": "audio/2026-08-01.mp3",
+    "html_pfad": "ausgaben/2026-08-01.html"
+  },
+  {
     "datum": "2026-07-29",
     "titel": "KI-Boom und globale Turbulenzen: Milliarden-Investitionen treffen auf Kriege und Krisen",
     "modus": "kurzform",
