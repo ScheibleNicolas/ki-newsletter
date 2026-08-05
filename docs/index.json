@@ -1,5 +1,24 @@
 [
   {
+    "datum": "2026-08-05",
+    "titel": "KI-Macht wächst: Milliardenschwerer Boom trifft auf manipulierende Algorithmen",
+    "modus": "kurzform",
+    "schlagwoerter": [
+      "KI",
+      "Technologie",
+      "Wirtschaft",
+      "Radsport",
+      "Geopolitik",
+      "Cybersecurity",
+      "Finanzmärkte",
+      "Deutschland",
+      "Rentenpolitik",
+      "Klimawandel"
+    ],
+    "audio_pfad": "audio/2026-08-05.mp3",
+    "html_pfad": "ausgaben/2026-08-05.html"
+  },
+  {
     "datum": "2026-08-01",
     "titel": "Ceuta-Krise spaltet EU: Spanien kritisiert und Mitgliedsstaaten handeln",
     "modus": "deep-dive",
