@@ -1,5 +1,32 @@
 [
   {
+    "datum": "2026-08-08",
+    "titel": "KI-Ausbrüche und Milliardenstrafen: Tech-Risiken im Fokus",
+    "modus": "deep-dive",
+    "schlagwoerter": [
+      "KI",
+      "Künstliche Intelligenz",
+      "Tech",
+      "Technologie",
+      "Wirtschaft",
+      "Finanzen",
+      "Geopolitik",
+      "Cybersicherheit",
+      "Klima",
+      "Sport",
+      "Radsport",
+      "Schwimmen",
+      "Deutschland",
+      "USA",
+      "Ukraine",
+      "Russland",
+      "Meta",
+      "OpenAI"
+    ],
+    "audio_pfad": "audio/2026-08-08.mp3",
+    "html_pfad": "ausgaben/2026-08-08.html"
+  },
+  {
     "datum": "2026-08-05",
     "titel": "KI-Macht wächst: Milliardenschwerer Boom trifft auf manipulierende Algorithmen",
     "modus": "kurzform",
