@@ -1,0 +1,431 @@
+{
+  "modus": "deep-dive",
+  "datum": "2026-08-15",
+  "titel": "KI-Modelle beschleunigen: Preiskampf entbrennt, während China aufholt",
+  "storys": [
+    {
+      "titel": "US-Präsident Trump will Straße von Hormus zu US-Gebiet erklären",
+      "zusammenfassung": "US-Präsident Trump hat angekündigt, die Straße von Hormus bald zu US-Territorium zu erklären. Diese Drohung kommt inmitten des anhaltenden Iran-Krieges und stößt auf sofortige Reaktion Irans. Die Kontrolle über die Meerenge ist ein zentraler Streitpunkt in den Waffenstillstandsverhandlungen zwischen den USA und Iran.",
+      "schlagwoerter": [
+        "US-Politik",
+        "Iran",
+        "Internationale Beziehungen",
+        "Rohstoffe"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.aljazeera.com/news/liveblog/2026/8/15/iran-war-live-trump-vows-to-make-hormuz-us-territory-pretty-soon?traffic_source=rss",
+      "quelle_name": "Al Jazeera English",
+      "kategorie": "international"
+    },
+    {
+      "titel": "US says dozens of countries helped China dodge Trump's tariffs",
+      "zusammenfassung": "Ein neuer US-Bericht enthüllt, dass zahlreiche Länder China dabei geholfen haben, die unter Trump verhängten Zölle zu umgehen. China leitete Güter demnach über Nationen mit niedrigeren Zöllen um, um höhere Abgaben zu vermeiden. Dies verdeutlicht die anhaltenden Spannungen und Umgehungsstrategien im globalen Handel.",
+      "schlagwoerter": [
+        "US-Handelspolitik",
+        "China",
+        "Zölle",
+        "Internationale Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/c78gy6ep3n5o?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Afghan women tell the BBC their lives are unrecognisable after five years of Taliban rule",
+      "zusammenfassung": "Fünf Jahre nach der Machtübernahme der Taliban berichten afghanische Frauen von einem unkenntlichen Leben. Sie sprechen von öffentlichen Auspeitschungen, Arbeitsplatzverlust und eingeschränktem Zugang zu lebenswichtiger Gesundheitsversorgung. Die Vereinten Nationen fordern verstärkte Unterstützung für Frauenhilfsorganisationen in Afghanistan.",
+      "schlagwoerter": [
+        "Afghanistan",
+        "Taliban",
+        "Menschenrechte",
+        "Frauenrechte"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/clyje43dz4eo?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "South Korea’s president wants talks with North to end Korean War",
+      "zusammenfassung": "Der südkoreanische Präsident Lee Jae Myung hat Gespräche mit Nordkorea vorgeschlagen, um den Koreakrieg formell zu beenden. Diese Initiative zielt darauf ab, die seit Jahrzehnten bestehende Waffenstillstandssituation durch einen Friedensvertrag zu ersetzen. Es bleibt abzuwarten, wie Nordkorea auf diesen Vorstoß reagieren wird.",
+      "schlagwoerter": [
+        "Südkorea",
+        "Nordkorea",
+        "Geopolitik",
+        "Friedensgespräche"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.aljazeera.com/video/newsfeed/2026/8/15/south-koreas-president-wants-talks-with-north-to-end-korean-war?traffic_source=rss",
+      "quelle_name": "Al Jazeera English",
+      "kategorie": "international"
+    },
+    {
+      "titel": "NRW kämpft mit dem wohl größten Waldbrand der Landesgeschichte",
+      "zusammenfassung": "Der Hürtgenwald in Nordrhein-Westfalen ist von einem verheerenden Waldbrand betroffen, der sich auf über 200 Hektar ausgebreitet hat und als größter der Landesgeschichte gilt. Hunderte Menschen mussten evakuiert werden, während Feuerökologen von einem „doppelten Weckruf“ angesichts der zunehmenden Hitzewellen sprechen. Die Grünen fordern von der Bundesregierung konkrete Maßnahmen für einen besseren Schutz vor Waldbränden.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Waldbrand",
+        "Klimawandel",
+        "NRW",
+        "Katastrophenschutz"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/inland/gesellschaft/waldbrand-nrw-eifel-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Warum die Fahrrinne im Rhein bisher nicht ausgebaut wurde",
+      "zusammenfassung": "Trotz jahrzehntelanger Debatten und zunehmendem Niedrigwasser ist der Ausbau der Fahrrinne im Rhein bislang ausgeblieben. Die wieder lauter werdenden Forderungen kollidieren mit Kritik an den potenziellen Umweltauswirkungen solcher Maßnahmen. Die anhaltende Trockenheit beeinträchtigt die Schifffahrt massiv und zwingt Gütertransporte vermehrt auf die Straße.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Rhein",
+        "Niedrigwasser",
+        "Binnenschifffahrt",
+        "Infrastruktur"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/rhein-niedrigwasser-fahrrinne-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Starke Geschäfte bei DAX-Konzernen - aber auch Stellenabbau",
+      "zusammenfassung": "Im ersten Halbjahr dieses Jahres haben Zehntausende von Industriejobs in Deutschland, auch bei DAX-Konzernen, abgebaut werden müssen. Dies geschieht, obwohl die Unternehmen in der obersten Börsenliga Rekordgewinne verzeichneten. Die Situation wirft Fragen nach der Vereinbarkeit von Profitabilität und Beschäftigungssicherung auf.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Wirtschaft",
+        "DAX",
+        "Arbeitsmarkt",
+        "Stellenabbau"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/konjunktur/stellenabbau-dax-konzerne-rekordgewinne-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "EU-Migrationspolitik: Mit Faktenchecks gegen neue Ceuta-Gerüchte",
+      "zusammenfassung": "Marokko warnt vor einem erneuten Migrantenansturm auf Ceuta, verstärkt durch Fake News und irreführende Videos in sozialen Medien. Die EU reagiert mit Faktenchecks und drängt Plattformen zu stärkerer Verantwortung im Kampf gegen Desinformation. Dies verdeutlicht die Herausforderungen bei der Steuerung von Migration und Informationsflüssen.",
+      "schlagwoerter": [
+        "EU",
+        "Migration",
+        "Ceuta",
+        "Fake News",
+        "Desinformation"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/ausland/europa/eu-fluechtlinge-152.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Hamburger Cum-Ex-Affäre kommt nun doch vor Gericht",
+      "zusammenfassung": "Die jahrelange Hamburger Cum-Ex-Affäre um die Traditionsbank MM Warburg und die Rolle einer Finanzbeamtin wird nun doch vor Gericht verhandelt. Das Oberlandesgericht Köln hat den Fall zur Hauptverhandlung zugelassen, um die Vorwürfe um zu Unrecht vereinnahmtes Steuergeld zu klären. Dieser Schritt könnte weitere Aufklärung in einem der größten Steuerskandale Deutschlands bringen.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Finanzen",
+        "Cum-Ex",
+        "Steuerskandal",
+        "Recht"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/investigativ/wdr/hamburg-cum-ex-gericht-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Klage von Verbraucherschützern: Sammelt Meta rechtswidrig Daten?",
+      "zusammenfassung": "Dem Tech-Konzern Meta, Betreiber von WhatsApp, Instagram und Facebook, wird vorgeworfen, Nutzer auch auf externen Internetseiten unerlaubt zu verfolgen. Verbraucherschützer haben Klage eingereicht, die potenziell 50 Millionen Nutzer in Deutschland betrifft. Dies könnte weitreichende Konsequenzen für Metas Datenpraktiken in Europa haben.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Datenschutz",
+        "Meta",
+        "Verbraucherschutz",
+        "Tech-Regulierung"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/verbraucher/meta-ueberwachung-klage-100.html",
+      "quelle_name": "Tagesschau Wirtschaft",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Chinese chipmaker SMIC increases prices on strong AI demand",
+      "zusammenfassung": "Der chinesische Chiphersteller SMIC erhöht seine Preise aufgrund der starken Nachfrage nach KI-Technologien. Dies spiegelt den globalen Boom im KI-Sektor wider und könnte Auswirkungen auf die Lieferketten und Kosten für KI-Hardware haben. Die Preissteigerungen zeigen auch die wachsende Bedeutung chinesischer Akteure auf dem globalen Chipmarkt.",
+      "schlagwoerter": [
+        "Finanzen",
+        "KI",
+        "Chipindustrie",
+        "Lieferkette",
+        "China"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/technology/ai/articles/chinese-chipmaker-smic-increases-prices-030934165.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Yen's slide to weekly loss prompts bets for another intervention",
+      "zusammenfassung": "Der wöchentliche Verlust des Yen hat Spekulationen über eine erneute Intervention der japanischen Zentralbank ausgelöst. Die Währung verzeichnete einen deutlichen Rückgang, was die Anleger aufmerksam macht. Solche Bewegungen können weitreichende Effekte auf internationale Finanzmärkte und Handelsbeziehungen haben.",
+      "schlagwoerter": [
+        "Finanzen",
+        "Währung",
+        "Japan",
+        "Devisenmarkt",
+        "Zentralbank"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/markets/currencies/articles/yens-slide-weekly-loss-prompts-014746575.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "SharpLink Deploys $200M in Ethereum Through Lido to Expand DeFi Yield Strategy",
+      "zusammenfassung": "SharpLink hat 200 Millionen US-Dollar in Ethereum über Lido eingesetzt, um seine DeFi-Ertragsstrategie zu erweitern. Dieser Schritt unterstreicht das wachsende Interesse an dezentralen Finanzprodukten und die Nutzung von Staking-Protokollen. Es zeigt die kontinuierliche Entwicklung und Investitionen im Krypto-Bereich.",
+      "schlagwoerter": [
+        "Finanzen",
+        "Kryptowährung",
+        "DeFi",
+        "Ethereum",
+        "Investitionen"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/markets/crypto/articles/sharplink-deploys-200m-ethereum-lido-011500282.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "When will mortgage rates go down from close to a one-year high?",
+      "zusammenfassung": "Nachdem die Hypothekenzinsen nahe einem Einjahreshoch liegen, fragen sich viele, wann die Raten wieder sinken werden. Analysten beobachten Indikatoren wie Inflation und Zentralbankpolitik, um zukünftige Entwicklungen vorherzusagen. Die Entwicklung der Hypothekenzinsen hat erhebliche Auswirkungen auf den Immobilienmarkt und die Verbraucherausgaben.",
+      "schlagwoerter": [
+        "Finanzen",
+        "Hypotheken",
+        "Zinsen",
+        "Immobilienmarkt",
+        "Inflation"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/personal-finance/mortgages/article/when-will-mortgage-rates-go-down-from-close-to-a-one-year-high-190610094.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Chief Economist Says Fed Won’t Hike Rates If Oil Holds Near $80",
+      "zusammenfassung": "Ein Chefökonom prognostiziert, dass die US-Notenbank die Zinsen nicht erhöhen wird, solange der Ölpreis stabil bei etwa 80 US-Dollar bleibt. Diese Aussage deutet auf eine enge Verknüpfung zwischen Energiepreisen und monetärer Politik hin. Die Entwicklung des Ölpreises könnte somit ein entscheidender Faktor für die zukünftige Zinsentwicklung sein.",
+      "schlagwoerter": [
+        "Finanzen",
+        "Zentralbank",
+        "Ölpreis",
+        "Geldpolitik",
+        "Inflation"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/economy/policy/articles/chief-economist-says-fed-won-025515793.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Impermanent loss in crypto: Understanding the real risk of providing liquidity",
+      "zusammenfassung": "Der 'Impermanent Loss' ist ein wesentliches Risiko beim Bereitstellen von Liquidität in dezentralen Finanzprotokollen (DeFi). Anleger müssen verstehen, wie diese Verluste entstehen, wenn sich der Preis ihrer eingezahlten Token im Verhältnis zueinander ändert. Dieses Konzept ist entscheidend für jeden, der im DeFi-Sektor aktiv ist und Liquidität bereitstellt.",
+      "schlagwoerter": [
+        "Finanzen",
+        "Kryptowährung",
+        "DeFi",
+        "Investitionsrisiko",
+        "Liquidität"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/personal-finance/investing/article/impermanent-loss-162416298.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed",
+      "zusammenfassung": "OpenAI hat den 'Ultrafast mode' für GPT-5.6 Sol vorgestellt, der das Modell bis zu 14-mal schneller macht. Dieser neue API-Dienst nutzt Cerebras-Technologie und liefert bis zu 750 Output-Tokens pro Sekunde. Die deutliche Beschleunigung soll die Effizienz von KI-Anwendungen drastisch verbessern und neue Einsatzmöglichkeiten eröffnen.",
+      "schlagwoerter": [
+        "KI",
+        "OpenAI",
+        "GPT",
+        "Geschwindigkeit",
+        "Innovation"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://openai.com/index/previewing-ultrafast",
+      "quelle_name": "OpenAI Blog",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Introducing Gemini 3.7 Flash",
+      "zusammenfassung": "Google DeepMind hat Gemini 3.7 Flash vorgestellt, eine neue Version seines KI-Modells. Gleichzeitig wurden DeepSeek V4-Pro und eine beschleunigte GPT-5.6 Sol Variante von OpenAI veröffentlicht. Diese neuen Modelle versprechen verbesserte Leistung und Effizienz für verschiedene KI-Anwendungen.",
+      "schlagwoerter": [
+        "KI",
+        "Google",
+        "Gemini",
+        "DeepMind",
+        "Modellentwicklung"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://deepmind.google/blog/introducing-gemini-3-7-flash/",
+      "quelle_name": "Google DeepMind Blog",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "OpenAI and Anthropic in price war as Chinese AI rivals gain ground",
+      "zusammenfassung": "OpenAI und Anthropic sind in einen Preiskampf verwickelt, während chinesische KI-Konkurrenten Marktanteile gewinnen. US-Firmen reagieren auf die neuen Herausforderungen mit günstigeren Modellen, um ihre ambitionierten Billionen-Dollar-Ziele zu verteidigen. Dieser Wettbewerb führt zu einer Demokratisierung des Zugangs zu leistungsfähigen KI-Technologien.",
+      "schlagwoerter": [
+        "KI",
+        "Wettbewerb",
+        "Preiskampf",
+        "OpenAI",
+        "Anthropic",
+        "China"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://arstechnica.com/ai/2026/08/openai-and-anthropic-in-price-war-as-chinese-ai-rivals-gain-ground/",
+      "quelle_name": "Ars Technica",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Leichtathletik-EM 2026 in Birmingham",
+      "zusammenfassung": "- Gold 200m: Owen Ansah (19,95s)\n- Silber 400m Hürden: Emil Agyekum\n- Silber Diskuswurf: Shanice Craft\n- Silber 1500m Freistil (Schwimmen): Isabel Gose\n- Silber Langbahn (Schwimmen): Angelina Köhler\n- Gold Rhythmische Sportgymnastik Mehrkampf: Darja Varfolomeev\n- Bronze Grand Prix Spécial (Reiten): Katharina Hemmer",
+      "schlagwoerter": [
+        "Leichtathletik",
+        "Schwimmen",
+        "Reiten",
+        "Sportgymnastik",
+        "EM",
+        "Medaillen",
+        "Deutschland"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.sportschau.de/leichtathletik/em/ansah-stuermt-zu-gold-agyekum-und-craft-mit-silber,la-em-2026-birmingham-freitag-fuenfter-tag-100.html",
+      "quelle_name": "Sportschau",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Volta a Portugal 2026",
+      "zusammenfassung": "- Etappe 6: Sieger Xabier Isasa (Euskaltel-Euskadi) vor Rui Oliveira\n- Etappe 7: Sieger Adrià Pericas (Anicolor-Campicarn)\n- Etappe 8: Neutralisiert nach tödlichem Unfall von Finlay Tarling (19, Wales) – Radprofi verunglückt tödlich",
+      "schlagwoerter": [
+        "Radrennen",
+        "Portugal",
+        "Todesfall",
+        "Cycling"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/volta-a-portugal-neutralised-stage-8-concludes-in-mourning-following-tragic-death-of-finlay-tarling/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Arctic Race of Norway 2026",
+      "zusammenfassung": "- Etappe 1: Sieger Giovanni Lonardi (Polti Kometa), übernimmt Führung\n- Etappe 2: Sieger Erlend Blikra (Uno-X Mobility), Lonardi bleibt Gesamtführender",
+      "schlagwoerter": [
+        "Radrennen",
+        "Norwegen",
+        "Cycling"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/arctic-race-of-norway-erlend-blikra-gets-a-home-win-on-stage-2/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Czech Tour 2026",
+      "zusammenfassung": "- Etappe 1: Sieger Riley Sheehan (EF Education-EasyPost)\n- Etappe 2: Sieger AJ August (Netcompany Ineos) nach Bergsieg, übernimmt Gesamtführung",
+      "schlagwoerter": [
+        "Radrennen",
+        "Tschechien",
+        "Cycling"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/czech-tour-netcompany-ineos-dominate-stage-2-to-deliver-aj-august-to-mountaintop-finish-victory/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Georg Steinhauser wechselt zu Red Bull-Bora-hansgrohe",
+      "zusammenfassung": "Der deutsche Radsport-Hoffnungsträger Georg Steinhauser wechselt zur kommenden Saison zum deutschen Top-Team Red Bull-Bora-hansgrohe. Trotz wechselhafter Leistungen hat der junge Kletterer sein Talent bereits mehrfach unter Beweis gestellt. Dieser Transfer gilt als strategisch wichtig für das Team, das in ihn großes Potenzial sieht.",
+      "schlagwoerter": [
+        "Radsport",
+        "Deutschland",
+        "Transfer",
+        "Red Bull-Bora-hansgrohe"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.sportschau.de/radsport/steinhauser-wechselt-zu-red-bull-bora-hansgrohe,radsport-steinhauser-red-bull-100.html",
+      "quelle_name": "Sportschau",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Zverev spielt Davis Cup gegen Kroatien",
+      "zusammenfassung": "Alexander Zverev, der beste deutsche Tennisspieler, hat überraschend seine Zusage für das Heimspiel im Davis Cup gegen Kroatien in Halle/Westfalen gegeben. Seine Teilnahme ist eine willkommene Stärkung für das deutsche Team im prestigeträchtigen Mannschaftswettbewerb. Dies markiert eine Rückkehr des prominenten Spielers in das Nationalteam.",
+      "schlagwoerter": [
+        "Tennis",
+        "Davis Cup",
+        "Deutschland",
+        "Alexander Zverev"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.sportschau.de/tennis/davis-cup/zverez-spielt-davis-cup-gegen-kroatien,davis-cup-halle-kroatien-100.html",
+      "quelle_name": "Sportschau",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Abholzung im Amazonas auf 10-Jahres-Tief",
+      "zusammenfassung": "Die Abholzung im brasilianischen Amazonas-Regenwald ist auf ein Zehn-Jahres-Tief gefallen, was einen bedeutenden Erfolg für den Artenschutz und die Umwelt darstellt. Dies ist eine ermutigende Nachricht im Kampf gegen den Klimawandel und den Verlust der Biodiversität. Erfolgreiche Maßnahmen zur Wiederaufforstung und zum Schutz bedrohter Gebiete tragen zu dieser positiven Entwicklung bei.",
+      "schlagwoerter": [
+        "Umwelt",
+        "Amazonas",
+        "Regenwald",
+        "Artenschutz",
+        "Klimawandel"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://goodnews-magazin.de/abholzung-im-amazonas-auf-10-jahres-tief/",
+      "quelle_name": "Good News Magazin",
+      "kategorie": "good-news"
+    }
+  ],
+  "schlagwoerter": [
+    "KI",
+    "Technologie",
+    "Wirtschaft",
+    "Cybersicherheit",
+    "Migration",
+    "Klimawandel",
+    "Sport",
+    "Leichtathletik",
+    "Radrennen",
+    "Deutschland",
+    "Internationales",
+    "Finanzen",
+    "Datenschutz",
+    "Umwelt"
+  ]
+}
