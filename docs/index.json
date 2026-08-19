@@ -1,5 +1,24 @@
 [
   {
+    "datum": "2026-08-19",
+    "titel": "Tech im Fokus der Kritik: Meta vor Gericht, KI ringt mit Umwelt und Sicherheit",
+    "modus": "kurzform",
+    "schlagwoerter": [
+      "KI",
+      "Wirtschaft",
+      "Technologie",
+      "Cybersicherheit",
+      "Nachhaltigkeit",
+      "Finanzen",
+      "Sport",
+      "Geopolitik",
+      "Gesundheit",
+      "Soziale Medien"
+    ],
+    "audio_pfad": "audio/2026-08-19.mp3",
+    "html_pfad": "ausgaben/2026-08-19.html"
+  },
+  {
     "datum": "2026-08-15",
     "titel": "KI-Modelle beschleunigen: Preiskampf entbrennt, während China aufholt",
     "modus": "deep-dive",

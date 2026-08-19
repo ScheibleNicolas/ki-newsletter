@@ -1,0 +1,484 @@
+{
+  "modus": "kurzform",
+  "datum": "2026-08-19",
+  "titel": "Tech im Fokus der Kritik: Meta vor Gericht, KI ringt mit Umwelt und Sicherheit",
+  "storys": [
+    {
+      "titel": "US-Staaten werfen Meta Gefährdung junger Nutzer vor",
+      "zusammenfassung": "Ein wegweisender Prozess hat in Kalifornien begonnen, in dem Meta vorgeworfen wird, seine Plattformen wie Facebook und Instagram absichtlich suchterzeugend für Kinder gestaltet zu haben. Mehrere US-Bundesstaaten fordern eine grundlegende Überarbeitung der Plattformen für junge Nutzer.",
+      "schlagwoerter": [
+        "Meta",
+        "Soziale Medien",
+        "Recht",
+        "Kinderschutz",
+        "USA"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": true,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cly5r7vr7q1o?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "breaking-news"
+    },
+    {
+      "titel": "Ukrainischer Verteidigungsminister fordert Präsidentschaftswahl",
+      "zusammenfassung": "Der abgesetzte ukrainische Verteidigungsminister hat eine Präsidentschaftswahl gefordert, obwohl unter Kriegsrecht seit Februar 2022 Wahlen ausgesetzt sind. Dies ist die erste derartige Forderung einer wichtigen ukrainischen politischen Figur seit der Invasion.",
+      "schlagwoerter": [
+        "Ukraine",
+        "Politik",
+        "Wahlen",
+        "Krieg"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cdew8n9erlwo?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Trump setzt neue Zölle auf Kanada aus",
+      "zusammenfassung": "US-Präsident Donald Trump hat die Verhängung neuer Zölle auf kanadische Waren für drei Tage ausgesetzt, da die Länder kurz vor einem Handelsabkommen stehen. Washington und Ottawa gaben die Einigung bekannt, um drastische Zölle zu vermeiden.",
+      "schlagwoerter": [
+        "USA",
+        "Kanada",
+        "Handelspolitik",
+        "Zölle",
+        "Trump"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cy9wz79ze29o?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "USA sanktionieren ICC-Führungskräfte",
+      "zusammenfassung": "Die USA haben neue Sanktionen gegen führende Persönlichkeiten des Internationalen Strafgerichtshofs (IStGH) verhängt, darunter dessen Präsidentin. Die Trump-Administration hatte zuvor angekündigt, den IStGH „Stein für Stein“ abzubauen, was die Rechtsstaatlichkeit gefährdet.",
+      "schlagwoerter": [
+        "USA",
+        "Internationaler Strafgerichtshof",
+        "Sanktionen",
+        "Rechtsstaatlichkeit"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cnvnl0elz47o?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Trump dementiert Iran-Gespräche inmitten angespannter Lage",
+      "zusammenfassung": "US-Präsident Trump bestreitet geplante Gespräche mit Teheran, während der iranische Außenminister behauptet, die USA „betteln“ um Verhandlungen. Dies geschieht inmitten wachsender Spannungen und Debatten über die Verwaltung der strategisch wichtigen Straße von Hormus.",
+      "schlagwoerter": [
+        "Iran",
+        "USA",
+        "Geopolitik",
+        "Trump",
+        "Diplomatie"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.aljazeera.com/news/liveblog/2026/8/19/iran-war-live-trump-denies-iran-talks-tehran-claims-us-begging?traffic_source=rss",
+      "quelle_name": "Al Jazeera English",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Fehlinvestitionen bei Kirchenbezirken, Pensionskassen und TÜV",
+      "zusammenfassung": "Neue Recherchen zeigen, dass nicht nur Krankenkassen, sondern auch Kirchenbezirke, Pensionskassen und der TÜV Millionen durch riskante Immobilienfonds verloren haben. Dies offenbart weitreichende Fehlinvestitionen bei verschiedenen Institutionen.",
+      "schlagwoerter": [
+        "Fehlinvestition",
+        "Immobilien",
+        "Finanzen",
+        "Kirchen",
+        "Pensionskassen"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/investigativ/fehlinvestments-kirchen-sterbekassen-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Justizministerin Hubig will Einbau von Klimaanlagen erleichtern",
+      "zusammenfassung": "Bundesjustizministerin Hubig spricht sich dafür aus, Mietern den Einbau von Klimaanlagen zu erleichtern, da es bisher keinen gesetzlichen Anspruch gibt. Sie fordert praktikable Regelungen, um sowohl Mieter als auch Vermieter zu berücksichtigen.",
+      "schlagwoerter": [
+        "Mietrecht",
+        "Klimaanlage",
+        "Hitzeschutz",
+        "Gesetzesänderung",
+        "Verbraucherschutz"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/inland/innenpolitik/hubig-mieter-klimaanlagen-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Grenzkontrollen sollen bis mindestens März 2027 verlängert werden",
+      "zusammenfassung": "Bundesinnenminister Dobrindt plant eine erneute Verlängerung der Grenzkontrollen an Deutschlands Außengrenzen bis mindestens März 2027. Bei Zustimmung der EU-Kommission würde die Regelung bis Mitte nächsten Jahres in Kraft bleiben.",
+      "schlagwoerter": [
+        "Grenzkontrollen",
+        "Sicherheit",
+        "Innenpolitik",
+        "EU",
+        "Migration"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/inland/innenpolitik/dobrindt-grenzkontrollen-verlaengern-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Deutschland stockt Ebola-Hilfe für DR Kongo auf",
+      "zusammenfassung": "Angesichts eines drohenden außer Kontrolle geratenden Ebola-Ausbruchs in der DR Kongo mit über 5.000 Infizierten haben Deutschland und die EU weitere Hilfen zugesagt. Die WHO stuft die Lage bereits als globalen Notstand ein.",
+      "schlagwoerter": [
+        "Ebola",
+        "DR Kongo",
+        "Humanitäre Hilfe",
+        "Gesundheit",
+        "Entwicklungshilfe"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/ausland/afrika/hilfen-deutschland-ebola-kongo-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Warnung vor China-Shops mit deutscher Tarnung",
+      "zusammenfassung": "Es gibt eine Zunahme von Online-Shops mit deutschen Namen und Adressen, die jedoch nicht in Deutschland ansässig sind und Verbraucher täuschen. Dies führt oft zu Problemen bei Qualität und Versandbedingungen und kann schwierig zu erkennen sein.",
+      "schlagwoerter": [
+        "E-Commerce",
+        "Verbraucherschutz",
+        "Online-Betrug",
+        "China-Shops",
+        "Qualität"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/verbraucher/warnung-china-shops-deutsche-tarnung-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Ventilatorenspezialist ebm-papst an US-Konzern verkauft",
+      "zusammenfassung": "Das deutsche Familienunternehmen ebm-papst, ein Spezialist für Ventilatoren, wird für fast fünf Milliarden Euro an den US-Konzern Madison Air verkauft. Die Übernahme betrifft einen wichtigen Hersteller von Kühlungslösungen, auch für Rechenzentren.",
+      "schlagwoerter": [
+        "EBM-Papst",
+        "Übernahme",
+        "Industrie",
+        "Deutschland",
+        "USA"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/unternehmen/ventilatorenspezialist-ebm-papst-verkauf-100.html",
+      "quelle_name": "Tagesschau Wirtschaft",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Rolls-Royce Aktie erreicht 14-Jahres-Hoch",
+      "zusammenfassung": "Die Aktie von Rolls-Royce hat ein 14-Jahres-Hoch erreicht, nachdem das Unternehmen ein neues Triebwerksprojekt angekündigt hat. Dies signalisiert eine positive Entwicklung für den britischen Hersteller.",
+      "schlagwoerter": [
+        "Rolls-Royce",
+        "Aktienmarkt",
+        "Wirtschaft",
+        "Unternehmen"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.investors.com/news/rolls-royce-jet-engines-india/?src=A00220&yptr=yahoo",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Nike-Aktie im unaufhörlichen Sturzflug",
+      "zusammenfassung": "Die Aktie von Nike befindet sich in einem unaufhörlichen Absturz, was Bedenken hinsichtlich der Unternehmensperformance und der Marktaussichten aufwirft. Gründe für den Einbruch wurden nicht genannt.",
+      "schlagwoerter": [
+        "Nike",
+        "Aktienmarkt",
+        "Unternehmen",
+        "Börse"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/markets/stocks/article/nikes-stock-plunge-is-relentless-182413545.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Lieferkettenbetrug erreicht neue Dimension",
+      "zusammenfassung": "Ein Diebstahl in Höhe von 111 Millionen US-Dollar im Bereich Lieferkettenbetrug zeigt eine neue Raffinesse der Täter. Dies unterstreicht die wachsenden Herausforderungen bei der Sicherung globaler Lieferketten.",
+      "schlagwoerter": [
+        "Lieferkette",
+        "Betrug",
+        "Wirtschaftskriminalität",
+        "Sicherheit"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/economy/policy/articles/supply-chain-fraud-111m-theft-190150925.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Bitmine erwirbt 10.000 Ethereum",
+      "zusammenfassung": "Bitmine hat fast 10.000 Ethereum gekauft, was auf eine verstärkte Investition in die Kryptowährung hindeutet. Der Kauf reflektiert das Vertrauen des Unternehmens in das Potenzial von Ethereum.",
+      "schlagwoerter": [
+        "Kryptowährung",
+        "Ethereum",
+        "Investition",
+        "Bitmine"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/markets/crypto/articles/bitmine-purchases-nearly-10-000-191400121.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Rohölpreise steigen angesichts US-Iran-Pattsituation",
+      "zusammenfassung": "Die Rohölpreise sind stark angestiegen, da sich der Konflikt zwischen den USA und Iran in einer Pattsituation befindet. Diese Entwicklung beeinflusst die globalen Energiemärkte erheblich.",
+      "schlagwoerter": [
+        "Rohöl",
+        "Iran",
+        "USA",
+        "Energiepreise",
+        "Geopolitik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/energy/articles/crude-prices-jump-us-iran-191456995.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Reduzierte Fed-Zinserwartungen schwächen den Dollar",
+      "zusammenfassung": "Erwartungen an reduzierte Zinserhöhungen der US-Notenbank Federal Reserve schwächen den Dollar. Dies deutet auf eine mögliche Lockerung der Geldpolitik und deren Auswirkungen auf den globalen Währungsmarkt hin.",
+      "schlagwoerter": [
+        "US-Dollar",
+        "Federal Reserve",
+        "Zinssatz",
+        "Wirtschaftspolitik",
+        "Währungsmarkt"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/markets/currencies/articles/reduced-fed-rate-hike-expectations-193809337.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "ChatGPT Ads expandiert in Europa",
+      "zusammenfassung": "ChatGPT Ads wird in 31 europäischen Märkten eingeführt, um Werbetreibenden zu ermöglichen, Nutzer beim Recherchieren, Vergleichen und Entscheiden zu erreichen. Die Erweiterung signalisiert eine neue Monetarisierungsstrategie für OpenAI.",
+      "schlagwoerter": [
+        "ChatGPT",
+        "Werbung",
+        "KI",
+        "OpenAI",
+        "Europa"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://openai.com/index/chatgpt-ads-expands-across-europe",
+      "quelle_name": "OpenAI Blog",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "KI-Selbstverbesserung könnte langsamer voranschreiten",
+      "zusammenfassung": "Die kühne Erwartung der KI-Industrie, dass sich KI bald selbstständig und ohne menschliche Aufsicht verbessern wird, könnte sich laut Experten nicht so schnell erfüllen. Trotz der Fähigkeit von LLMs, Code zu schreiben oder Trainingsdaten zu generieren, gibt es Skepsis.",
+      "schlagwoerter": [
+        "KI",
+        "Entwicklung",
+        "Forschung",
+        "Autonomie",
+        "Prognose"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/",
+      "quelle_name": "MIT Technology Review",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "AirTag enthüllt Amazons Bücher-Vernichtung für KI-Training",
+      "zusammenfassung": "Ein versteckter AirTag hat enthüllt, dass Amazon gebrauchte Bücher massenhaft kauft, scannt und dann vernichtet, um KI-Modelle zu trainieren. Diese Praxis wirft Fragen nach Urheberrecht, Datenethik und Umweltverträglichkeit auf.",
+      "schlagwoerter": [
+        "KI",
+        "Amazon",
+        "Datentraining",
+        "Urheberrecht",
+        "Ethik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://arstechnica.com/tech-policy/2026/08/hidden-airtag-reveals-amazon-is-trashing-rare-books-to-train-ai/",
+      "quelle_name": "Ars Technica",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Neue Gaskraftwerke für KI: Enormer CO2-Anstieg befürchtet",
+      "zusammenfassung": "Die geplante Realisierung von 99 neuen Gaskraftwerken für KI-Datenzentren in den USA könnte den CO2-Ausstoß der US-Stromproduktion um bis zu einem Drittel erhöhen. Dies wirft Bedenken hinsichtlich des ökologischen Fußabdrucks der KI auf.",
+      "schlagwoerter": [
+        "KI",
+        "Energieverbrauch",
+        "Klimawandel",
+        "CO2-Emissionen",
+        "Datenzentren"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.heise.de/news/Neue-Gaskraftwerke-fuer-KI-Enormer-CO2-Anstieg-befuerchtet-11418710.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "quelle_name": "Heise.de",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Prognose: Inferenzkosten für KI-Agenten verfünffachen sich bis 2028",
+      "zusammenfassung": "Trotz sinkender Preise für KI-Modelle erwartet Gartner einen deutlichen Anstieg der Inferenzkosten für KI-Agenten, die sich bis 2028 verfünffachen sollen. Dies könnte die Rentabilität von KI-Anwendungen beeinflussen.",
+      "schlagwoerter": [
+        "KI",
+        "Kosten",
+        "Prognose",
+        "Wirtschaft",
+        "Technologie"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.heise.de/news/Prognose-Inferenzkosten-fuer-KI-Agenten-verfuenffachen-sich-bis-2028-11417470.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "quelle_name": "Heise.de",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "OpenAI löst Preparedness-Team für KI-Risiken auf",
+      "zusammenfassung": "OpenAI hat sein Preparedness-Team aufgelöst, das für die Bewertung katastrophaler KI-Risiken zuständig war. Die Aufgaben sollen nun auf bestehende Teams umverteilt werden, was Fragen zur Priorisierung der KI-Sicherheit aufwirft.",
+      "schlagwoerter": [
+        "OpenAI",
+        "KI-Sicherheit",
+        "Risikomanagement",
+        "Unternehmenspolitik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.heise.de/news/OpenAI-loest-Preparedness-Team-fuer-KI-Risiken-auf-11416601.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "quelle_name": "Heise.de",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Radsport: Ergebnisse der Rundfahrten",
+      "zusammenfassung": "- Arctic Race of Norway, Etappe 3: Thomas Silva gewinnt Bergsprint, Lennert van Eetvelt Zweiter.\n- Arctic Race of Norway, Etappe 4: Cedrik Christophersen gewinnt Bergankunft.\n- Arctic Race of Norway, Gesamtwertung Top 5: 1. Thomas Silva, 2. Lennert Van Eetvelt.\n- Volta a Portugal, Etappe 9: Alexis Guérin gewinnt Bergankunft am Senhora da Graça.\n- Volta a Portugal, Etappe 10: Rui Oliveira gewinnt Sprint.\n- Volta a Portugal, Gesamtwertung Top 5: 1. Alexis Guérin.\n- Czech Tour, Etappe 3: AJ August gewinnt Bergankunft, Alessandro Fancellu Zweiter, Domenico Pozzovivo Dritter.\n- Czech Tour, Etappe 4: Alessandro Fancellu gewinnt.\n- Czech Tour, Gesamtwertung Top 5: 1. Andrew August.",
+      "schlagwoerter": [
+        "Radsport",
+        "Arctic Race of Norway",
+        "Volta a Portugal",
+        "Czech Tour"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/arctic-race-of-norway-thomas-silva-seals-overall-as-cedrik-christophersen-climbs-to-stage-4-victory/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Radsport: ADAC Cyclassics Hamburg",
+      "zusammenfassung": "- Rennen: Paul Magnier gewinnt Sprint, Mike Teunissen Zweiter, Laurence Pithie Dritter.",
+      "schlagwoerter": [
+        "Radsport",
+        "ADAC Cyclassics",
+        "Hamburg"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/adac-cyclassics-hamburg-paul-magnier-takes-sprint-win-after-perfect-leadout/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Fußball: Champions League Qualifikation",
+      "zusammenfassung": "- Hinspiele: Fenerbahce Istanbul - Olympique Lyon 1:1, Dinamo Zagreb - Viking Stavanger 2:2, AEK - Levski Sofia 0:0.",
+      "schlagwoerter": [
+        "Fußball",
+        "Champions League",
+        "Qualifikation"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.kicker.de/fenerbahce-gegen-lyon-2026-champions-league-qualifikation-5254298/spielbericht#omrss",
+      "quelle_name": "Kicker Fußball",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Fußball: Transfers und Testspiel",
+      "zusammenfassung": "- Fußball-Transfer: Rodri wechselt für 76,5 Millionen Euro von Manchester City zum FC Barcelona.\n- Fußball-Transfer: Niclas Füllkrug kehrt für ein Jahr auf Leihbasis zu Werder Bremen zurück.\n- Testspiel: FC Bayern München - 1. FC Heidenheim 4:2.",
+      "schlagwoerter": [
+        "Fußball",
+        "Transfers",
+        "Testspiel",
+        "FC Barcelona",
+        "Werder Bremen",
+        "FC Bayern München"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.sportschau.de/fussball/la-liga-primera-division/barca-sticht-real-aus-rodri-wechselt-fuer-rund-765-millionen-nach-katalonien,rodri-wechsel-barcelona-100.html",
+      "quelle_name": "Sportschau",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Tennis: Masters Cincinnati",
+      "zusammenfassung": "- Tennis Masters Cincinnati: Alexander Zverev erreicht Achtelfinale und trifft auf Tommy Paul (USA).",
+      "schlagwoerter": [
+        "Tennis",
+        "Alexander Zverev",
+        "Cincinnati",
+        "Masters-Turnier"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.sportschau.de/tennis/zverev-erreicht-achtelfinale-in-cincinnati,zverev-cincinnati-106.html",
+      "quelle_name": "Sportschau",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Mountainbike: Leadville Trail 100 MTB",
+      "zusammenfassung": "- Leadville Trail 100 MTB (Frauen): Melisa Rollins gewinnt ihren zweiten Titel nach Kampf mit Cecily Decker (2.) und Lauren Stephens (3.).\n- Leadville Trail 100 MTB (Männer): Keegan Swenson gewinnt seinen sechsten Titel im Sprint gegen Matt Wilson (2.). Bradyn Lange Dritter.",
+      "schlagwoerter": [
+        "Mountainbike",
+        "Leadville Trail 100 MTB"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/womens-cycling/leadville-trail-100-mtb-melisa-rollins-earns-second-elite-womens-title-after-epic-battle-with-cecily-decker/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "HPV-Impfung schützt Mädchen in Kiribati vor Gebärmutterhalskrebs",
+      "zusammenfassung": "Auf dem abgelegenen Inselstaat Kiribati schützt die HPV-Impfung dank einer Kooperation von UNICEF, Rotary International und dem Gesundheitsministerium zunehmend Mädchen vor Gebärmutterhalskrebs. Dies ermöglicht den Familien eine gesündere Zukunft und emotionale Entlastung.",
+      "schlagwoerter": [
+        "Good News",
+        "Medizinischer Fortschritt",
+        "Gesundheit",
+        "Impfung",
+        "Kiribati"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://goodnews-magazin.de/hpv-impfung-madchen-in-kiribati/",
+      "quelle_name": "Good News Magazin",
+      "kategorie": "good-news"
+    }
+  ],
+  "schlagwoerter": [
+    "KI",
+    "Wirtschaft",
+    "Technologie",
+    "Cybersicherheit",
+    "Nachhaltigkeit",
+    "Finanzen",
+    "Sport",
+    "Geopolitik",
+    "Gesundheit",
+    "Soziale Medien"
+  ]
+}
