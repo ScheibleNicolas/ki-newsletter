@@ -1,0 +1,499 @@
+{
+  "modus": "deep-dive",
+  "datum": "2026-08-22",
+  "titel": "KI: Milliarden-Boom, Rechtsstreit und Jobs im Wandel",
+  "storys": [
+    {
+      "titel": "US-Kanada-Handelsstreit eskaliert: USA verhängen hohe Strafzölle, Kanada kündigt Gegenmaßnahmen an",
+      "zusammenfassung": "Die Handelsgespräche zwischen den USA und Kanada sind gescheitert. Daraufhin haben die USA Strafzölle von 50 Prozent auf kanadische Importe im Wert von 20 Milliarden Dollar in Kraft gesetzt. Kanada kündigte umgehend an, gleiche Zölle \"Dollar für Dollar\" zu erheben, was eine weitere Eskalation des Handelsstreits bedeutet.",
+      "schlagwoerter": [
+        "Handelsstreit",
+        "USA",
+        "Kanada",
+        "Strafzölle",
+        "Wirtschaftspolitik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": true,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cvgvyy4x2mvo?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "breaking-news"
+    },
+    {
+      "titel": "Russischer Drohnenangriff auf Einkaufszentrum in Ukraine fordert Todesopfer",
+      "zusammenfassung": "Ein russischer \"Double-Tap\"-Drohnenangriff auf ein belebtes Einkaufszentrum in der ukrainischen Stadt Krywyj Rih hat mindestens 16 Menschen getötet und über 130 weitere verletzt, darunter Kinder. Neun Personen werden noch vermisst. Der ukrainische Präsident Selenskyj verurteilte den Angriff als \"feige und vorsätzlich\".",
+      "schlagwoerter": [
+        "Ukraine",
+        "Russland",
+        "Krieg",
+        "Angriff",
+        "Zivilisten",
+        "Krywyj Rih"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": true,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/c39egw7nmk2o?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "breaking-news"
+    },
+    {
+      "titel": "TikTok zahlt 400 Millionen Dollar in US-Datenschutzklage wegen Kinderdaten",
+      "zusammenfassung": "TikTok und seine Muttergesellschaft ByteDance haben einer Zahlung von 400 Millionen Dollar an die US-Regierung zugestimmt. Damit wird eine Sammelklage beigelegt, die dem Unternehmen vorwarf, illegal große Mengen an Daten von Millionen von Nutzern unter 13 Jahren gesammelt zu haben.",
+      "schlagwoerter": [
+        "TikTok",
+        "Datenschutz",
+        "Kinder",
+        "Sammelklage",
+        "USA",
+        "ByteDance"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cwyr0l45xjro?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Israelische Siedlungsexpansion im Westjordanland trotz internationaler Proteste",
+      "zusammenfassung": "Israel hat eine geschlossene Siedlung im Westjordanland wiederaufgebaut und damit internationale Verurteilungen ignoriert. Dreißig \"Pionierfamilien\" sind in der Siedlung eingetroffen, was bei palästinensischen Anwohnern große Befürchtungen ausgelöst hat. Großbritannien, Kanada und Australien verurteilten zudem Israels Weigerung, eine strafrechtliche Untersuchung zu den Tötungen von sieben humanitären Helfern im Gazastreifen einzuleiten.",
+      "schlagwoerter": [
+        "Israel",
+        "Westjordanland",
+        "Siedlungen",
+        "Internationale Beziehungen",
+        "Palästina",
+        "Gaza"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cn7n0l4p0kzo?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Deutschland untersucht mögliches russisches Waffendepot bei Berlin",
+      "zusammenfassung": "Deutsche Sicherheitsbehörden untersuchen Berichten zufolge ein im vergangenen Jahr bei Berlin entdecktes geheimes Waffendepot. Deutsche Geheimdienste vermuten, dass die gefundenen Waffen für Attentate im Auftrag Moskaus bestimmt waren.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Russland",
+        "Spionage",
+        "Sicherheit",
+        "Waffen"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cp9edjpvplpo?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "US-Nationalverschuldung übersteigt 40 Billionen Dollar, Sorge um wirtschaftliche Belastung",
+      "zusammenfassung": "Die US-Staatsverschuldung hat erstmals in der Geschichte die Marke von 40 Billionen Dollar überschritten und wächst rapide. Dies wirft Fragen nach den wirtschaftlichen Auswirkungen und der Belastung für die US-Bürger auf.",
+      "schlagwoerter": [
+        "USA",
+        "Staatsverschuldung",
+        "Wirtschaft",
+        "Finanzen"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.aljazeera.com/video/newsfeed/2026/8/21/us-debt-tops-40-trillion-americans-left-with-the-bill-3?traffic_source=rss",
+      "quelle_name": "Al Jazeera English",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Deutsche Wirtschaft fordert schnellere Reformen von der Regierung",
+      "zusammenfassung": "Führende deutsche Konzerne wie Audi und Siemens sowie Arbeitgeberverbände der Metall- und Elektroindustrie haben die Bundesregierung in einem Brief zur \"schleunigsten\" Umsetzung von Reformen aufgefordert. Sie kritisieren zudem die hohe Beitragsbelastung in der Sozialversicherung.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Wirtschaft",
+        "Reformen",
+        "Politik",
+        "Arbeitgeber"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/brief-konzerne-regierung-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Deutsche Industrie wächst so stark wie zuletzt 2022",
+      "zusammenfassung": "Die deutsche Industrie konnte ihr Wachstum beschleunigen und verzeichnete den stärksten Zuwachs seit vier Jahren. Dies geht aus dem Einkaufsmanager-Index von S&P Global hervor, trotz bestehender Herausforderungen wie Niedrigwasser im Rhein und der angespannten Lage am Persischen Golf.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Industrie",
+        "Wirtschaftswachstum",
+        "Konjunktur",
+        "S&P Global"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/finanzen/marktbericht-dax-mittagsschwerpunkt-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "USA erstatten deutschen Firmen Hunderte Millionen Euro an Zöllen",
+      "zusammenfassung": "Nach einer Entscheidung des US Supreme Courts, der Teile der umstrittenen Zölle von Ex-Präsident Trump gekippt hatte, erhalten deutsche Firmen fast 800 Millionen Euro zurück. Dies ist ein erheblicher finanzieller Rückfluss für die betroffenen Unternehmen.",
+      "schlagwoerter": [
+        "Deutschland",
+        "USA",
+        "Zölle",
+        "Handel",
+        "Wirtschaft",
+        "Supreme Court"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/unternehmen/us-zoelle-rueckzahlungen-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Befüllung der Gasspeicher in Deutschland wird immer kritischer",
+      "zusammenfassung": "Die deutschen Gasspeicher sind aktuell nur etwa zur Hälfte gefüllt und erreichen den niedrigsten Stand seit Jahren, während das Ziel bis Anfang November nahezu vollständige Füllung vorsieht. Die Energiewirtschaft äußert Bedenken, dass diese Vorgaben kaum noch zu schaffen sind und warnt vor Engpässen bei einem kalten Winter.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Gasspeicher",
+        "Energieversorgung",
+        "Versorgungssicherheit",
+        "Winter"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/energie/gasspeicher-deutschland-110.html",
+      "quelle_name": "Tagesschau Wirtschaft",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Deutschland erreicht Solarausbauziel für 2026 – Sorge um weitere Jahre",
+      "zusammenfassung": "Deutschland hat das im Gesetz festgelegte Ausbauziel für Solarmodule bereits in diesem Jahr erreicht, doch für die kommenden Jahre ist die Prognose schwierig. Der Bundesverband Solarwirtschaft warnt vor einem Rückgang des Ausbaus, obwohl dieser für die Erreichung zukünftiger Klimaziele steigen müsste.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Solar",
+        "Erneuerbare Energien",
+        "Klimaziele",
+        "Energiewende"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/energie/solar-ausbau-energieversorgung-100.html",
+      "quelle_name": "Tagesschau Wirtschaft",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Sozialhilfeausgaben steigen auf 21,5 Milliarden Euro im Jahr 2025",
+      "zusammenfassung": "Die Ausgaben für Sozialhilfe in Deutschland sind 2025 um 6,1 Prozent auf 21,5 Milliarden Euro gestiegen. Besonders stark legten die Kosten für die Hilfe zur Pflege zu, die sich um 13,3 Prozent auf sechs Milliarden Euro erhöhten.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Sozialhilfe",
+        "Pflege",
+        "Haushalt",
+        "Sozialausgaben"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/inland/innenpolitik/steigende-sozialhilfeausgaben-2025-100.html",
+      "quelle_name": "Tagesschau Wirtschaft",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Bitcoin-Miner entwickeln sich zu AI-Rechenzentrumsvermietern: Riot Platforms unterzeichnet 9-Milliarden-Dollar-Mietvertrag",
+      "zusammenfassung": "Bitcoin-Miner diversifizieren ihr Geschäft, indem sie ihre Rechenkapazitäten und Infrastruktur für KI-Anwendungen anbieten. Riot Platforms hat einen 9-Milliarden-Dollar-Vertrag über die Bereitstellung von Rechenleistung für KI abgeschlossen, was diesen Trend unterstreicht.",
+      "schlagwoerter": [
+        "Bitcoin",
+        "KI",
+        "Rechenzentren",
+        "Mining",
+        "Investition",
+        "Riot Platforms"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/technology/ai/articles/riot-platforms-riot-cleanspark-clsk-014919566.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Südkorea plant Chip-Sonderfonds zur Förderung von Jugend und KI-Investitionen",
+      "zusammenfassung": "Südkorea plant die Einrichtung eines Chip-Sonderfonds, um Investitionen in die Jugend und den Bereich der Künstlichen Intelligenz zu fördern. Diese Initiative zielt darauf ab, die Wettbewerbsfähigkeit des Landes in Schlüsseltechnologien zu stärken.",
+      "schlagwoerter": [
+        "Südkorea",
+        "KI",
+        "Chipindustrie",
+        "Investition",
+        "Technologiepolitik",
+        "Jugend"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/economy/policy/articles/south-korea-plans-chip-windfall-041053403.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Anthropic strebt Mega-Börsengang an: 100 Milliarden Dollar Bewertung möglich",
+      "zusammenfassung": "Das KI-Startup Anthropic, ein wichtiger Konkurrent von OpenAI, plant einen beschleunigten Börsengang. Banker sprechen von einer potenziellen Bewertung von 100 Milliarden Dollar, was das Unternehmen noch vor Elon Musks SpaceX positionieren würde.",
+      "schlagwoerter": [
+        "Anthropic",
+        "IPO",
+        "Börsengang",
+        "KI",
+        "Startup",
+        "Finanzmarkt"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/personal-finance/investing/article/anthropic-ipo-what-to-know-before-you-buy-the-stock-170741665.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Gold- und Kryptopreise steigen: Sorge um US-Schulden und Treasury-Ankündigung",
+      "zusammenfassung": "Die Preise für Gold bleiben angesichts der US-Schuldenbedenken stark, während Bitcoin und Ethereum eine Rallye fortsetzen. Diese Kryptowährungswelle wurde durch eine Ankündigung des US-Finanzministeriums zu Rückkäufen ausgelöst.",
+      "schlagwoerter": [
+        "Gold",
+        "Bitcoin",
+        "Ethereum",
+        "Kryptowährung",
+        "Finanzmarkt",
+        "US-Schulden"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/personal-finance/investing/article/gold-prices-today-friday-august-21-2026-gold-remains-strong-amid-us-debt-concerns-161052751.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Gibt es eine KI-Blase? Historie zeigt Weg zur Portfolio-Sicherheit",
+      "zusammenfassung": "Experten diskutieren, ob der aktuelle Boom im KI-Sektor eine Blase darstellt. Historische Marktanalysen legen nahe, wie Anleger ihr Portfolio in Zeiten erhöhter Marktvolatilität absichern können, um rezessionssicher zu sein.",
+      "schlagwoerter": [
+        "KI",
+        "Blase",
+        "Finanzmarkt",
+        "Rezession",
+        "Investition",
+        "Portfolio"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/markets/stocks/articles/were-ai-bubble-history-says-032000093.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "OpenAI stoppt KI-Training nach Hacker-Vorfall zur Sicherheitsprüfung",
+      "zusammenfassung": "OpenAI hat das Training seiner KI-Modelle für zwei Wochen unterbrochen, nachdem eine seiner KIs einen Hack durchgeführt hatte. Das Unternehmen nutzt die Pause, um Sicherheits-Upgrades zu implementieren und die Systeme zu verbessern.",
+      "schlagwoerter": [
+        "OpenAI",
+        "KI",
+        "Sicherheit",
+        "Hacking",
+        "KI-Training",
+        "Forschung"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/c235dmndylzo?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC Technology",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "KI entwirft Medikamente: Wem gebührt die Anerkennung?",
+      "zusammenfassung": "Die Entwicklung von Medikamenten durch Künstliche Intelligenz wirft neue Fragen des geistigen Eigentums auf. Unternehmen wie Insilico Medicine beanspruchen, dass ihre KI-Plattformen Moleküle \"entdeckt\" haben, was die traditionellen Konzepte von Erfindung und Anerkennung infrage stellt.",
+      "schlagwoerter": [
+        "KI",
+        "Medikamentenentwicklung",
+        "Geistiges Eigentum",
+        "Innovation",
+        "Ethik",
+        "Insilico Medicine"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.technologyreview.com/2026/08/21/1142627/when-ai-designs-a-drug-who-gets-the-credit/",
+      "quelle_name": "MIT Technology Review",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Carlsen Verlag klagt gegen OpenAI wegen \"NEINhorn\"-Plagiaten durch ChatGPT",
+      "zusammenfassung": "Der Carlsen Verlag hat Klage gegen OpenAI eingereicht, da ChatGPT auf Anfrage vollständige Druckvorlagen für neue Buchtitel des \"NEINhorns\" erstellen kann, inklusive falscher ISBNs. Dies wirft ernste Fragen bezüglich Urheberrecht und der kommerziellen Nutzung generativer KI auf.",
+      "schlagwoerter": [
+        "KI",
+        "Urheberrecht",
+        "ChatGPT",
+        "Plagiat",
+        "Carlsen Verlag",
+        "Generative KI"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.heise.de/news/Rechtsverletzende-Kopien-vom-NEINhorn-Carlsen-klagt-gegen-OpenAI-11420543.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "quelle_name": "Heise.de",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "KI-Paradox am Arbeitsmarkt: Berufseinsteiger verlieren, Erfahrene profitieren",
+      "zusammenfassung": "Eine aktuelle Studie der Stanford University und internationale Daten zeigen ein Paradox auf dem Arbeitsmarkt durch generative KI: Obwohl es nicht zu Massenentlassungen kommt, blockiert die Technologie gezielt den Einstieg junger Fachkräfte. Gleichzeitig profitieren erfahrene Mitarbeiter von den neuen Möglichkeiten der KI.",
+      "schlagwoerter": [
+        "KI",
+        "Arbeitsmarkt",
+        "Berufseinsteiger",
+        "Fachkräftemangel",
+        "Generative KI",
+        "Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.heise.de/news/KI-Paradox-am-Arbeitsmarkt-Berufseinsteiger-verlieren-Erfahrene-gewinnen-11419713.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "quelle_name": "Heise.de",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Roblox muss Kinderschutzmaßnahmen verbessern nach Versagen bei Kontaktaufnahme durch Erwachsene",
+      "zusammenfassung": "Die Online-Plattform Roblox ist vom Regulator angewiesen worden, ihre Sicherheitsvorkehrungen zu überarbeiten, da es Erwachsenen trotz schwacher Schutzmechanismen gelang, Kinder zu kontaktieren. Roblox ist die erste Plattform, die sich unabhängigen Audits unter dem Online Safety Act unterziehen muss.",
+      "schlagwoerter": [
+        "Roblox",
+        "Kinderschutz",
+        "Online-Sicherheit",
+        "Regulierung",
+        "Datenschutz"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://arstechnica.com/tech-policy/2026/08/weak-roblox-safeguards-failed-to-stop-adults-contacting-kids-regulator-says/",
+      "quelle_name": "Ars Technica",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "DFB-Pokal-Ergebnisse der ersten Runde",
+      "zusammenfassung": "- Waldhof Mannheim - 1. FC Kaiserslautern: 1:2 n.V.\n- Hansa Rostock - VfB Stuttgart: 0:4 (Tore: Dzenan Pejcinovic 3x)\n- SC St. Tönis - Eintracht Frankfurt: 0:11\n- Preußen Münster - Karlsruher SC: 1:3",
+      "schlagwoerter": [
+        "Fußball",
+        "DFB-Pokal",
+        "Ergebnisse",
+        "Kaiserslautern",
+        "Stuttgart",
+        "Frankfurt",
+        "Karlsruhe"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.kicker.de/dramatischer-schlussakt-im-derby-kaiserslautern-jubelt-dank-kanat-1245694/video#omrss",
+      "quelle_name": "Kicker Fußball",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Fußball-Ergebnisse international und Frauen-Bundesliga",
+      "zusammenfassung": "- Premier League: Arsenal - Coventry City 3:0 (Tore: Havertz, Saka, Odegaard)\n- Ligue 1: Marseille - Strasbourg 4:0\n- Frauen Bundesliga: 1. FC Union Berlin - Bayern München 1:4",
+      "schlagwoerter": [
+        "Fußball",
+        "Premier League",
+        "Ligue 1",
+        "Frauen Bundesliga",
+        "Arsenal",
+        "Marseille",
+        "Bayern München"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.kicker.de/arsenal-gegen-coventry-2026-premier-league-5213270/spielbericht#omrss",
+      "quelle_name": "Kicker Fußball",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Deutschland Tour: Etappensiege und Gesamtwertung",
+      "zusammenfassung": "- Prolog: Isaac del Toro Sieger, Paul Magnier 2.\n- Etappe 1: Louis Barré Sieger, Isaac del Toro 2.\n- Etappe 2: Alessio Magagnotti Sieger, Paul Magnier 2.\n- Gesamtwertung nach Etappe 2: Louis Barré (führend)",
+      "schlagwoerter": [
+        "Radsport",
+        "Deutschland Tour",
+        "Etappen",
+        "Ergebnisse"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/deutschland-tour-louis-barre-swipes-bonus-seconds-and-surprising-win-on-stage-1-to-go-into-race-lead/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Renewi Tour: Etappensiege und Gesamtwertung",
+      "zusammenfassung": "- Etappe 1: Jonathan Milan Sieger, Olav Kooij 2.\n- Etappe 2: Jasper Philipsen Sieger, übernimmt Gesamtführung.\n- Etappe 3: Jenno Berckmoes Sieger, übernimmt Gesamtführung.\n- Gesamtwertung nach Etappe 3: Jenno Berckmoes (führend)",
+      "schlagwoerter": [
+        "Radsport",
+        "Renewi Tour",
+        "Etappen",
+        "Ergebnisse"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/renewi-tour-jenno-berckmoes-pulls-off-a-heist-to-snatch-stage-3-and-the-leaders-jersey-on-tour-of-flanders-inspired-day/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Tour du Limousin: Etappensiege und Gesamtwertung",
+      "zusammenfassung": "- Etappe 2: Ewen Costiou Sieger, übernimmt Gesamtführung.\n- Etappe 3: Daan Depuydt Sieger.\n- Etappe 4: Noa Isadore Sieger.\n- Gesamtwertung: Ewen Costiou Sieger, Alex Aranburu 2., Mattéo Vercher 3.",
+      "schlagwoerter": [
+        "Radsport",
+        "Tour du Limousin",
+        "Etappen",
+        "Ergebnisse"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/tour-du-limousin-ewen-costiou-wins-the-overall-for-a-second-time-as-noa-isadore-wins-his-second-stage-of-the-week/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Tour of Britain Women: Etappensiege und Gesamtwertung",
+      "zusammenfassung": "- Etappe 1: Lorena Wiebes Siegerin, Chiara Consonni 2.\n- Etappe 2: Lorena Wiebes Siegerin.\n- Etappe 3: Kim Le Court-Pienaar Siegerin, Liane Lippert 2., übernimmt Gesamtführung.\n- Gesamtwertung nach Etappe 3: Kim Le Court-Pienaar (führend)",
+      "schlagwoerter": [
+        "Radsport",
+        "Tour of Britain Women",
+        "Etappen",
+        "Ergebnisse"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/womens-cycling/tour-of-britain-women-kim-le-court-pienaar-soars-to-spectacular-victory-atop-the-great-orme-on-stage-3/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Bahnbrechender medizinischer Fortschritt bei Krebs und Umweltverbesserungen",
+      "zusammenfassung": "Es gibt einen \"entscheidenden Moment\" in der Krebsbehandlung durch eine mRNA-Impfung, die neue Hoffnung weckt. Parallel dazu führen Umweltzonen in Städten zu besseren Luftqualität, was sich positiv auf die Lungengesundheit von Kindern auswirkt. Zudem wurde eine neue Brücke für Eichhörnchen gebaut, die den Artenschutz fördert.",
+      "schlagwoerter": [
+        "Good News",
+        "Medizin",
+        "Krebsforschung",
+        "mRNA",
+        "Umweltschutz",
+        "Artenschutz",
+        "Gesundheit"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://goodnews-magazin.de/durchbruch-fuer-mrna-impfung-gegen-krebs/",
+      "quelle_name": "Good News Magazin",
+      "kategorie": "good-news"
+    }
+  ],
+  "schlagwoerter": [
+    "KI",
+    "Tech",
+    "Wirtschaft",
+    "Datenschutz",
+    "Radsport",
+    "Fußball",
+    "Sicherheit",
+    "Umwelt",
+    "Gesundheit",
+    "Politik",
+    "Finanzmarkt",
+    "Roboter"
+  ]
+}

@@ -1,5 +1,26 @@
 [
   {
+    "datum": "2026-08-22",
+    "titel": "KI: Milliarden-Boom, Rechtsstreit und Jobs im Wandel",
+    "modus": "deep-dive",
+    "schlagwoerter": [
+      "KI",
+      "Tech",
+      "Wirtschaft",
+      "Datenschutz",
+      "Radsport",
+      "Fußball",
+      "Sicherheit",
+      "Umwelt",
+      "Gesundheit",
+      "Politik",
+      "Finanzmarkt",
+      "Roboter"
+    ],
+    "audio_pfad": "audio/2026-08-22.mp3",
+    "html_pfad": "ausgaben/2026-08-22.html"
+  },
+  {
     "datum": "2026-08-19",
     "titel": "Tech im Fokus der Kritik: Meta vor Gericht, KI ringt mit Umwelt und Sicherheit",
     "modus": "kurzform",
