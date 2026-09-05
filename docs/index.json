@@ -1,5 +1,29 @@
 [
   {
+    "datum": "2026-09-05",
+    "titel": "KI-Sicherheit im Fokus: Nach Hugging-Face-Hack fordern neue Modelle strikte Kontrolle",
+    "modus": "deep-dive",
+    "schlagwoerter": [
+      "KI",
+      "Technologie",
+      "Wirtschaft",
+      "Sport",
+      "Cybersecurity",
+      "Geopolitik",
+      "Finanzen",
+      "Deutschland",
+      "Europa",
+      "OpenAI",
+      "Google",
+      "Tesla",
+      "Radrennen",
+      "Basketball",
+      "Gesundheit"
+    ],
+    "audio_pfad": null,
+    "html_pfad": "ausgaben/2026-09-05.html"
+  },
+  {
     "datum": "2026-08-22",
     "titel": "KI: Milliarden-Boom, Rechtsstreit und Jobs im Wandel",
     "modus": "deep-dive",
