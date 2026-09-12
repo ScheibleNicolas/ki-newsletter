@@ -1,5 +1,24 @@
 [
   {
+    "datum": "2026-09-12",
+    "titel": "KI knackt 90-Jahre-Problem; Welt ringt mit Ölpreisen und Inflation",
+    "modus": "deep-dive",
+    "schlagwoerter": [
+      "KI",
+      "Tech",
+      "Wirtschaft",
+      "Sport",
+      "Geopolitik",
+      "Datenschutz",
+      "Umwelt",
+      "Finanzmärkte",
+      "Deutschland",
+      "Innovation"
+    ],
+    "audio_pfad": "audio/2026-09-12.mp3",
+    "html_pfad": "ausgaben/2026-09-12.html"
+  },
+  {
     "datum": "2026-09-05",
     "titel": "KI-Sicherheit im Fokus: Nach Hugging-Face-Hack fordern neue Modelle strikte Kontrolle",
     "modus": "deep-dive",
