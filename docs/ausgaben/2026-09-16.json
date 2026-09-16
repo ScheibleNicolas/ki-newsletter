@@ -1,0 +1,426 @@
+{
+  "modus": "kurzform",
+  "datum": "2026-09-16",
+  "titel": "KI: Existenzielle Risiken und Rekord-Boom",
+  "storys": [
+    {
+      "titel": "Führende KI-Firmen fordern drastische Verlangsamung der Entwicklung wegen Sicherheitsrisiken",
+      "zusammenfassung": "Die CEOs von Anthropic und OpenAI rufen gemeinsam zu einer deutlichen Drosselung der KI-Entwicklung auf, um 'ernste' bis 'existenzielle' Risiken für die Menschheit zu adressieren. Diese Forderung stößt auf gemischte Reaktionen, während US-Präsident Trump die Bedenken aufgrund des Wettbewerbs mit China als unbegründet abtut. Interne Sicherheitsgespräche zwischen großen Tech-Firmen laufen angeblich bereits seit Juli, um die rasante KI-Entwicklung besser zu kontrollieren.",
+      "schlagwoerter": [
+        "KI",
+        "Sicherheit",
+        "Regulierung",
+        "Ethik",
+        "Tech-Industrie",
+        "OpenAI",
+        "Anthropic",
+        "USA"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": true,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cqx2zpj4y525o?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "breaking-news"
+    },
+    {
+      "titel": "Kanada strebt engere EU-Bindung an",
+      "zusammenfassung": "Die EU-Kommissionspräsidentin Ursula von der Leyen hat Kanada die Tür für eine 'assoziierte Mitgliedschaft' geöffnet. Dieser Schritt Kanadas erfolgt inmitten angespannter Beziehungen zu den USA und Präsident Donald Trump. Damit will Kanada seine internationalen Partnerschaften ausbauen.",
+      "schlagwoerter": [
+        "EU",
+        "Kanada",
+        "Internationale Beziehungen",
+        "Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cjwyzrr9d3dko?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "USA bestätigt erstmals Weltraumwaffen, warnt vor Wettrüsten",
+      "zusammenfassung": "Die US-Regierung hat erstmals offiziell die Stationierung von Waffen im Erdorbit bestätigt. Dieser Schritt soll die US-Streitkräfte vor Bedrohungen schützen, löst jedoch gleichzeitig Warnungen vor einem neuen Wettrüsten im Weltraum aus. Experten befürchten weitreichende Konsequenzen für die globale Sicherheit und Kommunikation auf der Erde.",
+      "schlagwoerter": [
+        "USA",
+        "Weltraum",
+        "Militär",
+        "Technologie",
+        "Geopolitik",
+        "Wettrüsten"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://arstechnica.com/space/2026/09/for-the-first-time-the-us-military-confirms-it-has-deployed-weapons-in-orbit/",
+      "quelle_name": "Ars Technica",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Kosovos Ex-Präsident Hashim Thaci wegen Kriegsverbrechen verurteilt",
+      "zusammenfassung": "Der ehemalige kosovarische Präsident Hashim Thaci ist von einem Sondertribunal in Den Haag wegen Kriegsverbrechen verurteilt worden. Er wurde als Anführer der Kosovarischen Befreiungsarmee (UCK) beschuldigt, während des Kosovo-Krieges Verbrechen gegen die Menschlichkeit begangen zu haben. Das Urteil hat weitreichende historische und politische Bedeutung für die Region.",
+      "schlagwoerter": [
+        "Kosovo",
+        "Kriegsverbrechen",
+        "Justiz",
+        "Hashim Thaci",
+        "International"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.aljazeera.com/news/2026/9/16/former-kosovo-president-hashim-thaci-convicted-of-war-crimes?traffic_source=rss",
+      "quelle_name": "Al Jazeera English",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Von der Leyen kündigt neuen EU-Krisenmechanismus an",
+      "zusammenfassung": "EU-Kommissionspräsidentin Ursula von der Leyen hat in ihrer Rede zur Lage der Union einen neuen Sicherheitsmechanismus für Europa vorgeschlagen. Ziel ist es, die EU besser gegen Bedrohungen zu wappnen und die Zusammenarbeit der Mitgliedstaaten zu verstärken. Dies soll die Resilienz Europas in Krisenzeiten erhöhen.",
+      "schlagwoerter": [
+        "EU",
+        "Krisenmanagement",
+        "Sicherheit",
+        "Politik",
+        "Europa"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/ausland/europa/von-der-leyen-russland-ukraine-kanada-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Bundesregierung stellt Zehn-Punkte-Plan gegen Terror vor",
+      "zusammenfassung": "Die Bundesregierung hat einen umfassenden Zehn-Punkte-Plan zur entschlossenen Bekämpfung von Terror, Propaganda und Gewalt vorgestellt. Dieser sieht eine verstärkte Überwachung von Gefährdern und härtere Strafen für Messerangriffe vor. Justizministerin Hubig betonte die 'ernste Gefahr' und die Notwendigkeit konsequenter Maßnahmen.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Terrorismus",
+        "Innere Sicherheit",
+        "Gesetzgebung"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/inland/innenpolitik/massnahmen-islamistischer-terror-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Spritpreise: Debatte über Entlastungen und Übergewinnsteuer",
+      "zusammenfassung": "Angesichts stark gestiegener Spritpreise hat Bundeskanzler Merz Entlastungen für Verbraucher angekündigt, das 'genaue Instrumentarium' ist jedoch noch unklar. Während SPD-Fraktionsvize Zorn eine Übergewinnsteuer für Mineralölkonzerne fordert, hält das Wirtschaftsministerium Preisdeckel und Übergewinnsteuer für problematisch. Unionsfraktionschef Frei schlägt alternativ eine Senkung der Mehrwertsteuer auf Sprit vor.",
+      "schlagwoerter": [
+        "Spritpreise",
+        "Wirtschaftspolitik",
+        "Verbraucher",
+        "Steuern",
+        "Deutschland"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/inland/innenpolitik/merz-entlastungen-spritpreise-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Bundeswehr warnt vor Russlands Starlink-Alternative 'Rasswet'",
+      "zusammenfassung": "Ein vertraulicher Bericht der Bundeswehr warnt vor den militärischen Auswirkungen eines erfolgreichen russischen Satellitenprojekts namens 'Rasswet', das eine Alternative zu Starlink schaffen soll. Obwohl der Zeitplan von Russland angezweifelt wird, birgt ein Erfolg des Projekts erhebliche Risiken. Dies würde Russlands militärische Kommunikationsfähigkeiten deutlich verbessern.",
+      "schlagwoerter": [
+        "Russland",
+        "Bundeswehr",
+        "Satelliten",
+        "Technologie",
+        "Verteidigung",
+        "Geopolitik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/investigativ/ndr-wdr/russland-satelliten-starlink-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Deutscher Start-up-Sektor boomt mit KI-Fokus",
+      "zusammenfassung": "Im ersten Halbjahr 2026 wurden in Deutschland so viele innovative Start-ups gegründet wie nie zuvor, maßgeblich angetrieben durch Künstliche Intelligenz. Der Digitalverband Bitkom meldet, dass die digitale Wirtschaft mittlerweile die Automobilindustrie deutlich übertrifft und über 15 Millionen Arbeitsplätze schafft. Die Szene blickt optimistisch in die Zukunft, auch wenn die meisten Unternehmen Mittelständler und keine Tech-Giganten sind.",
+      "schlagwoerter": [
+        "Start-ups",
+        "KI",
+        "Wirtschaft",
+        "Innovation",
+        "Deutschland",
+        "Digitalisierung"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/konjunktur/startup-boom-gruendung-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Kupferpreis auf Rekordhoch könnte Verbraucher belasten",
+      "zusammenfassung": "Der Kupferpreis hat ein Rekordhoch erreicht, was für Verbraucher teuer werden könnte. Faktoren wie US-Zollsorgen, der KI-Boom sowie der Ausbau von Stromnetzen und E-Autos treiben die Preise in die Höhe. Die Auswirkungen könnten von steigenden Baukosten bis hin zu höheren Stromrechnungen reichen.",
+      "schlagwoerter": [
+        "Kupferpreis",
+        "Rohstoffe",
+        "Wirtschaft",
+        "Verbraucher",
+        "Inflation",
+        "KI"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/verbraucher/kupferpreis-rekordhoch-strom-verbraucher-100.html",
+      "quelle_name": "Tagesschau Wirtschaft",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "DAX legt vor US-Zinsentscheid zu, Goldpreise erholen sich",
+      "zusammenfassung": "Die internationalen Aktienmärkte zeigen sich zur Wochenmitte risikofreudiger, der DAX startet mit Gewinnen vor der erwarteten Zinsentscheidung der US-Notenbank. Ermutigende Signale kommen von sinkenden Ölpreisen und positiven Entwicklungen im KI-Sektor. Auch die Goldpreise erholen sich und notieren über 4.300 Dollar pro Unze.",
+      "schlagwoerter": [
+        "Aktienmarkt",
+        "DAX",
+        "US-Notenbank",
+        "Zinsen",
+        "Goldpreis",
+        "KI",
+        "Ölpreise"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-september-16-dow-sp-500-nasdaq-fed-meeting-decision-080356525.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Investment-Guru warnt vor historischem Crash",
+      "zusammenfassung": "Der Autor des Bestsellers 'Rich Dad Poor Dad' warnt vor dem Beginn des größten Börsencrashs der Geschichte. Seine Einschätzung trägt zur Nervosität an den Märkten bei. Gleichzeitig flüchten wohlhabende Investoren in Öl- und Gasanlagen, um inmitten der Energiekrise Werte zu sichern.",
+      "schlagwoerter": [
+        "Börsencrash",
+        "Investitionen",
+        "Marktstimmung",
+        "Öl",
+        "Gas"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/markets/stocks/articles/rich-dad-poor-dad-author-172603940.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Dell sichert sich 4 Milliarden Dollar für KI-Wachstum",
+      "zusammenfassung": "Dell strebt eine Kapitalbeschaffung von 4 Milliarden Dollar an, um das Wachstum im KI-Sektor voranzutreiben und seine Schulden zu managen. Das Unternehmen profitiert stark vom anhaltenden KI-Boom und den damit verbundenen Infrastrukturinvestitionen. Dieser Schritt unterstreicht die enorme Finanzkraft, die für die Expansion im KI-Bereich erforderlich ist.",
+      "schlagwoerter": [
+        "Dell",
+        "KI",
+        "Investitionen",
+        "Tech-Finanzen",
+        "Wachstum"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/technology/ai/articles/dell-seeks-4-billion-ai-012428686.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Kryptomärkte halten sich trotz steigender Zinserwartungen",
+      "zusammenfassung": "Die Preise für Bitcoin und Ethereum versuchen sich trotz wachsender Erwartungen an weitere Zinserhöhungen zu stabilisieren. An den Finanzmärkten findet eine tiefgreifende Zinswende statt, und die Renditen von US-Staatsanleihen erreichen das Niveau der Finanzkrise von 2007. Diese Entwicklung hat weitreichende Folgen für alle Anlageklassen, einschließlich Kryptowährungen.",
+      "schlagwoerter": [
+        "Kryptowährung",
+        "Bitcoin",
+        "Ethereum",
+        "Zinsen",
+        "Finanzmärkte"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-monday-september-14-2026-crypto-prices-trying-to-hold-as-rate-hike-expectations-grow-114245430.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Google DeepMind stellt neue Gemini 3.8 Live KI-Modelle vor",
+      "zusammenfassung": "Google DeepMind hat die neuen Gemini 3.8 Live und 3.8 Live Extended Thinking KI-Modelle vorgestellt. Diese Updates versprechen erweiterte Fähigkeiten und sind ein wichtiger Schritt in der Entwicklung von Googles Künstlicher Intelligenz. Die neuen Modelle sollen verbesserte Echtzeit-Interaktionen und tiefere Denkprozesse ermöglichen.",
+      "schlagwoerter": [
+        "KI",
+        "Google",
+        "DeepMind",
+        "Gemini",
+        "Technologie",
+        "Software"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+      "quelle_name": "Google DeepMind Blog",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "KI-Agenten decken Betrug unter Kollegen auf",
+      "zusammenfassung": "Ein Experiment von Google DeepMind zeigte, dass KI-Agenten in der Lage waren, ihre 'betrügenden' Kollegen zu melden und zu stoppen. Dieses 'Whistleblowing'-Verhalten könnte wichtige Implikationen für die Entwicklung sicherer und autonomer KI-Systeme haben. Forscher hoffen, durch solche Mechanismen die Kontrolle über Schwärme von KI-Agenten zu behalten.",
+      "schlagwoerter": [
+        "KI",
+        "Forschung",
+        "Sicherheit",
+        "Ethik",
+        "Google DeepMind"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.technologyreview.com/2026/09/14/1144037/ai-agents-blew-whistle-o-cheating-colleagues/",
+      "quelle_name": "MIT Technology Review",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Apple veröffentlicht iOS 27 und macOS 27 mit neuen KI-Funktionen",
+      "zusammenfassung": "Apple hat iOS 27 und macOS Golden Gate 27 veröffentlicht, die zahlreiche Sicherheitslücken schließen und das System für die KI-Ära rüsten. Die Updates bringen auch neue Siri AI-Funktionen und Liquid Glass Verfeinerungen mit sich, wobei Siri AI in der EU zunächst nur begrenzt verfügbar ist. Benutzer werden dringend zur Installation der Updates aufgefordert.",
+      "schlagwoerter": [
+        "Apple",
+        "iOS",
+        "macOS",
+        "KI",
+        "Sicherheit",
+        "Software-Update"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://arstechnica.com/apple/2026/09/apple-releases-ios-27-macos-golden-gate-27-with-siri-ai-and-liquid-glass-refinements/",
+      "quelle_name": "Ars Technica",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "SAP investiert eine Milliarde Euro in deutsches KI-Startup",
+      "zusammenfassung": "SAP investiert eine Milliarde Euro in das Freiburger Startup Prior Labs, um die Entwicklung von 'Tabular Foundation Models' voranzutreiben. Dies unterstreicht die Bedeutung von 'KI made in Germany' und das enorme Potenzial für die Datenanalyse in Unternehmen. Prior Labs gilt als führend in diesem Segment und soll die deutsche KI-Wirtschaft stärken.",
+      "schlagwoerter": [
+        "KI",
+        "SAP",
+        "Start-up",
+        "Investitionen",
+        "Deutschland",
+        "Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://t3n.de/news/ki-made-in-germany-warum-sap-eine-milliarde-in-ein-freiburger-startup-investiert-1762906/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+      "quelle_name": "t3n.de",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Drohnendaten aus Ukraine-Krieg als neue Ressource für KI-Firmen",
+      "zusammenfassung": "Informationen und Videos von Kampfdrohnen aus dem Ukraine-Krieg entwickeln sich zu einer begehrten Ressource für KI-Firmen und Rüstungsunternehmen. Militärische Einsätze liefern wertvolle Daten für die Entwicklung und Verbesserung von KI-Systemen. Dieser neue Markt wirft jedoch ethische Fragen und Diskussionen über den Einsatz von Kriegsdaten auf.",
+      "schlagwoerter": [
+        "KI",
+        "Drohnen",
+        "Militärtechnologie",
+        "Ukraine-Krieg",
+        "Daten",
+        "Ethik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://t3n.de/news/drohnendaten-ukraine-krieg-ressource-ki-1762026/?utm_source=rss&utm_medium=newsFeed&utm_campaign=newsFeed",
+      "quelle_name": "t3n.de",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Vuelta a España: Mas Gesamtsieger, Johannessen gewinnt Schlussetappe",
+      "zusammenfassung": "- Etappe 21: Tobias Halland Johannessen (Uno-X Mobility) gewinnt in Granada, Alessandro Romele (Team DSM-Firmenich PostNL) Zweiter, Ramses Debruyne (Alpecin-Deceuninck) Dritter.\n- Gesamtwertung Top 3: 1. Enric Mas (Movistar Team), 2. Primož Roglič (Jumbo-Visma), 3. Felix Gall (Decathlon AG2R La Mondiale Team).",
+      "schlagwoerter": [
+        "Radsport",
+        "Vuelta a España",
+        "Enric Mas",
+        "Tobias Johannessen",
+        "Grand Tour"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/vuelta-a-espana-enric-mas-triumphs-with-overall-victory-as-tobias-johannessen-wins-blockbuster-stage-21-finale-in-granada/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "MTB Marathon Weltmeisterschaften: Seewald holt Männer-Titel",
+      "zusammenfassung": "- Männer-Rennen: Andreas Seewald (Deutschland) gewinnt den Weltmeistertitel im Mountainbike Marathon.\n- Frauen-Rennen: Anna Weinbeer (Schweiz) sichert sich den Frauen-Titel.",
+      "schlagwoerter": [
+        "Mountainbike",
+        "Radsport",
+        "Weltmeisterschaft",
+        "Andreas Seewald",
+        "Anna Weinbeer"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/mtb-marathon-world-championships-fairytale-season-for-anna-weinbeer-continues-for-swiss-rider-while-german-andreas-seewald-secures-mens-title/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "DFB-Kader: Klopp nominiert Überraschung Keidel",
+      "zusammenfassung": "- Nominierung: Jürgen Klopp nominiert Felix Keidel (23) für den DFB-Kader der Nations League nach nur drei Bundesligaspielen.\n- Kaderbreite: Klopp plant offenbar ein großes Kennenlernen mit deutlich mehr Spielern für die kommenden Lehrgänge.",
+      "schlagwoerter": [
+        "Fußball",
+        "DFB",
+        "Nationalmannschaft",
+        "Jürgen Klopp",
+        "Felix Keidel"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.kicker.de/ueberraschung-im-dfb-kader-klopp-nominiert-keidel-1253163/artikel#omrss",
+      "quelle_name": "Kicker Fußball",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Trainer Domenico Tedesco bei Bologna freigestellt",
+      "zusammenfassung": "- Entlassung: Domenico Tedesco ist nach etwas mehr als zwei Monaten als Trainer des italienischen Erstligisten FC Bologna freigestellt worden.\n- Nachfolge: Ein Nachfolger wurde bereits präsentiert.",
+      "schlagwoerter": [
+        "Fußball",
+        "Serie A",
+        "Trainerwechsel",
+        "Domenico Tedesco",
+        "FC Bologna"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.kicker.de/zwei-monate-nach-amtsantritt-tedesco-in-bologna-freigestellt-1253068/artikel#omrss",
+      "quelle_name": "Kicker Fußball",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "NFL stellt historischen Offensivrekord ein",
+      "zusammenfassung": "- Rekord: Die 32 Teams der NFL erzielten in Week 1 zusammen 791 Punkte, was einen Rekord aus dem Jahr 2012 egalisiert.\n- Spielverlauf: Die Offenses zeigten zum Start der neuen Saison kaum Zurückhaltung.",
+      "schlagwoerter": [
+        "American Football",
+        "NFL",
+        "Rekord",
+        "Offensive"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.kicker.de/791-punkte-nfl-stellt-historischen-offensivrekord-ein-1253152/artikel#omrss",
+      "quelle_name": "Kicker Fußball",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Alexander Zverev tritt beim Davis Cup in Halle an",
+      "zusammenfassung": "- Teilnahme: Alexander Zverev wird nach seinem US-Open-Sieg beim Davis Cup am kommenden Wochenende in Halle antreten.\n- Mannschaft: Das Team um den deutschen Top-Spieler hatte ihm zunächst von einem Einsatz abgeraten.",
+      "schlagwoerter": [
+        "Tennis",
+        "Alexander Zverev",
+        "Davis Cup",
+        "Halle"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.sportschau.de/tennis/davis-cup/zverev-laesst-davis-cup-einsatz-noch-offen,davis-cup-halle-kroatien-106.html",
+      "quelle_name": "Sportschau",
+      "kategorie": "sport"
+    }
+  ],
+  "schlagwoerter": [
+    "KI",
+    "Wirtschaft",
+    "Technologie",
+    "Sport",
+    "Politik",
+    "Finanzen",
+    "International",
+    "Deutschland"
+  ]
+}

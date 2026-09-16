@@ -1,5 +1,22 @@
 [
   {
+    "datum": "2026-09-16",
+    "titel": "KI: Existenzielle Risiken und Rekord-Boom",
+    "modus": "kurzform",
+    "schlagwoerter": [
+      "KI",
+      "Wirtschaft",
+      "Technologie",
+      "Sport",
+      "Politik",
+      "Finanzen",
+      "International",
+      "Deutschland"
+    ],
+    "audio_pfad": null,
+    "html_pfad": "ausgaben/2026-09-16.html"
+  },
+  {
     "datum": "2026-09-12",
     "titel": "KI knackt 90-Jahre-Problem; Welt ringt mit Ölpreisen und Inflation",
     "modus": "deep-dive",
