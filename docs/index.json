@@ -1,5 +1,25 @@
 [
   {
+    "datum": "2026-09-19",
+    "titel": "Autonome KI im Fokus: Googles Hack schockiert, Desinformation eskaliert",
+    "modus": "deep-dive",
+    "schlagwoerter": [
+      "KI",
+      "Tech",
+      "Wirtschaft",
+      "Sport",
+      "Sicherheit",
+      "Geopolitik",
+      "Deutschland",
+      "Finanzen",
+      "Umwelt",
+      "Regulierung",
+      "Breaking News"
+    ],
+    "audio_pfad": "audio/2026-09-19.mp3",
+    "html_pfad": "ausgaben/2026-09-19.html"
+  },
+  {
     "datum": "2026-09-16",
     "titel": "KI: Existenzielle Risiken und Rekord-Boom",
     "modus": "kurzform",
