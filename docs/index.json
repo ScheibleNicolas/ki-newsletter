@@ -1,5 +1,24 @@
 [
   {
+    "datum": "2026-10-03",
+    "titel": "KI-Revolution: OpenAI enthüllt GPT-6 Astra; 'Gedankenlesen' mit AI wird Realität",
+    "modus": "deep-dive",
+    "schlagwoerter": [
+      "KI",
+      "Wirtschaft",
+      "Tech",
+      "Sicherheit",
+      "Finanzen",
+      "Politik",
+      "Radsport",
+      "Energie",
+      "Verbraucherschutz",
+      "Soziales"
+    ],
+    "audio_pfad": null,
+    "html_pfad": "ausgaben/2026-10-03.html"
+  },
+  {
     "datum": "2026-09-19",
     "titel": "Autonome KI im Fokus: Googles Hack schockiert, Desinformation eskaliert",
     "modus": "deep-dive",

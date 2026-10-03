@@ -1,0 +1,343 @@
+{
+  "modus": "deep-dive",
+  "datum": "2026-10-03",
+  "titel": "KI-Revolution: OpenAI enthüllt GPT-6 Astra; 'Gedankenlesen' mit AI wird Realität",
+  "storys": [
+    {
+      "titel": "Russland greift erneut Schlüsselbrücke in Kiew an",
+      "zusammenfassung": "Russland hat zum wiederholten Mal eine große Brücke in der ukrainischen Hauptstadt Kiew angegriffen, diesmal die Nordbrücke. Der Angriff folgt auf vorherige Attacken auf andere wichtige Verbindungen der Stadt und verstärkt die Infrastrukturschäden in Kiew.",
+      "schlagwoerter": [
+        "Ukraine",
+        "Russland",
+        "Krieg",
+        "Infrastruktur"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.bbc.co.uk/news/articles/c83vqxzdg1yko?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Massenproteste in Spanien gegen Wohnungsnot",
+      "zusammenfassung": "In ganz Spanien haben Demonstranten Maßnahmen gegen die eskalierende Wohnungskrise gefordert, nachdem die Regierung ein Notstandsgesetz im Parlament nicht verabschieden konnte. Über 50 Proteste fanden statt, um auf die mangelnde Verfügbarkeit von bezahlbarem Wohnraum aufmerksam zu machen.",
+      "schlagwoerter": [
+        "Spanien",
+        "Wohnungsmarkt",
+        "Soziale Proteste",
+        "Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cm2kej47095no?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Bildungs-Proteste in Frankreich eskalieren zu Zusammenstößen",
+      "zusammenfassung": "In Frankreich ist es bei anhaltenden Bildungsprotesten zu Zusammenstößen zwischen Bereitschaftspolizei und Studenten gekommen, wobei fast 735 Schulen betroffen waren. Die gewalttätigen Demonstrationen richten sich gegen mangelnde Standards und Lehrermangel im Bildungssystem.",
+      "schlagwoerter": [
+        "Frankreich",
+        "Bildung",
+        "Proteste",
+        "Politik"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.bbc.co.uk/news/articles/ck3r5dxxwqzpo?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "G7 gibt Öl- und Dieselreserven frei, um Preisanstieg entgegenzuwirken",
+      "zusammenfassung": "Die G7-Staaten haben eine koordinierte Freigabe von Millionen Barrel Öl und Diesel beschlossen, um weitere Preisspitzen zu verhindern. Dieser Schritt erfolgte unter dem Druck von US-Präsident Trump, der höhere Kraftstoffpreise innenpolitisch als großes Problem ansieht.",
+      "schlagwoerter": [
+        "G7",
+        "Rohöl",
+        "Energiepreise",
+        "Wirtschaftspolitik"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.bbc.co.uk/news/articles/ck87zg8jnwngo?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Galeria meldet vierte Insolvenz an – Zukunft von 12.000 Mitarbeitern ungewiss",
+      "zusammenfassung": "Deutschlands letzte große Warenhauskette Galeria hat zum vierten Mal innerhalb von sechs Jahren Insolvenz angemeldet. Die Zukunft der rund 12.000 Mitarbeiter in den 83 Warenhäusern ist nach diesem erneuten Rückschlag unklar.",
+      "schlagwoerter": [
+        "Einzelhandel",
+        "Insolvenz",
+        "Wirtschaft Deutschland",
+        "Arbeitsmarkt"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/galeria-insolvenz-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Volkswagen kündigt Tarifverträge – Drohender Arbeitskampf erwartet",
+      "zusammenfassung": "Im Rahmen eines verschärften Sparprogramms hat das Volkswagen-Management einen Großteil der bestehenden Tarifverträge gekündigt. Dies könnte zu einem massiven Arbeitskampf führen, da die Arbeitnehmerseite bereits Widerstand angekündigt hat.",
+      "schlagwoerter": [
+        "Automobilindustrie",
+        "Tarifverhandlungen",
+        "Volkswagen",
+        "Arbeitsrecht"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/unternehmen/volkswagen-vw-arbeitskampf-tarifvertrag-100.html",
+      "quelle_name": "Tagesschau Wirtschaft",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Deutschlandticket wird ab Januar erneut teurer: 66,80 Euro",
+      "zusammenfassung": "Der Preis für das Deutschlandticket steigt ab Januar auf 66,80 Euro, eine Erhöhung um 3,80 Euro gegenüber dem aktuellen Preis. Fahrgast- und Umweltverbände kritisieren diese erneute Preissteigerung bereits deutlich.",
+      "schlagwoerter": [
+        "ÖPNV",
+        "Deutschlandticket",
+        "Verkehrspolitik",
+        "Verbraucher"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/verbraucher/deutschlandticket-preis-110.html",
+      "quelle_name": "Tagesschau Wirtschaft",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Tankrabatt nur für Autofahrer – Kritik an Ungleichbehandlung beim Heizen",
+      "zusammenfassung": "Während Autofahrer seit dem 1. Oktober vom neuen \"Tankrabatt\" profitieren, gehen Hausbesitzer mit Ölheizung leer aus, was von Fachleuten als Gerechtigkeitsproblem gesehen wird. Es wird jedoch vor neuen, teuren Steuernachlässen gewarnt.",
+      "schlagwoerter": [
+        "Energiepolitik",
+        "Verbraucher",
+        "Steuern",
+        "Gerechtigkeit"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/verbraucher/heizen-tankrabatt-debatte-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Schufa-Score: Transparenz-Versprechen offenbar nicht eingehalten",
+      "zusammenfassung": "Recherchen von NDR und SZ legen nahe, dass der neue Schufa-Score, der Millionen Verbraucher bewertet, nicht wie versprochen vollkommen transparent und nachvollziehbar ist. Dies wirft Fragen zur Glaubwürdigkeit des Unternehmens und zum Verbraucherschutz auf.",
+      "schlagwoerter": [
+        "Verbraucherschutz",
+        "Schufa",
+        "Daten",
+        "Finanzen"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.tagesschau.de/investigativ/ndr/schufa-score-auskunftei-verbraucher-100.html",
+      "quelle_name": "Tagesschau Wirtschaft",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Ökostromanteil in Deutschland erreicht Rekordwert von 61 Prozent",
+      "zusammenfassung": "In den ersten neun Monaten des Jahres 2026 deckten erneuerbare Energien fast 61 Prozent des gesamten Stromverbrauchs in Deutschland, was einen neuen Höchststand darstellt. Gleichzeitig stieg jedoch auch der Gesamtstrombedarf.",
+      "schlagwoerter": [
+        "Erneuerbare Energien",
+        "Energiewende",
+        "Klimaschutz",
+        "Deutschland"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/energie/oekostrom-wind-sonne-wasserkraft-rekord-100.html",
+      "quelle_name": "Tagesschau Wirtschaft",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Anleihenmarkt unter Druck – US-Aktien rutschen ab",
+      "zusammenfassung": "Der Anleihenmarkt hat ein neues Druckniveau erreicht, was zu einem Rückgang der US-Aktienmärkte führte. Anleger zeigen sich besorgt über die Inflation und deren Auswirkungen auf die Wirtschaft.",
+      "schlagwoerter": [
+        "Anleihenmarkt",
+        "Aktien",
+        "Inflation",
+        "US-Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://finance.yahoo.com/markets/world-indices/articles/asian-shares-mixed-oil-prices-060041660.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Nvidia positioniert sich strategisch im KI-Wettlauf",
+      "zusammenfassung": "Nvidia verfolgt eine Strategie, Hardware an alle Akteure im KI-Wettlauf zu liefern, um von der starken Nachfrage nach KI-Chips zu profitieren. Dies unterstreicht die zentrale Rolle des Unternehmens in der expandierenden KI-Branche.",
+      "schlagwoerter": [
+        "Nvidia",
+        "KI-Chips",
+        "Tech-Investitionen",
+        "Halbleiter"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://finance.yahoo.com/technology/ai/articles/nvidia-doubles-down-selling-both-020300627.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "Palantir präsentiert KI-Souveränitätsstrategie und überzeugt Wall Street",
+      "zusammenfassung": "Palantir hat seine Strategie zur KI-Souveränität vorgestellt, die auf dem Markt zunehmend Anklang findet. Die Ankündigung stärkt das Vertrauen der Wall Street in das Unternehmen und seine Positionierung im geopolitischen Kontext der KI-Entwicklung.",
+      "schlagwoerter": [
+        "Palantir",
+        "KI-Strategie",
+        "Technologieaktien",
+        "Geopolitik"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://finance.yahoo.com/technology/ai/articles/palantir-reveals-ai-sovereignty-strategy-054053859.html",
+      "quelle_name": "Yahoo Finance RSS",
+      "kategorie": "finanzen"
+    },
+    {
+      "titel": "OpenAI stellt GPT-6 Astra und neue Tools auf dem DevDay 2026 vor",
+      "zusammenfassung": "OpenAI präsentierte auf seinem DevDay 2026 über 20 Neuheiten, darunter die Modelle GPT-6 Astra und ChatGPT sowie Updates zu APIs und Sicherheitsfunktionen. Das Event zeigte neue Werkzeuge und Verbesserungen für Entwickler.",
+      "schlagwoerter": [
+        "OpenAI",
+        "GPT-6",
+        "ChatGPT",
+        "KI-Entwicklung",
+        "APIs"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://openai.com/index/devday-2026-recap",
+      "quelle_name": "OpenAI Blog",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "OpenAI führt \"Dots\" ein: Proaktive KI-Assistenten für komplexe Projekte",
+      "zusammenfassung": "OpenAI hat \"Dots\" vorgestellt, proaktive Assistenten, die komplexe Projekte und alltägliche Aufgaben selbstständig bearbeiten können. Diese KI-Agenten sollen Nutzern ermöglichen, die Kontrolle zu behalten, während die Arbeit voranschreitet.",
+      "schlagwoerter": [
+        "OpenAI",
+        "KI-Agenten",
+        "Produktivität",
+        "Künstliche Intelligenz"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://openai.com/index/introducing-dots",
+      "quelle_name": "OpenAI Blog",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Google DeepMind präsentiert Gemini 4 Argon mit Fokus auf Cybersicherheit",
+      "zusammenfassung": "Google DeepMind hat Gemini 4 Argon angekündigt, ein neues KI-Modell, das sich auf Cybersicherheit und Unternehmens-Workflows konzentriert. Das Modell wird zunächst ausgewählten Unternehmen und Organisationen zur Verfügung gestellt, um Sicherheitsrisiken zu minimieren.",
+      "schlagwoerter": [
+        "Google DeepMind",
+        "Gemini",
+        "Cybersicherheit",
+        "KI-Modelle"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+      "quelle_name": "Google DeepMind Blog",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "KI rekonstruiert Bilder aus Gehirnscans – \"Gedankenlesen\" mittels AI",
+      "zusammenfassung": "Ein neues KI-Tool kann Bilder dessen, was eine Person betrachtet, präzise aus deren Gehirnscans rekonstruieren. Die Technologie ist auch in der Lage, Gehirnaktivität basierend auf visuellen Reizen vorherzusagen und stellt einen Durchbruch in der Neurotechnologie dar.",
+      "schlagwoerter": [
+        "KI-Forschung",
+        "Neurotechnologie",
+        "Bilderkennung",
+        "Innovation"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.technologyreview.com/2026/10/01/1145588/ai-mind-reading-reconstructs-what-youre-looking-at/",
+      "quelle_name": "MIT Technology Review",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Apple verschärft Full Disk Access-Berechtigungen gegen KI-Agenten",
+      "zusammenfassung": "Apple passt die Berechtigungen für den vollen Festplattenzugriff in macOS an, um den Missbrauch durch KI-Agenten einzudämmen. Diese Maßnahme ist eine Reaktion auf wachsende Sicherheitsrisiken, die von autonomen KI-Systemen ausgehen können.",
+      "schlagwoerter": [
+        "Apple",
+        "Datenschutz",
+        "KI-Sicherheit",
+        "macOS"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents/",
+      "quelle_name": "Ars Technica",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "UEC Europameisterschaften: Siege für Norwegen, Spanien und Schweiz",
+      "zusammenfassung": "- Männer Junioren Straßenrennen: Elias Dybing (Norwegen) gewinnt.\n- Männer U23 Straßenrennen: Héctor Alvárez (Spanien) siegt im Alleingang.\n- Frauen U23 Straßenrennen: Mara Winter (Schweiz) gewinnt vor Nienke Vinke (2.) und Viktória Chladoňová (3.).",
+      "schlagwoerter": [
+        "Radsport",
+        "Europameisterschaft",
+        "Rennen",
+        "Ergebnisse"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/uec-european-championships-elias-dybing-wins-the-men-junior-road-race-for-norway/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Tour de Langkawi: Etappensiege und Lennart Jasch als Gesamtführender",
+      "zusammenfassung": "- Etappe 4: Petr Rikunov gewinnt in den Cameron Highlands, Lennart Jasch verteidigt Gesamtführung.\n- Etappe 5: Nicolas Breuillard gewinnt, Lennart Jasch behält die Gesamtführung.\n- Etappe 6: Riley Pickrell gewinnt den Sprint vor Matteo Malucelli (2.).\n- Etappe 7: Nil Gimeno feiert ersten Profisieg.\n- Gesamtwertung: Lennart Jasch verteidigt die Gesamtführung.",
+      "schlagwoerter": [
+        "Radsport",
+        "Tour de Langkawi",
+        "Etappenrennen",
+        "Gesamtwertung"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/nil-gimeno-snares-first-professional-win-at-stage-7-of-le-tour-de-langkawi-to-batu-pahat/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Tennis: Zverev im Viertelfinale in Peking, Sinner sagt Shanghai ab",
+      "zusammenfassung": "- China Open (Peking): Alexander Zverev besiegt Juncheng Shang und erreicht das Viertelfinale gegen Novak Djokovic.\n- ATP Masters Shanghai: Jannik Sinner zieht wegen anhaltender Knieprobleme zurück.",
+      "schlagwoerter": [
+        "Tennis",
+        "ATP",
+        "Alexander Zverev",
+        "Jannik Sinner"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.kicker.de/live-zverev-im-eiltempo-weiter-und-nun-gegen-djokovic-1257437/artikel#omrss",
+      "quelle_name": "Kicker Fußball",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Fußball U19: Deutschland verpasst Turniersieg nach Remis",
+      "zusammenfassung": "- Deutschland U19 - Tschechien U19 1:1.\n- Die deutsche U19 bleibt ungeschlagen, verpasst aber den Turniersieg des Sechs-Nationen-Turniers.",
+      "schlagwoerter": [
+        "Fußball",
+        "U19",
+        "Deutschland",
+        "Nationalmannschaft"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://www.kicker.de/deutschland-gegen-tschechien-2026-u-nationalteams-freundschaftsspiele-5267599/spielbericht#omrss",
+      "quelle_name": "Kicker Fußball",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Bahnbrechender Erfolg: Genschere CRISPR heilt ersten Patienten",
+      "zusammenfassung": "Ein wegweisender medizinischer Fortschritt wurde erzielt: Erstmals konnte die CRISPR-Genschere erfolgreich zur Heilung eines Patienten eingesetzt werden. Dieser Durchbruch weckt große Hoffnungen für die Behandlung bisher schwer therapierbarer Krankheiten.",
+      "schlagwoerter": [
+        "Medizin",
+        "CRISPR",
+        "Gentherapie",
+        "Durchbruch",
+        "Gesundheit"
+      ],
+      "typ": "kurzmeldung",
+      "quelle_url": "https://goodnews-magazin.de/genschere-heilt-ersten-patienten/",
+      "quelle_name": "Good News Magazin",
+      "kategorie": "good-news"
+    }
+  ],
+  "schlagwoerter": [
+    "KI",
+    "Wirtschaft",
+    "Tech",
+    "Sicherheit",
+    "Finanzen",
+    "Politik",
+    "Radsport",
+    "Energie",
+    "Verbraucherschutz",
+    "Soziales"
+  ]
+}
