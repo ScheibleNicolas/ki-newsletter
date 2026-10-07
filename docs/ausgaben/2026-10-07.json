@@ -1,0 +1,378 @@
+{
+  "modus": "kurzform",
+  "datum": "2026-10-07",
+  "titel": "KI-Regulierung drängt: Wasserzeichen, UN-Resolution und Europas Modell Mistral",
+  "storys": [
+    {
+      "titel": "Frankreich stoppt Einsatz von Betäubungsgranaten bei Schülerprotesten",
+      "zusammenfassung": "Frankreich hat den Einsatz von Betäubungsgranaten bei Schülerprotesten vorübergehend ausgesetzt, nachdem Beschwerden über unverhältnismäßige Polizeigewalt gegen Jugendliche laut wurden. Tausende demonstrierten für bessere Lernbedingungen und mehr Bildungsmittel.",
+      "schlagwoerter": [
+        "Frankreich",
+        "Proteste",
+        "Polizeigewalt",
+        "Bildung"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cqzjx7z2r4gko?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Chemie-Nobelpreis für die Entdeckung nichtlinearer Effekte",
+      "zusammenfassung": "Der Chemie-Nobelpreis 2026 geht an Henri B. Kagan aus Frankreich und Kenso Soai aus Japan. Sie werden für ihre wegweisenden Entdeckungen zur Lösung des Rätsels der chemischen Asymmetrie von Aminosäuren ausgezeichnet, welche entscheidend für die Herstellung von Arzneimitteln sind.",
+      "schlagwoerter": [
+        "Chemie",
+        "Nobelpreis",
+        "Wissenschaft",
+        "Medizin"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/c6ly038jg0d4o?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Japanische Bierkonzerne wegen angeblicher Preisabsprachen durchsucht",
+      "zusammenfassung": "Die japanischen Biergiganten Asahi und Kirin haben bestätigt, dass ihre Geschäftsräume von den japanischen Wettbewerbsbehörden durchsucht wurden. Es besteht der Verdacht eines Preiskartells, das den Wettbewerb auf dem Biermarkt beeinträchtigt haben könnte.",
+      "schlagwoerter": [
+        "Japan",
+        "Wirtschaft",
+        "Kartell",
+        "Preise",
+        "Asahi",
+        "Kirin"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cm5yn3592xk9o?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Zelensky verurteilt 'abscheuliche' groß angelegte russische Angriffe mit 15 Toten",
+      "zusammenfassung": "Präsident Selenskyj hat die 'abscheulichen' russischen Angriffe verurteilt, die 15 Menschen das Leben kosteten. Besonders betroffen war ein zerstörtes Wohnhaus in Pryluky, wo die Rettungsarbeiten fortgesetzt werden.",
+      "schlagwoerter": [
+        "Ukraine",
+        "Russland",
+        "Krieg",
+        "Angriffe",
+        "Konflikt"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/ckr5ym098vdeo?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Bund untersagt Zippel-Übernahme durch chinesische Cosco aus Sicherheitsgründen",
+      "zusammenfassung": "Die Bundesregierung hat die geplante Übernahme einer Mehrheitsbeteiligung am Logistikunternehmen Zippel durch die chinesische Reederei Cosco untersagt. Dies geschah aus Sicherheitsgründen, obwohl das Kartellamt bereits grünes Licht gegeben hatte.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Wirtschaft",
+        "China",
+        "Logistik",
+        "Sicherheit",
+        "Investition"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/weltwirtschaft/zippel-cosco-china-aussenhandel-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Früherer BND-Präsident Hanning muss in Untersuchungshaft",
+      "zusammenfassung": "Der ehemalige BND-Chef August Hanning wurde unter Spionageverdacht in Untersuchungshaft genommen. Ein Ermittlungsrichter des Bundesgerichtshofs setzte den Haftbefehl in Vollzug, was in der Politik Entsetzen auslöste.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Sicherheit",
+        "BND",
+        "Spionage",
+        "Justiz"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/inland/gesellschaft/hanning-bnd-haftbefehl-spionage-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Deutsche Unternehmen fahren Produktion überraschend deutlich hoch",
+      "zusammenfassung": "Die deutschen Unternehmen haben ihre Produktion im August stark erhöht, das kräftigste Plus seit März 2025. Dies geschah trotz Behinderungen durch Niedrigwasser in der Rhein-Schifffahrt.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Wirtschaft",
+        "Industrieproduktion",
+        "Konjunktur"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/konjunktur/produktion-industrie-bau-august-plus-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Frauen fühlen sich finanziell unsicherer – Sorgen um Geld in Deutschland",
+      "zusammenfassung": "Fast die Hälfte der Frauen in Deutschland macht sich Sorgen um ihre finanzielle Zukunft, hauptsächlich aufgrund fehlender Mittel zur Vorsorge. Dies zeigt eine Studie, die auf anhaltende finanzielle Ungleichheiten hinweist.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Finanzen",
+        "Frauen",
+        "Gleichberechtigung",
+        "Studie"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/finanzen/finanzen-frauen-sicherheit-unsicher-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "UN-Menschenrechtsrat verabschiedet Resolution zum Schutz vor KI",
+      "zusammenfassung": "Der UN-Menschenrechtsrat hat einstimmig eine Resolution verabschiedet, die den Schutz der Menschenrechte vor den Auswirkungen Künstlicher Intelligenz zum Ziel hat. Die Debatten über die Zukunft von KI konzentrieren sich zunehmend auf deren gesellschaftliche Auswirkungen.",
+      "schlagwoerter": [
+        "KI",
+        "Menschenrechte",
+        "UN",
+        "Ethik",
+        "Regulierung"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/ausland/europa/un-menschenrechte-ki-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Verbraucherpolitiker kritisieren Schufa wegen mangelnder Transparenz",
+      "zusammenfassung": "Nach NDR- und SZ-Recherchen zu zusätzlichen Bewertungsscores der Schufa üben Verbraucherpolitiker scharfe Kritik. Linke, Grüne, SPD und Union fordern mehr Transparenz und Antworten von der Auskunftei.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Verbraucherschutz",
+        "Schufa",
+        "Transparenz",
+        "Politik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/inland/innenpolitik/schufa-bundestag-kritik-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "OpenAI führt Wasserzeichen für KI-generierte Texte in der EU ein",
+      "zusammenfassung": "OpenAI wird in der Europäischen Union standardmäßig Wasserzeichen in von ChatGPT generierte Texte einbetten. Diese Maßnahme soll die Erkennbarkeit von KI-Inhalten verbessern, gilt aber zunächst nur für EU-Nutzer.",
+      "schlagwoerter": [
+        "KI",
+        "OpenAI",
+        "ChatGPT",
+        "EU",
+        "Transparenz",
+        "Regulierung"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://arstechnica.com/ai/2026/10/openai-will-watermark-chatgpt-outputs-by-default-but-only-in-the-eu/",
+      "quelle_name": "Ars Technica",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Geoffrey Hintons Idee: KI-Modelle wie Medikamente zulassen",
+      "zusammenfassung": "Nobelpreisträger Geoffrey Hinton, bekannt als 'Godfather of AI', schlägt vor, KI-Modelle vor ihrer Veröffentlichung einem ähnlichen Genehmigungsverfahren zu unterziehen wie Medikamente. Angesichts jüngster Vorfälle mahnt er zur Eile bei der Regulierung von KI-Systemen.",
+      "schlagwoerter": [
+        "KI",
+        "Regulierung",
+        "Sicherheit",
+        "Ethik",
+        "Forschung",
+        "Geoffrey Hinton"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.heise.de/news/KI-Modelle-wie-Medikamente-zulassen-Das-steckt-hinter-Geoffrey-Hintons-Idee-11479404.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "quelle_name": "Heise.de",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Hacker erlangen gefälschte TLS-Zertifikate für Google und andere Dienste",
+      "zusammenfassung": "Hacker haben durch einen Kompromiss von drei Domain-Registrierungsstellen gefälschte TLS-Zertifikate für Google und andere große Dienste erlangt. Dies ermöglichte es ihnen, nicht autorisierte Zertifikate zu verwenden und stellt ein erhebliches Sicherheitsrisiko dar.",
+      "schlagwoerter": [
+        "Cybersecurity",
+        "Hacking",
+        "Google",
+        "TLS-Zertifikate",
+        "Datensicherheit"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://arstechnica.com/security/2026/10/hackers-obtain-counterfeit-tls-certificates-for-google-and-other-large-services/",
+      "quelle_name": "Ars Technica",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Mistral Large 4: Europas KI-Hoffnungsträger meldet sich mit neuem Spitzenmodell zurück",
+      "zusammenfassung": "Die französische KI-Firma Mistral hat mit Large 4 ihr bisher größtes und leistungsfähigstes Modell vorgestellt. Mit 49 Milliarden aktiven Parametern soll es die Lücke zu chinesischen Open-Source-Modellen schließen und die Wettbewerbsfähigkeit Europas im KI-Bereich stärken.",
+      "schlagwoerter": [
+        "KI",
+        "Mistral",
+        "Sprachmodell",
+        "Europa",
+        "Tech",
+        "Innovation"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.heise.de/news/Mistral-Large-4-Der-LLM-Brocken-aus-der-EU-will-zur-Konkurrenz-aufschliessen-11478121.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "quelle_name": "Heise.de",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Paramount schluckt Warner: Aus HBO Max und Paramount+ wird ein Streamingabo",
+      "zusammenfassung": "Paramount hat die 111 Milliarden US-Dollar schwere Übernahme von Warner Bros. Discovery abgeschlossen und das neue Unternehmen Skydance gegründet. Geplant ist, HBO Max und Paramount+ zu einem einzigen Streamingdienst zusammenzulegen, was zu einer deutlich größeren Filmauswahl führen soll.",
+      "schlagwoerter": [
+        "Medien",
+        "Streaming",
+        "Fusion",
+        "Paramount",
+        "Warner Bros.",
+        "HBO Max"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.heise.de/news/Neues-Unternehmen-heisst-Skydance-Paramount-schliesst-Warner-Uebernahme-ab-11478064.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "quelle_name": "Heise.de",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Deutsche Telekom will durch KI-Einsatz Milliarden sparen",
+      "zusammenfassung": "Die Deutsche Telekom plant, bis 2030 jährlich 2,5 Milliarden Euro durch den Einsatz von Künstlicher Intelligenz und Automatisierung einzusparen. Der Konzern verspricht sich davon effizientere Abläufe im Service und bei der Entwicklung neuer Angebote.",
+      "schlagwoerter": [
+        "KI",
+        "Telekom",
+        "Wirtschaft",
+        "Automatisierung",
+        "Effizienz",
+        "Deutschland"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.heise.de/news/Deutsche-Telekom-will-durch-KI-Einsatz-Milliarden-sparen-11475717.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "quelle_name": "Heise.de",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Lionel Messi nimmt Abschied von Argentiniens Nationalmannschaft",
+      "zusammenfassung": "Nach 21 Jahren in der 'Albiceleste' hat Lionel Messi seine Karriere in der argentinischen Nationalmannschaft mit einer emotionalen Rede beendet. Er absolvierte sein 208. und letztes Länderspiel und hinterlässt eine magische Präsenz auf dem Feld.",
+      "schlagwoerter": [
+        "Fußball",
+        "Messi",
+        "Argentinien",
+        "Abschied",
+        "Sport"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.sportschau.de/fussball/adios-argentinien-letztes-laenderspiel-von-messi,messi-abschied-argentinien-100.html",
+      "quelle_name": "Sportschau",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "George Russell muss beim Großen Preis von Singapur von ganz hinten starten",
+      "zusammenfassung": "Formel-1-Pilot George Russell erhält eine Startplatzstrafe für den Großen Preis von Singapur und muss von hinten ins Rennen gehen. Grund ist ein Power-Unit-Wechsel nach einem Motorschaden in Malaysia.",
+      "schlagwoerter": [
+        "Formel 1",
+        "George Russell",
+        "Mercedes",
+        "Singapur",
+        "Strafe"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.kicker.de/strafe-russell-startet-in-singapur-von-ganz-hinten-1259006/artikel#omrss",
+      "quelle_name": "Kicker Fußball",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Alexander Zverev hat Weltranglistenplatz eins so gut wie sicher",
+      "zusammenfassung": "Alexander Zverev steht kurz davor, die Nummer eins der Tennis-Weltrangliste zu werden. Durch das Saison-Aus von Jannik Sinner ist sein Weg an die Spitze geebnet.",
+      "schlagwoerter": [
+        "Tennis",
+        "Alexander Zverev",
+        "Weltrangliste",
+        "ATP"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.sportschau.de/tennis/zverevs-weg-an-die-spitze-der-weltrangliste,zverevs-weg-weltrangliste-platz-eins-100.html",
+      "quelle_name": "Sportschau",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "VfL Bochum ordnet Hüpfverbot für Fans in der Ostkurve an",
+      "zusammenfassung": "Im Ruhrstadion des VfL Bochum gilt ab sofort ein 'Hüpfverbot' für die Osttribüne. Diese kuriose Maßnahme ist Teil von Modernisierungsarbeiten und bei Verstoß drohen harte Strafen.",
+      "schlagwoerter": [
+        "Fußball",
+        "VfL Bochum",
+        "Fans",
+        "Stadion",
+        "Regeln"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.kicker.de/huepfverbot-bochumer-fans-muessen-auf-springen-verzichten-1259017/artikel#omrss",
+      "quelle_name": "Kicker Fußball",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Aktuelle Sport-Ergebnisse und Zwischenstände",
+      "zusammenfassung": "- Radsport - UEC Europameisterschaften, Junior Herren Zeitfahren: Benjamín Noval (ESP) Sieger.\n- Radsport - UEC Europameisterschaften, Junior Damen Zeitfahren: Alejandra Neira (ESP) Siegerin.\n- Radsport - UEC Europameisterschaften, Elite Mixed Staffel Teamzeitfahren: Frankreich Sieger, Italien Silber, Luxemburg Bronze.\n- Radsport - UEC Europameisterschaften, Junioren Mixed Staffel Teamzeitfahren: Italien Sieger, Polen Zweiter, Schweiz Dritter.\n- Radsport - UEC Europameisterschaften, Elite Herren Zeitfahren: Remco Evenepoel (BEL) Sieger. Giulio Ciccone (ITA) zweifelt Foto-Finish an.\n- Radsport - Tre Valli Varesine, Herren: Jarno Widar Sieger im Sprint vor Tom Pidcock und Matteo Jorgenson.\n- Radsport - Tre Valli Varesine, Damen: Eleonora Gasparrini Siegerin vor Sarah Van Dam und Noemi Rüegg.\n- Radsport - Binche-Chimay-Binche, Herren: Paul Magnier Sieger im Sprint.\n- Radsport - Binche-Chimay-Binche, Damen: Linda Riedmann Siegerin im Bergaufsprint vor Charlotte Kool und Nicole Steigenga.\n- Fußball - Nations League: Spanien besiegt Kroatien, bleibt 42 Spiele ungeschlagen.\n- Fußball - Nations League: England besiegt Tschechien 3:0. Harry Kane erreicht 125 Länderspiele und trifft doppelt.\n- Fußball - Nations League: Niederlande besiegt Serbien 2:1.\n- Fußball - U21 EM-Qualifikation: Deutschland U21 besiegt Georgien und qualifiziert sich für die EM 2027.\n- Handball - European League: Bergischer HC (Solingen) gewinnt erstes internationales Heimspiel.\n- Handball - European League: SG Flensburg-Handewitt gewinnt bei Aguas Santas Milaneza und verteidigt die Tabellenführung.\n- Tennis - ATP Peking: Novak Djokovic gewinnt das Turnier und stellt einen neuen Rekord auf.\n- Tennis - ATP Shanghai: Yannick Hanfmann gewinnt sein Match nach drei Tiebreaks.",
+      "schlagwoerter": [
+        "Radsport",
+        "Fußball",
+        "Handball",
+        "Tennis",
+        "Ergebnisse",
+        "Meisterschaften"
+      ],
+      "typ": "sport",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/uec-european-championships-ineos-bound-super-talent-benjamin-noval-maintains-worlds-form-to-win-junior-mens-time-trial/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Bedrohte Irawadi-Delfine: Rekord-Nachwuchs im Mekong",
+      "zusammenfassung": "Die stark bedrohte Population der Irawadi-Delfine im kambodschanischen Mekong erlebt einen Rekord-Nachwuchs. Im Jahr 2026 wurden sechs Kälber geboren, die höchste Zahl innerhalb eines Jahres, wodurch die Population seit 2017 von 89 auf 118 Tiere anstieg. Dieser Erfolg wird den Schutzmaßnahmen in Zusammenarbeit mit lokalen Gemeinden und Fischereibehörden zugeschrieben.",
+      "schlagwoerter": [
+        "Artenschutz",
+        "Natur",
+        "Delfine",
+        "Mekong",
+        "Umweltschutz",
+        "Good News"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://goodnews-magazin.de/bedrohte-irawadi-delfine-rekord-nachwuchs-im-mekong/",
+      "quelle_name": "Good News Magazin",
+      "kategorie": "good-news"
+    }
+  ],
+  "schlagwoerter": [
+    "KI",
+    "Wirtschaft",
+    "Tech",
+    "Sport",
+    "Deutschland",
+    "International",
+    "Regulierung",
+    "Sicherheit",
+    "Umwelt",
+    "Innovation",
+    "Fußball",
+    "Radsport"
+  ]
+}

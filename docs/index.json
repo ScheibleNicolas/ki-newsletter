@@ -1,5 +1,26 @@
 [
   {
+    "datum": "2026-10-07",
+    "titel": "KI-Regulierung drängt: Wasserzeichen, UN-Resolution und Europas Modell Mistral",
+    "modus": "kurzform",
+    "schlagwoerter": [
+      "KI",
+      "Wirtschaft",
+      "Tech",
+      "Sport",
+      "Deutschland",
+      "International",
+      "Regulierung",
+      "Sicherheit",
+      "Umwelt",
+      "Innovation",
+      "Fußball",
+      "Radsport"
+    ],
+    "audio_pfad": null,
+    "html_pfad": "ausgaben/2026-10-07.html"
+  },
+  {
     "datum": "2026-10-03",
     "titel": "KI-Revolution: OpenAI enthüllt GPT-6 Astra; 'Gedankenlesen' mit AI wird Realität",
     "modus": "deep-dive",
