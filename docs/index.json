@@ -1,5 +1,25 @@
 [
   {
+    "datum": "2026-10-10",
+    "titel": "KI: Neue Ära mit GPT-6, doch Risiken fordern Regulierung",
+    "modus": "deep-dive",
+    "schlagwoerter": [
+      "KI",
+      "Technologie",
+      "Wirtschaft",
+      "Politik",
+      "Cybersicherheit",
+      "Energie",
+      "Weltraum",
+      "Sport",
+      "Radsport",
+      "Fußball",
+      "Eishockey"
+    ],
+    "audio_pfad": "audio/2026-10-10.mp3",
+    "html_pfad": "ausgaben/2026-10-10.html"
+  },
+  {
     "datum": "2026-10-07",
     "titel": "KI-Regulierung drängt: Wasserzeichen, UN-Resolution und Europas Modell Mistral",
     "modus": "kurzform",
