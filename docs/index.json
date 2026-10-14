@@ -1,5 +1,21 @@
 [
   {
+    "datum": "2026-10-14",
+    "titel": "KI-Boom befeuert Weltwirtschaft – Europas Tech-Ringen und Ukraine-Krise",
+    "modus": "kurzform",
+    "schlagwoerter": [
+      "KI",
+      "Technologie",
+      "Wirtschaft",
+      "Deutschland",
+      "Radsport",
+      "Cybersicherheit",
+      "Innovation"
+    ],
+    "audio_pfad": "audio/2026-10-14.mp3",
+    "html_pfad": "ausgaben/2026-10-14.html"
+  },
+  {
     "datum": "2026-10-10",
     "titel": "KI: Neue Ära mit GPT-6, doch Risiken fordern Regulierung",
     "modus": "deep-dive",

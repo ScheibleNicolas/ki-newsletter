@@ -1,0 +1,377 @@
+{
+  "modus": "kurzform",
+  "datum": "2026-10-14",
+  "titel": "KI-Boom befeuert Weltwirtschaft – Europas Tech-Ringen und Ukraine-Krise",
+  "storys": [
+    {
+      "titel": "Russische Angriffe lassen 600.000 in Ukraine ohne Strom, Starlink-Einschränkungen betreffen Frontlinie",
+      "zusammenfassung": "Kritische Energieinfrastruktur in der Ukraine wurde getroffen, wodurch 600.000 Menschen ohne Strom sind. Gleichzeitig beeinträchtigen Geschwindigkeitsbeschränkungen von Elon Musks Starlink-Dienst militärische Missionen an der Frontlinie.",
+      "schlagwoerter": [
+        "Ukraine",
+        "Russland",
+        "Energie",
+        "Starlink",
+        "Cyberkrieg"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cm2d6e62p49do?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Deutschland stellt Ukrainer wegen Nord Stream-Pipeline-Anschlägen vor Gericht",
+      "zusammenfassung": "Vier Jahre nach den Anschlägen auf die Nord Stream-Pipelines hat in Deutschland der Prozess gegen einen Ukrainer begonnen. Serhii K wird vorgeworfen, die russischen Gasleitungen nach Deutschland zerstört zu haben.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Nord Stream",
+        "Pipeline",
+        "Anschlag",
+        "Justiz"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cw99zpmnxzmjo?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Chinas Exporte steigen stark durch KI-getriebene Nachfrage",
+      "zusammenfassung": "Chinas Exporte sind im September überraschend stark um 36,3 Prozent gestiegen, der größte Sprung seit der COVID-11-Pandemie. Dieser Anstieg, der vor allem durch Halbleiter und Automobile getrieben wird, nähert den Handelsüberschuss des Landes einem Rekordwert und wird durch die Nachfrage im KI-Sektor beflügelt.",
+      "schlagwoerter": [
+        "China",
+        "Exporte",
+        "Wirtschaft",
+        "KI",
+        "Handel"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.aljazeera.com/economy/2026/10/14/chinas-exports-sugrge?traffic_source=rss",
+      "quelle_name": "Al Jazeera English",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Singapurs Wirtschaft wächst inmitten des KI-Booms um über 5 Prozent",
+      "zusammenfassung": "Die Wirtschaft des Stadtstaates Singapur verzeichnete im Juli-September-Quartal ein Bruttoinlandsprodukt-Wachstum von 5,4 Prozent. Diese positive Entwicklung wird maßgeblich durch den anhaltenden KI-Boom und die damit verbundene Nachfrage in der Technologiebranche vorangetrieben.",
+      "schlagwoerter": [
+        "Singapur",
+        "Wirtschaftswachstum",
+        "KI",
+        "Technologie"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.aljazeera.com/economy/2026/10/14/singapores-economy-grows-more-than-5-percent-amid-ai-boom?traffic_source=rss",
+      "quelle_name": "Al Jazeera English",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Bundesregierung einigt sich bei Zuckersteuer auf Zwei-Stufen-Modell",
+      "zusammenfassung": "Nach langem Streit haben Union und SPD eine Einigung zur Einführung einer Zuckersteuer erzielt. Ab dem 1. Juli 2027 soll ein gestaffeltes Modell greifen, dessen Höhe vom Zuckeranteil in Getränken abhängt.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Zuckersteuer",
+        "Regierung",
+        "Gesundheitspolitik",
+        "Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/inland/innenpolitik/zuckersteuer-bundesregierung-einigung-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Verurteilter Signa-Gründer Benko darf in den Hausarrest wechseln",
+      "zusammenfassung": "Der wegen Betrugs verurteilte österreichische Investor René Benko hat die Erlaubnis erhalten, das Gefängnis zu verlassen. Er wird seinen neuen Prozess mit einer elektronischen Fußfessel im Hausarrest vorbereiten.",
+      "schlagwoerter": [
+        "Benko",
+        "Signa",
+        "Justiz",
+        "Wirtschaft",
+        "Österreich"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/ausland/benko-fussfessel-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Rüstungsindustrie: Engere deutsch-türkische Zusammenarbeit?",
+      "zusammenfassung": "Auf der 4. Deutsch-Türkischen Wirtschaftskonferenz in Ankara wird über eine Intensivierung der Zusammenarbeit bei Waffen- und Rüstungsgütern diskutiert. Bislang ist der Austausch in diesem Sektor zwischen beiden Ländern eher gering.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Türkei",
+        "Rüstung",
+        "Wirtschaft",
+        "Außenpolitik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/ausland/asien/deutsch-tuerkische-wirtschaftskonferenz-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "EU bremst Hybrid-Importe: Können deutsche Autobauer profitieren?",
+      "zusammenfassung": "Die EU plant eine Deckelung chinesischer Hybridfahrzeugimporte, um heimische Hersteller zu stärken. Es bleibt abzuwarten, ob dies deutschen Autobauern helfen kann, ihre Position im Wettbewerb zurückzugewinnen.",
+      "schlagwoerter": [
+        "EU",
+        "Autoindustrie",
+        "Deutschland",
+        "Hybridfahrzeuge",
+        "Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/autobranche-hybride-eu-china-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Galeria-Insolvenz: Wie geht's weiter für Angestellte und Kunden?",
+      "zusammenfassung": "Nach der erneuten Insolvenzanmeldung von Galeria Kaufhof herrscht Unsicherheit über die Zukunft der Filialen und Arbeitsplätze. Beschäftigte erhalten vor dem Weihnachtsgeschäft immerhin Insolvenzgeld, die langfristige Entwicklung bleibt jedoch abzuwarten.",
+      "schlagwoerter": [
+        "Deutschland",
+        "Galeria",
+        "Einzelhandel",
+        "Insolvenz",
+        "Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/unternehmen/neue-galeria-insolvenz-faq-2026-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "IWF hebt Prognose für deutsche Wirtschaft deutlich an",
+      "zusammenfassung": "Der Internationale Währungsfonds (IWF) hat seine Wirtschaftsprognose für Deutschland auf 1,3 Prozent angehoben. Dies ist fast doppelt so stark wie bisher erwartet und signalisiert eine verbesserte Aussicht für die deutsche Konjunktur.",
+      "schlagwoerter": [
+        "Deutschland",
+        "IWF",
+        "Wirtschaftsprognose",
+        "Konjunktur"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/weltwirtschaft/iwf-prognose-deutschland-104.html",
+      "quelle_name": "Tagesschau Wirtschaft",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "OpenAI-Mitarbeiter nach Wanzenfund im Konferenzraum festgenommen",
+      "zusammenfassung": "Ein Ingenieur von OpenAI wurde vom FBI festgenommen, nachdem ein verstecktes Aufnahmegerät in einem Konferenzraum entdeckt wurde. Die Wanze war in Toilettenpapier gewickelt in einem USB-Port hinter einem Fernseher platziert worden.",
+      "schlagwoerter": [
+        "OpenAI",
+        "Sicherheit",
+        "Spionage",
+        "KI",
+        "FBI"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.heise.de/news/Meetings-heimlich-aufgenommen-OpenAI-Angestellter-festgenommen-und-gefeuert-11487158.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "quelle_name": "Heise.de",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Google DeepMind und Singapur entwickeln KI zur Betrugserkennung",
+      "zusammenfassung": "Google DeepMind arbeitet mit der Regierung Singapurs zusammen, um ein speziell abgestimmtes KI-Modell zur Erkennung von Betrug zu entwickeln. Das leichte On-Device-Gemma-Modell soll betrügerische Unterhaltungen in privaten Chats abfangen, ohne Daten in die Cloud zu senden.",
+      "schlagwoerter": [
+        "Google DeepMind",
+        "Singapur",
+        "KI",
+        "Betrugserkennung",
+        "Sicherheit"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+      "quelle_name": "Google DeepMind Blog",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Google veröffentlicht sein neues Spitzen-KI-Modell Gemini 4 Argon",
+      "zusammenfassung": "Google hat sein fortschrittliches KI-Modell Gemini 4 Argon veröffentlicht, das entwickelt wurde, um die schwierigsten Probleme zu lösen. Es steht nun zahlenden Nutzern in der Gemini-App, der Google-Suche und über eine API zur Verfügung.",
+      "schlagwoerter": [
+        "Google",
+        "Gemini 4 Argon",
+        "KI",
+        "Sprachmodell",
+        "DeepMind"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://deepmind.google/blog/introducing-gemini-4-argon/",
+      "quelle_name": "Google DeepMind Blog",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "KI-Labs kaufen Daten von insolventen Startups für Modelltraining",
+      "zusammenfassung": "KI-Labore erwerben zunehmend Daten von insolventen Startups, um ihre Modelle zu trainieren. Selbst anonymisierte oder als wertlos erachtete Datensätze können für Entwickler großer Sprachmodelle (LLMs) lukrativ sein.",
+      "schlagwoerter": [
+        "KI",
+        "Daten",
+        "Startups",
+        "Modelltraining",
+        "Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models/",
+      "quelle_name": "MIT Technology Review",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Apple stellt 7-Zoll Smart-Display HomeView vor – nicht für die EU",
+      "zusammenfassung": "Apple hat ein neues 7-Zoll Smart-Display namens HomeView für das Smart Home vorgestellt, das $299 kosten wird. Das Gerät, welches Unterhaltung, Kommunikation und Smart-Home-Funktionen vereint, kommt aufgrund von EU-Regulierungsgründen vorerst nicht nach Europa.",
+      "schlagwoerter": [
+        "Apple",
+        "HomeView",
+        "Smart Home",
+        "KI",
+        "EU"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.golem.de/news/ai-act-apple-smartes-display-homeview-kommt-nicht-in-die-eu-2610-214062.html",
+      "quelle_name": "Golem.de",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "EU-Telekomriesen schmieden Allianz gegen Elon Musks Starlink",
+      "zusammenfassung": "Europäische Mobilfunkunternehmen wie die Deutsche Telekom gründen eine Allianz, um dem Vormarsch von Elon Musks Starlink im Satelliten-Direktfunk entgegenzuwirken. Mit Unterstützung aus Paris und Brüssel wollen sie einen eigenen europäischen Wettbewerber aufbauen.",
+      "schlagwoerter": [
+        "EU",
+        "Starlink",
+        "Telekom",
+        "Satelliteninternet",
+        "Wettbewerb"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.heise.de/news/Satellitennetz-EU-Telecomriesen-schmieden-Allianz-gegen-Elon-Musks-Starlink-11487200.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "quelle_name": "Heise.de",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Tour of Guangxi: Magnier siegt auf Etappe 1",
+      "zusammenfassung": "- Etappe 1: Paul Magnier (FRA) gewinnt, Sam Welsford (AUS) Zweiter, Max Kanter (GER) Dritter.\n- Gesamtwertung Top 5: Keine Angaben verfügbar.",
+      "schlagwoerter": [
+        "Radsport",
+        "Tour of Guangxi",
+        "Etappenrennen",
+        "Ergebnisse"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/tour-of-guangxi-paul-magnier-scorches-to-victory-on-stage-1-to-make-it-six-wins-from-past-seven-stages-of-the-worldtour-race-in-china/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Tour of Guangxi: Biesterbos überrascht auf Etappe 2",
+      "zusammenfassung": "- Etappe 2: Frits Biesterbos (NED) gewinnt, Paul Magnier (FRA) Zweiter, Olav Kooij (NED) Dritter.\n- Gesamtwertung Top 5: Keine Angaben verfügbar.",
+      "schlagwoerter": [
+        "Radsport",
+        "Tour of Guangxi",
+        "Etappenrennen",
+        "Ergebnisse"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/tour-of-guangxi-frits-biesterbos-surprises-favourites-on-stage-2-for-picnic-postnls-first-worldtour-victory-of-the-season/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Eneco Tour: Söderqvist gewinnt Prolog der Männer",
+      "zusammenfassung": "- Prolog Männer: Jakob Söderqvist (SWE) gewinnt, Wessel Mouris (NED) Zweiter, Christophe Laporte (FRA) Dritter.\n- Gesamtwertung Top 5: Keine Angaben verfügbar.",
+      "schlagwoerter": [
+        "Radsport",
+        "Eneco Tour",
+        "Prolog",
+        "Ergebnisse"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/eneco-tour-jakob-soderqvist-secures-leaders-jersey-as-fastest-rider-in-nighttime-prologue-at-the-hague/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Eneco Tour Women: Nooijen dominiert Prolog der Frauen",
+      "zusammenfassung": "- Prolog Frauen: Lieke Nooijen (NED) gewinnt, Charlotte Kool (NED) Zweite, Lonneke Uneken (NED) Dritte.\n- Gesamtwertung Top 5: Keine Angaben verfügbar.",
+      "schlagwoerter": [
+        "Radsport",
+        "Eneco Tour",
+        "Frauenradsport",
+        "Prolog",
+        "Ergebnisse"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/womens-cycling/eneco-tour-women-lieke-nooijen-dominates-prologue-for-first-race-leaders-jersey/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Gravel World Championships: Bak Klaris sprintet zum Titel",
+      "zusammenfassung": "- Elite Männer Rennen: Magnus Bak Klaris (DEN) gewinnt, Florian Vermeersch (BEL) Zweiter, Connor Swift (GBR) Dritter.\n- Elite Frauen Rennen: Marianne Vos (NED) gewinnt.\n- Gesamtwertung Top 5: Keine Angaben verfügbar.",
+      "schlagwoerter": [
+        "Radsport",
+        "Gravel",
+        "Weltmeisterschaft",
+        "Ergebnisse"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/gravel-world-championships-magnus-bak-klaris-sprints-to-huge-victory-in-thrilling-elite-mens-race/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Il Lombardia: Seixas mit Solo-Sieg bei Monument-Klassiker",
+      "zusammenfassung": "- Elite Männer Rennen: Paul Seixas (FRA) gewinnt, Enric Mas (ESP) Zweiter, Giulio Ciccone (ITA) Dritter.\n- Gesamtwertung Top 5: Keine Angaben verfügbar.",
+      "schlagwoerter": [
+        "Radsport",
+        "Il Lombardia",
+        "Monument",
+        "Ergebnisse"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/il-lombardia-paul-seixas-puts-in-stunning-solo-ride-to-claim-first-monument/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Neuer Wirkstoff könnte Endometriose erstmals gezielt ohne Hormone behandeln",
+      "zusammenfassung": "Ein neuer Wirkstoff aus den USA namens ENDO-205 könnte eine bahnbrechende Behandlung für Endometriose darstellen. Er zielt darauf ab, erkranktes Gewebe gezielt anzugreifen, ohne den Hormonhaushalt zu beeinflussen.",
+      "schlagwoerter": [
+        "Medizin",
+        "Endometriose",
+        "Forschung",
+        "Gesundheit",
+        "Innovation"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://goodnews-magazin.de/wirkstoff-endometriose-ohne-hormone/",
+      "quelle_name": "Good News Magazin",
+      "kategorie": "good-news"
+    }
+  ],
+  "schlagwoerter": [
+    "KI",
+    "Technologie",
+    "Wirtschaft",
+    "Deutschland",
+    "Radsport",
+    "Cybersicherheit",
+    "Innovation"
+  ]
+}
