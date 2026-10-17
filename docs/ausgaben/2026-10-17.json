@@ -1,0 +1,305 @@
+{
+  "modus": "deep-dive",
+  "datum": "2026-10-17",
+  "titel": "KI-Klagen und hohe Kosten: Das bewegt Tech und Wirtschaft",
+  "storys": [
+    {
+      "titel": "Trump setzt Russland-Sanktionen aus und verstärkt Spannungen mit der Ukraine",
+      "zusammenfassung": "US-Präsident Trump hat mehrere von Kongress verabschiedete Sanktionen gegen Moskau vorübergehend aufgehoben, was die Spannungen mit der Ukraine verschärft. Italienische Minister kritisierten Trumps Entscheidung als kontraproduktiv für ein Ende der russischen Invasion. Diese Annäherung an Russland begründet Trump mit nationalen Sicherheitsinteressen.",
+      "schlagwoerter": [
+        "USA",
+        "Russland",
+        "Sanktionen",
+        "Ukraine",
+        "Trump",
+        "Geopolitik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cxr5yvzv7rp0o?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Brasilien verzeichnet Rekordrückgang der Amazonas-Abholzung",
+      "zusammenfassung": "Die Abholzung des brasilianischen Amazonas-Regenwaldes ist auf den niedrigsten Stand seit Beginn der Aufzeichnungen im Jahr 1988 gefallen. Dies wird als Erfolg der Schutzbemühungen der Regierung von Präsident Lula gewertet. Der Amazonas spielt eine entscheidende Rolle als Puffer gegen den Klimawandel.",
+      "schlagwoerter": [
+        "Brasilien",
+        "Amazonas",
+        "Abholzung",
+        "Umwelt",
+        "Klimawandel",
+        "Regierung"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.bbc.co.uk/news/articles/cqe8rzg6zl00o?at_medium=RSS&at_campaign=rss",
+      "quelle_name": "BBC World News",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Russische Angriffe töten Zivilisten und verletzen Dutzende in der Ukraine",
+      "zusammenfassung": "Bei einer neuen Welle russischer Angriffe in der gesamten Ukraine sind mindestens acht Menschen ums Leben gekommen und Dutzende verletzt worden. Die Angriffe zielten auf die Energieversorgung des Landes ab, wobei in mehreren Regionen die Stromversorgung für bis zu eine Million Menschen unterbrochen wurde.",
+      "schlagwoerter": [
+        "Ukraine",
+        "Russland",
+        "Krieg",
+        "Zivilisten",
+        "Energieversorgung"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.aljazeera.com/news/2026/10/17/russian-attacks-in-ukraine-kill-at-least-8-cut-power-to-1-million?traffic_source=rss",
+      "quelle_name": "Al Jazeera English",
+      "kategorie": "international"
+    },
+    {
+      "titel": "IWF fordert Unterstützung für ärmere Länder angesichts hoher Inflation und Kriegsfolgen",
+      "zusammenfassung": "Der Internationale Währungsfonds (IWF) mahnt zu dringender Unterstützung für einkommensschwache Länder, die unter hoher Inflation und den wirtschaftlichen Auswirkungen von Kriegen leiden. Diese Staaten wenden bis zu 14 Prozent ihrer Einnahmen für den Schuldendienst auf, was ihre finanzielle Handlungsfähigkeit stark einschränkt. Der IWF fordert Industrieländer auf, ihre Haushaltsdefizite zu verringern und Schulden abzubauen, um globalen finanziellen Spielraum zu schaffen.",
+      "schlagwoerter": [
+        "IWF",
+        "Wirtschaft",
+        "Inflation",
+        "Schulden",
+        "Internationale Beziehungen"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.aljazeera.com/economy/2026/10/17/war-spillovers-debt-threaten-low-income-nations-imf-chief-warns?traffic_source=rss",
+      "quelle_name": "Al Jazeera English",
+      "kategorie": "international"
+    },
+    {
+      "titel": "Steigende Preise für Benzin und Heizöl lassen Winter teuer werden",
+      "zusammenfassung": "Die Preise für Kraftstoff, Heizöl und Erdgas sind binnen kurzer Zeit stark gestiegen, was den Alltag der Verbraucher und die Kosten für Unternehmen belastet. Die Bundesregierung sucht nach Lösungen, um die Mehrkosten abzufedern. Die Entwicklung könnte sich in den kommenden Wintermonaten weiter zuspitzen.",
+      "schlagwoerter": [
+        "Energiepreise",
+        "Inflation",
+        "Verbraucher",
+        "Wirtschaft",
+        "Deutschland"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/verbraucher/energie-heizen-winter-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Eurowings streicht Flüge und prüft Kurzarbeit wegen gestiegener Kerosinpreise",
+      "zusammenfassung": "Die Lufthansa-Tochter Eurowings sieht sich aufgrund stark gestiegener Kerosinpreise gezwungen, Flüge zu streichen und die Einführung von Kurzarbeit für ihre Mitarbeiter zu prüfen. Der Kostendruck in der Luftfahrtbranche nimmt durch die aktuellen geopolitischen Entwicklungen erheblich zu. Die Maßnahmen sollen die wirtschaftliche Stabilität des Unternehmens sichern.",
+      "schlagwoerter": [
+        "Eurowings",
+        "Flugverkehr",
+        "Kurzarbeit",
+        "Wirtschaft",
+        "Deutschland",
+        "Kerosinpreise"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/unternehmen/eurowings-kurzarbeit-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Deutschland und Frankreich einigen sich auf Aufweichung des Verbrenner-Aus",
+      "zusammenfassung": "Deutschland und Frankreich haben sich auf eine Lockerung des ursprünglich beschlossenen Verbrenner-Aus in der EU geeinigt. Dies könnte bedeuten, dass Neufahrzeuge mit Verbrennungsmotoren auch nach 2035 in der EU zugelassen werden können, sofern sie mit synthetischen Kraftstoffen betrieben werden. Die Einigung soll die europäische Autoindustrie stärken und ihr mehr Flexibilität für den Übergang zur Elektromobilität geben.",
+      "schlagwoerter": [
+        "Verbrenner-Aus",
+        "EU",
+        "Deutschland",
+        "Frankreich",
+        "Autoindustrie",
+        "Wirtschaftspolitik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/ausland/europa/verbrenner-aus-paris-berlin-100.html",
+      "quelle_name": "Tagesschau.de",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Deutlich mehr Baugenehmigungen für Wohnimmobilien in Deutschland",
+      "zusammenfassung": "Der deutsche Wohnungsbau zeigt einen Lichtblick: Der Aufwärtstrend des ersten Halbjahres setzte sich auch im August fort, mit deutlich mehr Baugenehmigungen. Trotz Belastungen durch höhere Energiepreise und Zinsen deutet dies auf eine positive Entwicklung im Sektor hin. Die Branche hofft auf eine Stabilisierung des Marktes.",
+      "schlagwoerter": [
+        "Wohnungsbau",
+        "Immobilien",
+        "Wirtschaft",
+        "Deutschland",
+        "Baugenehmigungen"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/baugenehmigungen-steigen-wieder-2026-100.html",
+      "quelle_name": "Tagesschau Wirtschaft",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Wärmepumpen dominieren den Heizungsmarkt: Öl fast 'tot'",
+      "zusammenfassung": "Trotz wechselnder gesetzlicher Vorgaben boomt das Geschäft mit klimafreundlicheren Wärmepumpen in Deutschland, während Ölheizungen zunehmend an Bedeutung verlieren. Massive Subventionen tragen maßgeblich zu diesem Trend bei. Der Heizungsmarkt erlebt eine tiefgreifende Transformation hin zu nachhaltigeren Lösungen.",
+      "schlagwoerter": [
+        "Wärmepumpen",
+        "Heizung",
+        "Energie",
+        "Klimaschutz",
+        "Deutschland",
+        "Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/wirtschaft/energie/waermepumpen-bilanz-heizen-100.html",
+      "quelle_name": "Tagesschau Wirtschaft",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "US-Klagewelle: Acht Bundesstaaten verklagen OpenAI wegen ChatGPT-Gefahren",
+      "zusammenfassung": "Acht US-Bundesstaaten haben Klagen gegen OpenAI eingereicht und werfen dem Unternehmen vor, Risiken von ChatGPT und anderen KI-Chatbots für Minderjährige zu verharmlosen. Die Klagen zielen darauf ab, den sicheren Umgang mit KI-Chatbots zu gewährleisten und fordern teilweise auch Grenzen für Tests fortgeschrittener KI-Modelle. Die Debatte um KI-Sicherheit und Jugendschutz erreicht damit eine neue Ebene.",
+      "schlagwoerter": [
+        "OpenAI",
+        "ChatGPT",
+        "KI",
+        "Datenschutz",
+        "Recht",
+        "USA"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.tagesschau.de/ausland/amerika/klage-openai-100.html",
+      "quelle_name": "Tagesschau Wirtschaft",
+      "kategorie": "deutschland"
+    },
+    {
+      "titel": "Künstliche Intelligenz: Chatbots plaudern mit der Werbeindustrie",
+      "zusammenfassung": "Eine Studie enthüllt, dass sechs von neun getesteten Chatbots, darunter ChatGPT, Claude und Gemini, Chat-Daten an Werbedienste weitergeben. Das Landgericht Köln hat Snapchat bereits untersagt, aus Kinderdaten Werbung zu machen, da diese Datenverarbeitung ohne ausreichende Rechtsgrundlage rechtswidrig ist. Dies wirft erneut Fragen zum Datenschutz und zur Transparenz im Umgang mit KI auf.",
+      "schlagwoerter": [
+        "KI",
+        "Chatbots",
+        "Datenschutz",
+        "Werbung",
+        "Snapchat",
+        "Ethik"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.golem.de/news/kuenstliche-intelligenz-chatbots-plaudern-mit-der-werbeindustrie-2610-214209.html",
+      "quelle_name": "Golem.de",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "KI im Recruiting: McKinsey testet Bewerbende mit Chatbots",
+      "zusammenfassung": "Das Beratungsunternehmen McKinsey setzt in Nordamerika künstliche Intelligenz ein, um Bewerbende in simulierten Kundengesprächen zu testen. Diese Methode soll die Eignung der Kandidaten effizienter bewerten. Der Einsatz von Chatbots im Recruiting zeigt die zunehmende Integration von KI in Unternehmensprozesse und die Personalauswahl.",
+      "schlagwoerter": [
+        "KI",
+        "Recruiting",
+        "McKinsey",
+        "Personalwesen",
+        "Chatbots",
+        "Wirtschaft"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.heise.de/news/KI-im-Recruiting-Wie-McKinsey-Bewerbende-mit-Chatbots-testet-11490750.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "quelle_name": "Heise.de",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Grok Voice 3.0 von SpaceXAI führt Sprach-KI-Vergleich an",
+      "zusammenfassung": "SpaceXAI hat mit Grok Voice 3.0 eine neue Sprach-KI vorgestellt, die sich im Gesamtindex von Artificial Analysis an die Spitze setzt. Das Modell zeigt insbesondere bei Kundendienstaufgaben eine deutlich gesteigerte Leistung und übertrifft damit Konkurrenten wie OpenAI und Google. Dies markiert einen wichtigen Fortschritt in der Entwicklung von Sprach-KI-Systemen.",
+      "schlagwoerter": [
+        "Grok Voice",
+        "SpaceXAI",
+        "KI",
+        "Sprach-KI",
+        "Technologie",
+        "Wettbewerb"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.heise.de/news/Grok-Voice-3-0-setzt-sich-im-Sprach-KI-Vergleich-an-die-Spitze-11489420.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "quelle_name": "Heise.de",
+      "kategorie": "ki-tech"
+    },
+    {
+      "titel": "Radsport: Ergebnisse der Tour of Guangxi, Eneco Tour und UCI Bahnrad-WM",
+      "zusammenfassung": "- Tour of Guangxi Etappe 3: Milan Fretin (Cofidis) siegt.\n- Tour of Guangxi Etappe 4: Paul Magnier (Soudal Quick-Step) gewinnt und übernimmt die Gesamtführung.\n- Tour of Guangxi Etappe 5: Milan Fretin (Cofidis) siegt. Paul Magnier behält die Gesamtführung.\n- Tour of Guangxi Gesamtwertung Top 5: 1. Paul Magnier.\n- Eneco Tour (Männer) Etappe 1: Tim Merlier (Soudal Quick-Step) gewinnt.\n- Eneco Tour (Männer) Etappe 2 (Zeitfahren): Jakob Söderqvist (Lidl-Trek) gewinnt und baut Gesamtführung aus.\n- Eneco Tour (Männer) Etappe 3: Mick van Dijke (Visma | Lease a Bike) gewinnt. Victor Campenaerts (Lotto Dstny) übernimmt die Gesamtführung.\n- Eneco Tour (Männer) Gesamtwertung Top 5: 1. Victor Campenaerts.\n- Eneco Tour (Frauen) Etappe 1: Sandrine Tas (Lidl-Trek) gewinnt.\n- Eneco Tour (Frauen) Etappe 2 (Zeitfahren): Lieke Nooijen (Visma | Lease a Bike) gewinnt und übernimmt die Gesamtführung.\n- Eneco Tour (Frauen) Etappe 3: Femke Markus (Team dsm-firmenich PostNL) siegt. Lieke Nooijen verteidigt die Gesamtführung.\n- Eneco Tour (Frauen) Gesamtwertung Top 5: 1. Lieke Nooijen.\n- UCI Bahnrad-WM Männer Einerverfolgung: Jonathan Milan (Italien) bricht Weltrekord (unter 3:59 Min.).\n- UCI Bahnrad-WM Frauen Teamsprint: China gewinnt Gold.\n- UCI Bahnrad-WM Männer Teamsprint: Niederlande gewinnt Gold.\n- UCI Bahnrad-WM Frauen Mannschaftsverfolgung: Großbritannien gewinnt Gold.\n- UCI Bahnrad-WM Frauen Scratch Race: Katie Archibald (Großbritannien) gewinnt Gold.\n- UCI Bahnrad-WM Frauen 1000m Zeitfahren: Pauline Grabosch (Deutschland) gewinnt Gold.",
+      "schlagwoerter": [
+        "Radsport",
+        "UCI",
+        "Guangxi",
+        "Eneco Tour",
+        "Bahnrad-WM",
+        "Sport"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.cyclingnews.com/pro-cycling/racing/tour-of-guangxi-milan-fretin-wins-again-on-stage-5-as-paul-magnier-crashes-in-final-kilometre/",
+      "quelle_name": "Cyclingnews",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Tennis ATP Masters Shanghai: Zverev scheidet im Halbfinale aus",
+      "zusammenfassung": "- ATP Masters Shanghai Halbfinale: Alejandro Davidovich Fokina (Spanien) besiegt Alexander Zverev (Deutschland) 6:4, 4:6, 3:6.",
+      "schlagwoerter": [
+        "Tennis",
+        "ATP Masters",
+        "Shanghai",
+        "Alexander Zverev",
+        "Sport"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.kicker.de/davidovich-fokina-baerenstark-zverev-verpasst-shanghai-finale-1262218/artikel#omrss",
+      "quelle_name": "Kicker Fußball",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "Fußball Deutschland: Bundesliga- und Liga-Ergebnisse",
+      "zusammenfassung": "- Bundesliga Männer: Eintracht Frankfurt gewinnt gegen 1. FC Köln.\n- 2. Bundesliga Männer: 1. FC Nürnberg sichert sich späten Punkt bei Energie Cottbus. Holstein Kiel stoppt Hertha BSC Siegesserie. 1. FC Heidenheim gleicht Führung des VfL Wolfsburg schnell aus.\n- Frauen Bundesliga: RB Leipzig gewinnt gegen SC Freiburg. Eintracht Frankfurt gewinnt gegen Bayer Leverkusen.\n- Tischtennis-EM Mixed: Benedikt Duda und Nina Mittelham (Deutschland) gewinnen Gold.\n- Fußball Ü80 WM: Deutsche Ü80-Nationalmannschaft gewinnt WM.",
+      "schlagwoerter": [
+        "Fußball",
+        "Bundesliga",
+        "2. Bundesliga",
+        "Frauen Bundesliga",
+        "Tischtennis",
+        "WM",
+        "Deutschland",
+        "Sport"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://www.sportschau.de/fussball/bundesliga/viele-flanken-und-ein-geistesblitz-frankfurt-besiegt-koeln,spielbericht-eintracht-frankfurt-koeln-102.html",
+      "quelle_name": "Sportschau",
+      "kategorie": "sport"
+    },
+    {
+      "titel": "New York plant das Ende der Pferdekutschen im Central Park",
+      "zusammenfassung": "Die traditionellen Pferdekutschen im New Yorker Central Park könnten bald Geschichte sein, da sich Bürgermeister und Stadtratspräsidentin für ein Verbot einsetzen. Tierschutzorganisationen kritisieren seit Jahren die Belastung der Pferde durch Verkehr, Hitze, Lärm und wiederholte Unfälle. Die Initiative verspricht eine deutliche Verbesserung der Lebensbedingungen für die Tiere.",
+      "schlagwoerter": [
+        "New York",
+        "Pferdekutschen",
+        "Tierschutz",
+        "Central Park",
+        "Umwelt",
+        "Good News"
+      ],
+      "typ": "kurzmeldung",
+      "ist_breaking_news": false,
+      "quelle_url": "https://goodnews-magazin.de/new-york-verbietet-pferdekutschen-im-central-park/",
+      "quelle_name": "Good News Magazin",
+      "kategorie": "good-news"
+    }
+  ],
+  "schlagwoerter": [
+    "KI",
+    "Technologie",
+    "Wirtschaft",
+    "Politik",
+    "Ukraine-Krieg",
+    "Radsport",
+    "Fußball",
+    "Datenschutz",
+    "Umwelt",
+    "Sport"
+  ]
+}

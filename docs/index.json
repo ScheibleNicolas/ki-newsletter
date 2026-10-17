@@ -1,5 +1,24 @@
 [
   {
+    "datum": "2026-10-17",
+    "titel": "KI-Klagen und hohe Kosten: Das bewegt Tech und Wirtschaft",
+    "modus": "deep-dive",
+    "schlagwoerter": [
+      "KI",
+      "Technologie",
+      "Wirtschaft",
+      "Politik",
+      "Ukraine-Krieg",
+      "Radsport",
+      "Fußball",
+      "Datenschutz",
+      "Umwelt",
+      "Sport"
+    ],
+    "audio_pfad": "audio/2026-10-17.mp3",
+    "html_pfad": "ausgaben/2026-10-17.html"
+  },
+  {
     "datum": "2026-10-14",
     "titel": "KI-Boom befeuert Weltwirtschaft – Europas Tech-Ringen und Ukraine-Krise",
     "modus": "kurzform",
