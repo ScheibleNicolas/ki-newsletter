@@ -1,5 +1,26 @@
 [
   {
+    "datum": "2026-10-21",
+    "titel": "Musks Mega-Fusion, KI-Herausforderungen und Deutschlands Tech-Investitionen",
+    "modus": "kurzform",
+    "schlagwoerter": [
+      "KI",
+      "Technologie",
+      "Wirtschaft",
+      "Cybersicherheit",
+      "Geopolitik",
+      "Automobilindustrie",
+      "Sicherheitspolitik",
+      "Radsport",
+      "Fußball",
+      "Basketball",
+      "Formel 1",
+      "Medizin"
+    ],
+    "audio_pfad": "audio/2026-10-21.mp3",
+    "html_pfad": "ausgaben/2026-10-21.html"
+  },
+  {
     "datum": "2026-10-17",
     "titel": "KI-Klagen und hohe Kosten: Das bewegt Tech und Wirtschaft",
     "modus": "deep-dive",
